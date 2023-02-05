@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'formulario', 
     component: FormComponent, 
     canActivate: [AuthGuard]
+  },
+  {
+    path: '**',
+    redirectTo: '/login'
   }
 ];
 
