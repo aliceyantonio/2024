@@ -9,4 +9,8 @@ export class UtilsService {
   constructor() {
     this.userRole = localStorage.getItem('userRole');
   }
+
+  getUserRole(){
+    this.userRole = localStorage.getItem('userRole');
+  }
 }
