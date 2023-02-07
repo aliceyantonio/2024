@@ -4,13 +4,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UtilsService {
-  userRole;
-  
+  userRoles: string[];
+
   constructor() {
-    this.userRole = localStorage.getItem('userRole');
+    this.userRoles = JSON.parse(localStorage.getItem('userRoles')!);
   }
 
-  getUserRole(){
-    this.userRole = localStorage.getItem('userRole');
+  setUserRoles(userRoles: string[]) {
+    this.userRoles = userRoles;
+    localStorage.setItem('userRoles', userRoles.toString());
+  }
+
+  getUserRoles() {
+    this.userRoles = JSON.parse(localStorage.getItem('userRoles')!);
   }
 }
