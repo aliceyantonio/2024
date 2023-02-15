@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UtilsService } from '../utils.service';
 
@@ -10,16 +10,13 @@ import { UtilsService } from '../utils.service';
 })
 export class LoginComponent {
 
-  familyId = 'AA15062024'
-  friendsId = 'AA08062024'
 
   password: any;
 
-  loginForm = this.fb.group({
-    username: [''],
-    bookingId: ['']
+  loginForm: FormGroup = this.fb.group({
+    username: ['', Validators.required],
+    bookingId: ['', Validators.required]
   });
-
 
   constructor(
     private router: Router,
@@ -30,13 +27,13 @@ export class LoginComponent {
   }
 
   login() {
-    const currentUser = this.users.find(user =>
+    const currentUser = this.utilsService.users.find(user =>
       user.username === this.loginForm.value.username
       && user.bookingIds.includes(this.loginForm.value.bookingId!)
     );
 
-    if(currentUser){
-      this.utilsService.setUserRoles(currentUser.userRoles),
+    if (currentUser) {
+      this.utilsService.setCurrentUser(currentUser);
       this.router.navigate(['home']);
     } else {
       alert('¿plata o plomo extraño?');
@@ -44,23 +41,6 @@ export class LoginComponent {
   }
 
 
-  users = [
-    {
-      name: 'rodrigo',
-      surname: 'lópez gómez',
-      username: 'rolo',
-      bookingIds: [this.familyId],
-      userRoles: ['family'],
-      dependientes: 5
-    },
-    {
-      name: 'rubén',
-      surname: 'gonzález román',
-      username: 'rugon',
-      bookingIds: [this.familyId, this.friendsId],
-      userRoles: ['family', 'friend'],
-      dependientes: 1
-    }
-  ]
+
 
 }
