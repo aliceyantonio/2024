@@ -1,4 +1,5 @@
 @import 'bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
 :root {
   --color-light: #ffffff;
@@ -29,3 +30,8 @@
 .bg-color-tertiary { background-color: var(--color-tertiary);}
 .bg-color-quaternary { background-color: var(--color-quaternary);}
 .bg-color-quinary { background-color: var(--color-quinary);}
+
+body{
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+}

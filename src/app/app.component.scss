@@ -1,5 +1,14 @@
-main {
+main{
   font-size: 0.8rem;
+  background-color: red;
+}
+
+main.loginStyle {
   // tamaño header - margin del header - tamaño footer - margin del footer
-  min-height: calc(100vh - 70px - 24px - 60px - 48px);
+  min-height: 100vh;
+}
+
+main:not(.loginStyle) {
+  // tamaño header - margin del header - tamaño footer - margin del footer
+  min-height: calc(100vh - 70px - 60px);
 }
