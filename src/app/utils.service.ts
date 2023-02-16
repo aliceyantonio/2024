@@ -14,15 +14,16 @@ export class UtilsService {
 
   setCurrentUser(currentUser: User){
     this.currentUser = currentUser;
-    localStorage.setItem('currentUser', JSON.stringify(currentUser))
+    localStorage.setItem('currentUser', JSON.stringify(currentUser));
   }
 
   getCurrentUser(){
-    this.currentUser = JSON.parse(localStorage.getItem('currentUser')!)
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser')!);
   }
 
   familyId = 'AA15062024'
   friendsId = 'AA08062024'
+
 
   users = [
     {
