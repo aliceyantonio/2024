@@ -1,6 +1,6 @@
 <app-header *ngIf="!isLogin"></app-header>
 <main [class]="isLogin ? 'loginStyle': null">
-  <div class="container pt-4 pb-5">
+  <div [class]="isLogin ? null : 'container pt-4 pb-5'">
     <router-outlet></router-outlet>
   </div>
 </main>
