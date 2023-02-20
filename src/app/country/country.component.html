@@ -1,38 +1,32 @@
-<div class="row border rounded bg-color-medium p-3">
-  <div class="col-4 text-center">
+<div class="row border rounded p-3 apiInfoRow">
+  <div class="col-4 text-center d-flex align-items-center justify-content-center">
     <img class="w-50" [src]="countryAPI.flags.png" alt="" srcset="">
   </div>
   <div class="col-8">
     <h2>{{countryAPI.translations.spa.common}}</h2>
-    <div class="row">
-      <div class="col-4">
+    <div class="d-flex">
+      <div class="col-4 ps-4 pe-0 border-start border-end">
         <p>
-          <fa-icon [icon]="['fas', 'globe']"></fa-icon>
-          {{countryAPI.region}}
+          <fa-icon [icon]="['fas', 'globe']" class="me-1"></fa-icon> {{countryAPI.region}}
         </p>
         <p>
-          <fa-icon [icon]="['fas', 'map-marked-alt']"></fa-icon>
-          {{countryAPI.capital}}
+          <fa-icon [icon]="['fas', 'map-marked-alt']" class="me-1"></fa-icon> {{countryAPI.capital}}
         </p>
       </div>
-      <div class="col-4">
+      <div class="col-4 ps-4 pe-0 border-end">
         <p>
-          <fa-icon [icon]="['far', 'money-bill-alt']"></fa-icon>
-          {{ currency.symbol}} {{ currency.name }}
+          <fa-icon [icon]="['far', 'money-bill-alt']" class="me-1"></fa-icon> {{ currency.symbol}} {{ currency.name }}
         </p>
         <p>
-          <fa-icon [icon]="['fas', 'street-view']"></fa-icon>
-          {{ countryAPI.population }}
+          <fa-icon [icon]="['fas', 'street-view']" class="me-1"></fa-icon> {{ countryAPI.population }}
         </p>
       </div>
-      <div class="col-4">
+      <div class="col-4 ps-4 pe-0">
         <p>
-          <fa-icon [icon]="['fas', 'pray']"></fa-icon>
-          Religión
+          <fa-icon [icon]="['fas', 'pray']" class="me-1"></fa-icon> Religión
         </p>
         <p>
-          <fa-icon [icon]="['fas', 'language']"></fa-icon>
-          {{ language }}
+          <fa-icon [icon]="['fas', 'language']" class="me-1"></fa-icon> {{ language }}
         </p>
       </div>
     </div>
@@ -40,26 +34,31 @@
 </div>
 
 <div class="row justify-content-between">
-  <div class="row">
-    <div class="col-4" *ngFor="let countryPost of countryPosts">
-      <div class="card">
-        <div class="row">
-          <div class="col-3">
-            <img class="w-100" [src]="countryPost.avatar">
+  <div class="row justify-content-around">
+    <div class="col-5 p-4" *ngFor="let countryPost of countryPosts">
+      <div class="card my-3 py-1">
+        <div class="userRow m-1 d-flex align-items-center">
+          <div class="p-0 text-center">
+            <img [src]="countryPost.avatar">
           </div>
-          <div class="col-9">
-            <div>{{countryPost.username}}</div>
-            <div>{{countryPost.location}}</div>
+          <div class="ms-2">
+            <div><b>{{ countryPost.username }}</b></div>
+            <div>{{ countryPost.location }}</div>
           </div>
         </div>
-        <div>
-          <img class="w-100" [src]="countryPost.avatar">
+        <div class="imageRow">
+          <img class="w-100" [src]="countryPost.image">
         </div>
-        <div class="row">
-
+        <div class="socialRow mx-2 my-1">
+          <fa-icon [icon]="['fas', 'heart']"></fa-icon>
+          <fa-icon [icon]="['far', 'comment']"></fa-icon>
+          <fa-icon [icon]="['far', 'paper-plane']"></fa-icon>
+          <div>
+            <b>{{ countryPost.username }}</b> <span class="mx-2">{{ countryPost.comment }}</span>
+          </div>
         </div>
-
       </div>
-    <div class="col-4"></div>
+    </div>
   </div>
 </div>
+

@@ -1,1 +1,23 @@
 
+.apiInfoRow{
+  // background-color: rgba( #0f1941, .8 );
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.userRow {
+  img {
+    clip-path: circle();
+    max-height: 35px;
+    max-width: fit-content;
+  }
+}
+
+.socialRow .ng-fa-icon {
+  font-size: 1.1rem;
+  margin-right: 13px;
+
+  &:first-child{
+    color: red;
+  }
+}
