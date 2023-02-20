@@ -1,0 +1,65 @@
+<div class="row border rounded bg-color-medium p-3">
+  <div class="col-4 text-center">
+    <img class="w-50" [src]="countryAPI.flags.png" alt="" srcset="">
+  </div>
+  <div class="col-8">
+    <h2>{{countryAPI.translations.spa.common}}</h2>
+    <div class="row">
+      <div class="col-4">
+        <p>
+          <fa-icon [icon]="['fas', 'globe']"></fa-icon>
+          {{countryAPI.region}}
+        </p>
+        <p>
+          <fa-icon [icon]="['fas', 'map-marked-alt']"></fa-icon>
+          {{countryAPI.capital}}
+        </p>
+      </div>
+      <div class="col-4">
+        <p>
+          <fa-icon [icon]="['far', 'money-bill-alt']"></fa-icon>
+          {{ currency.symbol}} {{ currency.name }}
+        </p>
+        <p>
+          <fa-icon [icon]="['fas', 'street-view']"></fa-icon>
+          {{ countryAPI.population }}
+        </p>
+      </div>
+      <div class="col-4">
+        <p>
+          <fa-icon [icon]="['fas', 'pray']"></fa-icon>
+          Religión
+        </p>
+        <p>
+          <fa-icon [icon]="['fas', 'language']"></fa-icon>
+          {{ language }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-between">
+  <div class="row">
+    <div class="col-4" *ngFor="let countryPost of countryPosts">
+      <div class="card">
+        <div class="row">
+          <div class="col-3">
+            <img class="w-100" [src]="countryPost.avatar">
+          </div>
+          <div class="col-9">
+            <div>{{countryPost.username}}</div>
+            <div>{{countryPost.location}}</div>
+          </div>
+        </div>
+        <div>
+          <img class="w-100" [src]="countryPost.avatar">
+        </div>
+        <div class="row">
+
+        </div>
+
+      </div>
+    <div class="col-4"></div>
+  </div>
+</div>
