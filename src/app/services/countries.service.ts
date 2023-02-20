@@ -34,7 +34,7 @@ export class CountriesService {
           username: "aliceilopezg",
           location: "Zundert, Netherlands",
           avatar: "../../assets/users/aliceilopezg.jpeg",
-          image: "https://bit.ly/3TubxHq",
+          image: "../../assets/countries/ES/1.jpeg",
           comment: "just took a few mushrooms lol",
           likes: 21
         },
@@ -42,7 +42,7 @@ export class CountriesService {
           username: "aliceilopezg",
           location: "Zundert, Netherlands",
           avatar: "../../assets/users/aliceilopezg.jpeg",
-          image: "https://bit.ly/3W2pTk6",
+          image: "../../assets/countries/ES/2.jpeg",
           comment: "just took a few mushrooms lol",
           likes: 21
         }
