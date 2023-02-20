@@ -7,10 +7,10 @@
     <div class="d-flex">
       <div class="col-4 ps-4 pe-0 border-start border-end">
         <p>
-          <fa-icon [icon]="['fas', 'globe']" class="me-1"></fa-icon> {{countryAPI.region}}
+          <fa-icon [icon]="['fas', 'globe']" class="me-1"></fa-icon> {{region === 'Américas' ? 'América' : region}}
         </p>
         <p>
-          <fa-icon [icon]="['fas', 'map-marked-alt']" class="me-1"></fa-icon> {{countryAPI.capital}}
+          <fa-icon [icon]="['fas', 'map-marked-alt']" class="me-1"></fa-icon> {{capital}}
         </p>
       </div>
       <div class="col-4 ps-4 pe-0 border-end">
@@ -61,4 +61,3 @@
     </div>
   </div>
 </div>
-

@@ -1,3 +1,4 @@
+import { TranslateService } from './../services/translate.service';
 import { CountriesService } from './../services/countries.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -12,12 +13,17 @@ export class CountryComponent implements OnInit {
   countryAPI: any;
   countryPosts: any;
   countryCode: string;
+  region: any;
+  capital: any;
   currency: any;
+  population: any;
+  religion: any;
   language: any;
 
   constructor(
     private countriesService: CountriesService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    public translateService: TranslateService
   ) {
     this.countryCode = this.activatedRoute.snapshot.paramMap.get('code')!;
     if (!localStorage.getItem('countries') || !this.countriesService.countries.length) {
@@ -30,5 +36,12 @@ export class CountryComponent implements OnInit {
     this.countryPosts = this.countriesService.countriesPosts.find(countryPost => countryPost.country == this.countryCode)?.posts;
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.translateService.translate(this.countryAPI.region).subscribe(res => this.region = res[0][0][0]);
+    this.translateService.translate(this.countryAPI.capital).subscribe(res => this.capital = res[0][0][0]);
+    this.translateService.translate(this.currency.name).subscribe(res => this.currency.name = res[0][0][0]);
+    this.translateService.translate(this.population).subscribe(res => this.population = res[0][0][0]);
+    this.translateService.translate(this.religion).subscribe(res => this.religion = res[0][0][0]);
+    this.translateService.translate(this.language).subscribe(res => this.language = res[0][0][0]);
+  }
 }
