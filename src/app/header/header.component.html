@@ -1,3 +1,29 @@
-<header class="p-3">
+<header>
+  <nav class="navbar navbar-expand-lg bg-color-primary pb-0 pt-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="'home'">Responsive navbar</a>
 
+      <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+
+      <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'reserva'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Mi reserva</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'alojamiento'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Alojamiento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'destinos'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Destinos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'checkin'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Check-in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'planing'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Planing de Vuelo</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>

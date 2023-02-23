@@ -21,8 +21,8 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'nosotros',
-    component: UsComponent,
+    path: 'reserva',
+    component: PlaceComponent,
     canActivate: [AuthGuard]
   },
   {
@@ -31,23 +31,23 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'lugar',
-    component: PlaceComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'programa',
-    component: PlanningComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'formulario',
-    component: FormComponent,
+    path: 'destinos',
+    component: UsComponent,
     canActivate: [AuthGuard]
   },
   {
     path: 'pais/:code',
     component: CountryComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'checkin',
+    component: FormComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'planing',
+    component: PlanningComponent,
     canActivate: [AuthGuard]
   },
   {

@@ -1,3 +1,4 @@
+import { UtilsService } from './../utils.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./place.component.scss']
 })
 export class PlaceComponent {
+
+  constructor(
+    public utilsService: UtilsService
+  ) { }
 
 }

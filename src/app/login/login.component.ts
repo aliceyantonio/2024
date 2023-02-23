@@ -27,6 +27,8 @@ export class LoginComponent {
   }
 
   login() {
+    localStorage.clear();
+
     const currentUser = this.utilsService.users.find(user =>
       user.username === this.loginForm.value.username
       && user.bookingIds.includes(this.loginForm.value.bookingId!)
@@ -37,7 +39,7 @@ export class LoginComponent {
       this.router.navigate(['home']);
     } else {
       alert('¿plata o plomo extraño?');
-    }
+    };
   }
 
 

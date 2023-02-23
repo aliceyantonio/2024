@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { User } from './models/user.model';
 import { Injectable } from '@angular/core';
 
@@ -8,22 +9,28 @@ export class UtilsService {
   // userRoles: string[];
   currentUser: User;
 
-  constructor() {
+  constructor(
+    private router: Router
+  ) {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser')!);
   }
 
-  setCurrentUser(currentUser: User){
+  setCurrentUser(currentUser: User) {
     this.currentUser = currentUser;
     localStorage.setItem('currentUser', JSON.stringify(currentUser));
   }
 
-  getCurrentUser(){
+  getCurrentUser() {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser')!);
   }
 
-  familyId = 'AA15062024'
-  friendsId = 'AA08062024'
+  logOut() {
+    localStorage.clear();
+    this.router.navigate(['login']);
+  }
 
+  familyId = 'AA15062024';
+  friendsId = 'AA08062024';
 
   users = [
     {
@@ -42,5 +49,5 @@ export class UtilsService {
       userRoles: ['family', 'friend'],
       dependientes: 1
     }
-  ]
+  ];
 }
