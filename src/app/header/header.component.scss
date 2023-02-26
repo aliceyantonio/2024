@@ -12,8 +12,17 @@ header {
 
     img {
       filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(106%) contrast(101%);
-      rotate: 90deg;
+      rotate: 45deg;
       max-height: 50px;
+    }
+
+    img:last-child {
+      rotate: -45deg;
+      margin-left: 10px;
+      max-height: 40px;
+      position: absolute;
+      top: 50%;
+      transform: translate(24%, -49%);
     }
   }
 
