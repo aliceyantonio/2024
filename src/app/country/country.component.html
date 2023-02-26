@@ -1,24 +1,24 @@
 <div class="row border rounded p-3 apiInfoRow">
   <div class="col-4 text-center d-flex align-items-center justify-content-center">
-    <img class="w-50" [src]="countryAPI.flags.png" alt="" srcset="">
+    <img class="w-50" [src]="countryData.flag">
   </div>
   <div class="col-8">
-    <h2>{{countryAPI.translations.spa.common}}</h2>
+    <h2>{{countryData.translations.spa.common ? countryData.translations.spa.common : countryData.translations.spa.official}}</h2>
     <div class="d-flex">
       <div class="col-4 ps-4 pe-0 border-start border-end">
         <p>
-          <fa-icon [icon]="['fas', 'globe']" class="me-1"></fa-icon> {{region === 'Américas' ? 'América' : region}}
+          <fa-icon [icon]="['fas', 'globe']" class="me-1"></fa-icon> {{ region |titlecase }}
         </p>
         <p>
-          <fa-icon [icon]="['fas', 'map-marked-alt']" class="me-1"></fa-icon> {{capital}}
+          <fa-icon [icon]="['fas', 'map-marked-alt']" class="me-1"></fa-icon> {{ capital  |titlecase }}
         </p>
       </div>
       <div class="col-4 ps-4 pe-0 border-end">
         <p>
-          <fa-icon [icon]="['far', 'money-bill-alt']" class="me-1"></fa-icon> {{ currency.symbol}} {{ currency.name }}
+          <fa-icon [icon]="['far', 'money-bill-alt']" class="me-1"></fa-icon> {{ currency.symbol |titlecase }} {{ currency.name |titlecase }}
         </p>
         <p>
-          <fa-icon [icon]="['fas', 'street-view']" class="me-1"></fa-icon> {{ countryAPI.population }}
+          <fa-icon [icon]="['fas', 'street-view']" class="me-1"></fa-icon> {{ countryData.population }}
         </p>
       </div>
       <div class="col-4 ps-4 pe-0">
@@ -26,7 +26,7 @@
           <fa-icon [icon]="['fas', 'pray']" class="me-1"></fa-icon> Religión
         </p>
         <p>
-          <fa-icon [icon]="['fas', 'language']" class="me-1"></fa-icon> {{ language }}
+          <fa-icon [icon]="['fas', 'language']" class="me-1"></fa-icon> {{ languages }}
         </p>
       </div>
     </div>

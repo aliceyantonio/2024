@@ -1,5 +1,5 @@
-import { UtilsService } from './../utils.service';
 import { Component } from '@angular/core';
+import { UtilsService } from '../services/utils.service';
 
 @Component({
   selector: 'app-place',

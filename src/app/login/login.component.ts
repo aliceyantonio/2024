@@ -1,7 +1,9 @@
+import { User } from './../models/user.model';
+import { UserService } from './../services/user.service';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UtilsService } from '../utils.service';
+import { UtilsService } from '../services/utils.service';
 
 @Component({
   selector: 'app-login',
@@ -21,6 +23,7 @@ export class LoginComponent {
   constructor(
     private router: Router,
     private utilsService: UtilsService,
+    private userService: UserService,
     private fb: FormBuilder
   ) {
 
@@ -29,17 +32,20 @@ export class LoginComponent {
   login() {
     localStorage.clear();
 
-    const currentUser = this.utilsService.users.find(user =>
-      user.username === this.loginForm.value.username
-      && user.bookingIds.includes(this.loginForm.value.bookingId!)
-    );
+    this.userService.getUsers().subscribe(res => {
+      const currentUser = JSON.parse(res.value).find((user:User) =>
+        user.username === this.loginForm.value.username
+        && user.bookingIds.includes(this.loginForm.value.bookingId!)
+      );
 
-    if (currentUser) {
-      this.utilsService.setCurrentUser(currentUser);
-      this.router.navigate(['home']);
-    } else {
-      alert('¿plata o plomo extraño?');
-    };
+      if (currentUser) {
+        this.userService.setCurrentUser(currentUser);
+        this.router.navigate(['home']);
+      } else {
+        alert('¿plata o plomo extraño?');
+      };
+    })
+
   }
 
 

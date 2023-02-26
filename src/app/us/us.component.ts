@@ -20,11 +20,7 @@ export class UsComponent implements OnInit {
     private countriesService: CountriesService,
     private router: Router,
     private location: Location
-  ) {
-    if (!localStorage.getItem('countries') || !this.countriesService.countries.length) {
-      this.countriesService.getAll();
-    };
-  }
+  ) { }
 
   ngOnInit(): void {
 
@@ -46,12 +42,12 @@ export class UsComponent implements OnInit {
       onRegionTooltipShow: (tooltip: any, code: any) => {
         tooltip.css({ backgroundColor: '#000000' });
 
-        const country = this.countriesService.countries.find(country => country['cca2'] == code);
+        const country = this.countriesService.countriesDataEsp.find((country: any) => country['cca2'] == code);
 
         tooltip.selector.innerHTML =
-          `<img style='height:10px' src='${country!['flags']['png']}'>
+          `<img style='height:10px' src='${country!['flag']}'>
           <div style='color:white; display:inline-block'>
-            ${country!['translations']['spa']['common']}
+            ${country!['translations']['spa']['common'] ? country!['translations']['spa']['common'] : country!['translations']['spa']['official']}
           </div>`;
       },
 
