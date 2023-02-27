@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "git config --global user.email a2vallejolopez@gmail.com && git config --global user.name aliceyantonio && ng deploy --base-href=/2024/ && git config --global user.email antonio.vapei@gmail.com && git config --global user.name vapean"
+    "deploy": "ng deploy --base-href=/2024/"
   },
   "private": true,
   "dependencies": {
