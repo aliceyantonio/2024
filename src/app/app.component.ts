@@ -17,5 +17,6 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe(event => {
       this.isLogin = location.href.includes('login');
     })
+
   }
 }

@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import { UsComponent } from './us/us.component';
 import { AccommodationComponent } from './accommodation/accommodation.component';
-import { PlaceComponent } from './place/place.component';
+import { ReservationComponent } from './reservation/reservation.component';
 import { PlanningComponent } from './planning/planning.component';
 import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -21,6 +21,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CountryComponent } from './country/country.component';
+import { TravelersComponent } from './travelers/travelers.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +30,13 @@ import { CountryComponent } from './country/country.component';
     FormComponent,
     UsComponent,
     AccommodationComponent,
-    PlaceComponent,
+    ReservationComponent,
     PlanningComponent,
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    CountryComponent
+    CountryComponent,
+    TravelersComponent
   ],
   imports: [
     BrowserModule,
