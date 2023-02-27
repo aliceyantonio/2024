@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-lg bg-color-primary pb-0 pt-4">
+  <nav class="navbar navbar-expand-lg bg-color-primary pb-0 pt-4" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" [routerLink]="'home'">
         <img src="assets/images/turtle_solid.svg">
@@ -20,6 +20,9 @@
             <a class="nav-link" [routerLink]="'destinos'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Destinos</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" [routerLink]="'viajeros'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Viajeros</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" [routerLink]="'checkin'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Check-in</a>
           </li>
           <li class="nav-item">
@@ -30,3 +33,9 @@
     </div>
   </nav>
 </header>
+
+<button onclick="var el=document.querySelector('body'); el.requestFullscreen();">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize">
+		<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+	</svg>
+</button>

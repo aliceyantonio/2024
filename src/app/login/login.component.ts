@@ -1,6 +1,6 @@
 import { User } from './../models/user.model';
 import { UserService } from './../services/user.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UtilsService } from '../services/utils.service';
@@ -10,8 +10,7 @@ import { UtilsService } from '../services/utils.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
-
+export class LoginComponent implements OnInit {
 
   password: any;
 
@@ -26,14 +25,20 @@ export class LoginComponent {
     private userService: UserService,
     private fb: FormBuilder
   ) {
+  }
 
+  ngOnInit(): void {
+    document.getElementById('loginComponent')!.addEventListener("click", function () {
+      var el = document.documentElement
+      el.requestFullscreen();
+    });
   }
 
   login() {
     localStorage.clear();
 
     this.userService.getUsers().subscribe(res => {
-      const currentUser = JSON.parse(res.value).find((user:User) =>
+      const currentUser = JSON.parse(res.value).find((user: User) =>
         user.username === this.loginForm.value.username
         && user.bookingIds.includes(this.loginForm.value.bookingId!)
       );
@@ -47,8 +52,5 @@ export class LoginComponent {
     })
 
   }
-
-
-
 
 }
