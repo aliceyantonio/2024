@@ -36,6 +36,28 @@ body{
   font-family: 'Lato', sans-serif;
 }
 
-main{
-  background-color: white;
+:fullscreen, ::backdrop {
+  background-color: white
+}
+
+#header.on-hover #navbar {
+  transform: translateY(-100%);
+  transition: 1s;
+}
+
+#header.on-hover:hover #navbar {
+  transform: translateY(0);
+  transition: 1s;
+}
+
+#footer.on-hover div {
+  transform: translateY(100%);
+  transition: 1s;
+  visibility: hidden;
+}
+
+#footer.on-hover:hover div {
+  transform: translateY(0);
+  transition: 1s;
+  visibility: hidden;
 }
