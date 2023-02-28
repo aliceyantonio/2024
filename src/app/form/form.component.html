@@ -6,7 +6,7 @@
 </div>
 <div class="form-wrap">
   <form method="POST" id="survey-form"
-    action="https://script.google.com/macros/s/AKfycbyX6kzYOpLEKSFs2t37ajilEp3ONZMGgym-epjG6rpojL8s9bXkgzJjCYKSgd8JR0rN/exec">
+    action="https://script.google.com/macros/s/AKfycbyX6kzYOpLEKSFs2t37ajilEp3ONZMGgym-epjG6rpojL8s9bXkgzJjCYKSgd8JR0rN/exec" target="_blank">
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
@@ -131,9 +131,59 @@
       </div>
     </div>
   </form>
-  <div class="row">
-    <div class="col-lg-4">
-      <button (click)="onSubmit()" class="btn btn-primary btn-block">Enviar</button>
+</div>
+
+<form [formGroup]="checkInForm" (ngSubmit)="onSubmit()">
+  <div class="form-row justify-content-center">
+
+    <div class="form-group">
+      <label for="nombre">nombre</label>
+      <input type="text" class="form-control" id="nombre" formControlName="nombre">
+    </div>
+    <div class="form-group">
+      <label for="apellido">apellido</label>
+      <input type="text" class="form-control" id="apellido" formControlName="apellido">
+    </div>
+    <div class="form-group">
+      <label for="email">email</label>
+      <input type="text" class="form-control" id="email" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="telefono">telefono</label>
+      <input type="text" class="form-control" id="telefono" formControlName="telefono">
+    </div>
+    <div class="form-group">
+      <label for="menu">menu</label>
+      <input type="text" class="form-control" id="menu" formControlName="menu">
+    </div>
+    <div class="form-group">
+      <label for="bebida">bebida</label>
+      <input type="text" class="form-control" id="bebida" formControlName="bebida">
+    </div>
+    <div class="form-group">
+      <label for="alergia">alergia</label>
+      <input type="text" class="form-control" id="alergia" formControlName="alergia">
+    </div>
+    <div class="form-group">
+      <label for="transporte">transporte</label>
+      <input type="text" class="form-control" id="transporte" formControlName="transporte">
+    </div>
+    <div class="form-group">
+      <label for="alojamiento">alojamiento</label>
+      <input type="text" class="form-control" id="alojamiento" formControlName="alojamiento">
+    </div>
+    <div class="form-group">
+      <label for="otros">otros</label>
+      <input type="text" class="form-control" id="otros" formControlName="otros">
+    </div>
+
+
+    <div class="form-group">
+      <label>&nbsp;</label>
+      <button type="submit" class="btn btn-primary form-control" [disabled]="checkInForm.invalid">
+        Enviar
+      </button>
     </div>
   </div>
-</div>
+</form>
+
