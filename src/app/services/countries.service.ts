@@ -28,6 +28,14 @@ export class CountriesService {
           image: "assets/countries/ES/2.jpeg",
           comment: "just took a few mushrooms lol",
           likes: 21
+        },
+        {
+          username: "aliceilopezg",
+          location: "Zundert, Netherlands",
+          avatar: "assets/users/aliceilopezg.jpeg",
+          image: "assets/countries/ES/2.jpeg",
+          comment: "just took a few mushrooms lol",
+          likes: 21
         }
       ]
     }
