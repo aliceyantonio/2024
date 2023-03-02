@@ -33,8 +33,8 @@
           d="m 85.55159,42.447431 c 0,0 -5.282585,0.456211 -6.372912,3.263659 1.335401,2.378073 6.397919,2.528767 6.397919,2.528767 z" />
         <path fill="#fff" stroke="#464646" stroke-linejoin="round" stroke-width="1"
           d="m 133.68903,31.07417 h -7.01411 c -1.26938,0 -2.89286,-1.005314 -3.21496,-3.216179 h 7.50225 z" />
-        <ellipse cx="113.564" cy="29.448534" fill="#fff" stroke="#464646" stroke-linecap="square" stroke-linejoin="round"
-          stroke-width="1" rx="1.3354006" ry="1.6400863" />
+        <ellipse cx="113.564" cy="29.448534" fill="#fff" stroke="#464646" stroke-linecap="square"
+          stroke-linejoin="round" stroke-width="1" rx="1.3354006" ry="1.6400863" />
         <ellipse cx="107.56219" cy="29.448534" fill="#fff" stroke="#464646" stroke-linecap="square"
           stroke-linejoin="round" stroke-width="1" rx="1.3354006" ry="1.6400863" />
         <ellipse cx="101.56039" cy="29.448534" fill="#fff" stroke="#464646" stroke-linecap="square"
@@ -62,32 +62,34 @@
   </div>
 
   <div class="container">
-    <div class="w-50 border rounded p-4 mx-auto bg-color-light">
-        <div class="w-50 d-inline-block pe-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea debitis illum sed temporibus vitae consectetur
-          expedita, quaerat in! Dicta est quisquam ullam incidunt nobis, mollitia eum autem eligendi dolorem vitae.
+    <div class="row m-0">
+      <div class="col-12 col-lg-6 border rounded p-4 mx-auto bg-color-light">
+        <div class="row m-0">
+          <div class="col-lg-6 p-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea debitis illum sed temporibus vitae consectetur
+            expedita, quaerat in! Dicta est quisquam ullam incidunt nobis, mollitia eum autem eligendi dolorem vitae.
+          </div>
+          <div class="col-lg-6 p-0 pt-3 pt-lg-0">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="username">Nombre del Pasajero/a</label>
+                  <input type="text" class="form-control" id="username" formControlName="username" maxlength="10">
+                </div>
+                <div class="form-group mt-2">
+                  <label for="bookingId">Id de Reserva</label>
+                  <input type="text" class="form-control" id="bookingId" formControlName="bookingId" maxlength="10">
+                </div>
+                <div class="form-group mt-3">
+                  <button type="submit" class="btn btn-primary form-control" [disabled]="loginForm.invalid">
+                    <i class="fa fa-search"></i> Entrar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="w-50 d-inline-block ps-4">
-          <form [formGroup]="loginForm" (ngSubmit)="login()">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="username">Nombre del Pasajero/a</label>
-                <input type="text" class="form-control" id="username" formControlName="username" maxlength="10">
-              </div>
-              <div class="form-group">
-                <label for="bookingId">Id de Reserva</label>
-                <input type="text" class="form-control" id="bookingId" formControlName="bookingId" maxlength="10">
-              </div>
-
-              <div class="form-group">
-                <label>&nbsp;</label>
-                <button type="submit" class="btn btn-primary form-control" [disabled]="loginForm.invalid">
-                  <i class="fa fa-search"></i> Entrar
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
+      </div>
     </div>
   </div>
 </div>
