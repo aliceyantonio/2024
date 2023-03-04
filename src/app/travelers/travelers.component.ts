@@ -1,3 +1,4 @@
+import { UtilsService } from './../services/utils.service';
 import { Component, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
@@ -8,6 +9,10 @@ import { Component, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
 })
 export class TravelersComponent implements OnInit, OnDestroy {
 
+  constructor(
+    private utilsService: UtilsService
+  ) { }
+
   ngOnInit(): void {
     document.getElementById('iDuck')!.style.display = 'none';
     document.getElementById('header')!.classList.add('on-hover');
@@ -15,6 +20,9 @@ export class TravelersComponent implements OnInit, OnDestroy {
     document.querySelector('body')!.style.overflow = 'hidden';
     document.querySelector('body')!.style.position = 'relative';
     document.querySelector('html')!.style.overflow = 'hidden';
+
+    this.utilsService.swapNodes(document.getElementById(this.utilsService.randomNumber(1, 5)), document.getElementById(this.utilsService.randomNumber(1, 5)))
+    this.utilsService.swapNodes(document.getElementById(this.utilsService.randomNumber(1, 5)), document.getElementById(this.utilsService.randomNumber(1, 5)))
   }
 
   ngOnDestroy(): void {

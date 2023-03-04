@@ -1,50 +1,38 @@
-#travelersComponent {
+body {
   overflow: hidden;
+  background-color: #131520;
 }
 
 .wrapper-images {
   display: flex;
   flex-direction: column;
-  // height: 50vh;
   justify-content: center;
   left: 50%;
   position: absolute;
-  top: 50%;
-  opacity: 0.8;
+  top: 54%;
   z-index: -1;
   transform: translate3d(-50%, -50%, 0) perspective(800px) rotatey(10deg) rotateX(-10deg);
 }
 
 .images-line {
-  animation: runner 15s linear infinite;
+  animation: runner 25s linear infinite;
   display: flex;
   transform: translateX(23%);
 
   &:nth-child(even) {
-    animation-duration: calc(15s * 1.5);
+    animation-duration: calc(25s * 1.5);
   }
 
   .line {
     background-position: 50% 50%;
     background-size: cover;
     flex: none;
-    height: 28vh;
+    height: 19vh;
     margin: clamp(10px, 1vw, 20px);
-    width: 21vh;
+    width: 28vh;
     position: relative;
     transition: ease-in-out all 0.3s;
     border-radius: 1rem;
-
-    // background-position: 50% 50%;
-    // background-size: cover;
-    // flex: none;
-    // height: 29vh;
-    // margin: clamp(10px, 2vw, 20px);
-    // width: 20vh;
-    // position: relative;
-    // transition: ease-in-out all 0.3s;
-    // border-radius: 1rem;
-
 
     .img {
       position: absolute;
@@ -58,17 +46,6 @@
       transition: ease-in-out all 0.3s;
       overflow: hidden;
       border-radius: 1rem;
-    }
-
-    &:hover {
-      .img {
-        cursor: pointer;
-        transform: scale(1.1) translatez(0px);
-      }
-
-      &:after {
-        filter: blur(35px) opacity(0.8);
-      }
     }
 
     &:after {
@@ -100,7 +77,6 @@
 .dev {
   font-family: "Poppins", sans-serif;
   position: fixed;
-  font-size: clamp(8px, 3vw, 14px);
   bottom: 1vw;
   left: 1vw;
   padding: 1em;
