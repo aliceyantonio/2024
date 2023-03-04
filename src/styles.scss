@@ -31,13 +31,17 @@
 .bg-color-quaternary { background-color: var(--color-quaternary);}
 .bg-color-quinary { background-color: var(--color-quinary);}
 
+html{
+  font-size: 14px;
+}
+
 body{
   font-size: 1rem;
   font-family: 'Lato', sans-serif;
 }
 
 :fullscreen, ::backdrop {
-  background-color: white
+  background-color: inherit
 }
 
 #header.on-hover #navbar {
