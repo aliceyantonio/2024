@@ -1,28 +1,56 @@
-<!-- relleno que solo ponga una descripcion de cada sección -->
-<!-- cubito de from to -->
-<!-- stepper -->
-
-
 <div id="homeComponent">
 
-  <div class="searcher mb-5 row">
+  <div class="searcher row m-0" *ngIf="this.userService.currentUser.userRoles.includes('friend')">
+    <h4>Itinerario de viaje</h4>
+    <h6 *ngIf="this.userService.currentUser.userRoles.length > 1" class="mb-3">Escala 1</h6>
     <div class="form-floating mb-3 col-6 px-1">
-      <input type="text" class="form-control" id="floatingInput" value="Madrid">
+      <input type="text" class="form-control" id="floatingInput"
+        [value]="this.userService.currentUser.origin |titlecase">
       <label for="floatingInput">Origen</label>
     </div>
     <div class="form-floating mb-3 col-6 px-1">
-      <input type="text" class="form-control" id="floatingInput" value="Avila">
+      <input type="text" class="form-control" id="floatingInput" value="Ávila">
       <label for="floatingInput">Destino</label>
     </div>
-    <div class="form-floating col-6 px-1">
+    <div class="form-floating col-5 px-1">
       <input type="text" class="form-control" id="floatingInput" value="08/09-JUN-2024">
       <label for="floatingInput">Fecha de salida</label>
     </div>
-    <div class="form-floating col-6 px-1">
-      <input type="text" class="form-control" id="floatingInput" value="2 Adultos">
-      <label for="floatingInput">Número de Pasajeros</label>
+    <div class="form-floating col-4 col-lg-5 px-1">
+      <input type="text" class="form-control" id="floatingInput"
+        [value]="this.userService.currentUser.dependientes + (this.userService.currentUser.dependientes > 1 ? ' Adultos' : ' Adulto')">
+      <label for="floatingInput">Pasajeros</label>
+    </div>
+    <div class="col-3 col-lg-2 p-0 ps-lg-2">
+      <button class="btn btn-light w-100 h-100" (click)="startTrip()">Empezar</button>
     </div>
   </div>
+  <div class="searcher row m-0" *ngIf="this.userService.currentUser.userRoles.includes('family')">
+    <h4 *ngIf="this.userService.currentUser.userRoles.length === 1">Itinerario de viaje</h4>
+    <h6 *ngIf="this.userService.currentUser.userRoles.length > 1" class="mb-3">Escala 2</h6>
+    <div class="form-floating mb-3 col-6 px-1">
+      <input type="text" class="form-control" id="floatingInput"
+        [value]="this.userService.currentUser.origin |titlecase">
+      <label for="floatingInput">Origen</label>
+    </div>
+    <div class="form-floating mb-3 col-6 px-1">
+      <input type="text" class="form-control" id="floatingInput" value="La Granja">
+      <label for="floatingInput">Destino</label>
+    </div>
+    <div class="form-floating col-5 px-1">
+      <input type="text" class="form-control" id="floatingInput" value="08/09-JUN-2024">
+      <label for="floatingInput">Fecha de salida</label>
+    </div>
+    <div class="form-floating col-4 col-lg-5 px-1">
+      <input type="text" class="form-control" id="floatingInput"
+        [value]="this.userService.currentUser.dependientes + (this.userService.currentUser.dependientes > 1 ? ' Adultos' : ' Adulto')">
+      <label for="floatingInput">Pasajeros</label>
+    </div>
+    <div class="col-3 col-lg-2 p-0 ps-lg-2">
+      <button class="btn btn-light w-100 h-100" (click)="startTrip()">Empezar</button>
+    </div>
+  </div>
+
   <div class="stepper">
     <div class="step">
       <div class="step-circle">

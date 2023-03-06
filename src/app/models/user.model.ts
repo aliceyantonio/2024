@@ -5,4 +5,5 @@ export class User {
   'bookingIds': string[];
   'userRoles': string[];
   'dependientes': number;
+  'origin': string;
 }

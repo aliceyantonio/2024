@@ -1,19 +1,44 @@
 <div id="planingComponent">
-  <h2>Próximamente</h2>
-  <p>Sabemos que te mueres de ganas de conocer todos los detalles del evento pero tenemos que pedirte que suportes la
-    espera un poco más</p>
-  <div id="countdown">
-    <div>
-      <span>Días</span>
-      <span>Horas</span>
-      <span>Minutos</span>
-      <span>Segundos</span>
-    </div>
-    <div class="numbers">
-      <span id="days">00</span>
-      <span id="hours">00</span>
-      <span id="minutes">00</span>
-      <span id="seconds">00</span>
-    </div>
+  <div class="mt-3 mb-5">
+    <h2>Próximamente</h2>
+    <p>Sabemos que te mueres de ganas de conocer todos los detalles del evento pero tenemos que pedirte que suportes la
+      espera un poco más.</p>
   </div>
+
+  <ng-container *ngIf="this.userService.currentUser.userRoles.includes('family')">
+    <h3>Tiempo hasta la fecha de salida</h3>
+    <h6 *ngIf="this.userService.currentUser.userRoles.length > 1" class="mt-4">Escala 1</h6>
+    <div id="countdown">
+      <div>
+        <span>Días</span>
+        <span>Horas</span>
+        <span>Minutos</span>
+        <span>Segundos</span>
+      </div>
+      <div class="numbers">
+        <span id="days_1">00</span>
+        <span id="hours_1">00</span>
+        <span id="minutes_1">00</span>
+        <span id="seconds_1">00</span>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="this.userService.currentUser.userRoles.includes('friend')">
+    <h6 *ngIf="this.userService.currentUser.userRoles.length > 1" class="mt-4">Escala 2</h6>
+    <div id="countdown">
+      <div>
+        <span>Días</span>
+        <span>Horas</span>
+        <span>Minutos</span>
+        <span>Segundos</span>
+      </div>
+      <div class="numbers">
+        <span id="days_2">00</span>
+        <span id="hours_2">00</span>
+        <span id="minutes_2">00</span>
+        <span id="seconds_2">00</span>
+      </div>
+    </div>
+  </ng-container>
 </div>

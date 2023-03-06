@@ -1,3 +1,4 @@
+import { UserService } from './../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public userService: UserService
+  ) { }
 
   ngOnInit(): void {
     document.getElementById('iDuck')!.style.display = 'initial';
+  }
+
+  startTrip() {
+    document.querySelector(".stepper")!.scrollIntoView();
   }
 
 }
