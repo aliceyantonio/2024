@@ -1,0 +1,24 @@
+#planingComponent {
+  text-align: center;
+
+  #countdown div {
+    display: flex;
+    justify-content: center;
+  }
+
+  #countdown {
+    div span {
+      display: inline-block;
+      width: 75px;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      background-color: var(--color-primary);
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .numbers {
+      font-size: 2em;
+    }
+  }
+}
