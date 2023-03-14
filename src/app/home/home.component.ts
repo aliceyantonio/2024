@@ -35,12 +35,6 @@ export class HomeComponent implements OnInit {
             (document.querySelector('.s1 .section-image') as HTMLElement).classList.add('animationCompleted'); // then only replace with blue div with new height and width
           }
         });
-
-
-    // document.querySelector(".btn")!.addEventListener("click", () => {
-    //   tl.reversed() ? tl.play() : tl.reverse();
-    // });
-
   }
 
   startTrip() {
@@ -60,6 +54,7 @@ export class HomeComponent implements OnInit {
               (document.querySelector('.s2 .section-image') as HTMLElement).classList.add('animationCompleted'); // then only replace with blue div with new height and width
             }
           });
+
     } else if ((window.pageYOffset > (document.querySelectorAll('.section')[2]! as HTMLElement).offsetTop - 500) && !this.section3Animated) {
       console.log('aqui 3');
       this.section3Animated = true
@@ -70,6 +65,7 @@ export class HomeComponent implements OnInit {
             (document.querySelector('.s3 .section-image') as HTMLElement).classList.add('animationCompleted'); // then only replace with blue div with new height and width
           }
         });
+
     } else if ((window.pageYOffset > (document.querySelectorAll('.section')[3]! as HTMLElement).offsetTop - 500) && !this.section4Animated) {
       console.log('aqui 4');
       this.section4Animated = true
@@ -80,6 +76,7 @@ export class HomeComponent implements OnInit {
             (document.querySelector('.s4 .section-image') as HTMLElement).classList.add('animationCompleted'); // then only replace with blue div with new height and width
           }
         });
+
     } else if ((window.pageYOffset > (document.querySelectorAll('.section')[4]! as HTMLElement).offsetTop - 500) && !this.section5Animated) {
       console.log('aqui 5');
       this.section5Animated = true
@@ -90,6 +87,7 @@ export class HomeComponent implements OnInit {
             (document.querySelector('.s5 .section-image') as HTMLElement).classList.add('animationCompleted'); // then only replace with blue div with new height and width
           }
         });
+
     } else if ((window.pageYOffset > (document.querySelectorAll('.section')[5]! as HTMLElement).offsetTop - 500) && !this.section6Animated) {
       console.log('aqui 6');
       this.section6Animated = true
@@ -102,5 +100,4 @@ export class HomeComponent implements OnInit {
         });
     }
   }
-
 }
