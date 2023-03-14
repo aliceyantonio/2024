@@ -13,7 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -22,6 +22,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { HttpClientModule } from '@angular/common/http';
 import { CountryComponent } from './country/country.component';
 import { TravelersComponent } from './travelers/travelers.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { TravelersComponent } from './travelers/travelers.component';
     HeaderComponent,
     FooterComponent,
     CountryComponent,
-    TravelersComponent
+    TravelersComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +46,8 @@ import { TravelersComponent } from './travelers/travelers.component';
     ReactiveFormsModule,
     FontAwesomeModule,
     HttpClientModule,
+    FormsModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
