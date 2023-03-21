@@ -1,5 +1,38 @@
-
 <button class="btn btn-light" (click)="utilsService.logOut()">logOut</button>
+<button class="btn btn-light" (click)="userService.setUsers()">update</button>
+<button class="btn btn-light" (click)="openModal()">invitación</button>
 
-<!-- invitación -->
 <!-- cosas a llevar (poner cosas graciosas como llevra flotador, pantalon de perreo (para que no te apse lo que a jaime)) -->
+<!-- datos de pago https://codepen.io/emacampa/pen/MWOygoV -->
+<ng-template ng-template #invitationModal let-modal>
+  <section class="cartridge">
+    <div class="case">
+      <figure class="front">
+        <figure></figure>
+        <figure class="label"></figure>
+      </figure>
+
+      <figure class="back">
+        <figure></figure>
+      </figure>
+
+      <figure class="rightside">
+        <figure></figure>
+      </figure>
+
+      <figure class="leftside">
+        <figure></figure>
+      </figure>
+
+      <figure class="topside">
+        <figure></figure>
+      </figure>
+
+      <figure class="bottomside">
+        <figure></figure>
+      </figure>
+
+    </div>
+  </section>
+</ng-template>
+
