@@ -8,11 +8,10 @@
   --color-medium: #828282;
   --color-dark: #000000;
 
-  --color-primary: #0f1941;
-  --color-secondary: #868da0;
-  --color-tertiary: #2275d9;
-  --color-quaternary: #6ba5b4;
-  --color-quinary: #ffaf00;
+  // --color-primary: #0f1941;
+  --color-primary: #0d453f;
+  --color-secondary: #869d84;
+  --color-tertiary: #6ba5b4;
 }
 
 .color-light { color: var(--color-light);}
@@ -21,8 +20,6 @@
 .color-primary { color: var(--color-primary);}
 .color-secondary { color: var(--color-secondary);}
 .color-tertiary { color: var(--color-tertiary);}
-.color-quaternary { color: var(--color-quaternary);}
-.color-quinary { color: var(--color-quinary);}
 
 .bg-color-light { background-color: var(--color-light);}
 .bg-color-medium { background-color: var(--color-medium);}
@@ -30,8 +27,6 @@
 .bg-color-primary { background-color: var(--color-primary); color: var(--color-light);}
 .bg-color-secondary { background-color: var(--color-secondary);}
 .bg-color-tertiary { background-color: var(--color-tertiary);}
-.bg-color-quaternary { background-color: var(--color-quaternary);}
-.bg-color-quinary { background-color: var(--color-quinary);}
 
 html{
   font-size: 14px;

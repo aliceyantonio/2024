@@ -54,15 +54,15 @@ export class UsComponent implements OnInit {
       // estilos del mapa
       regionStyle: {
         initial: {
-          fill: '#0f1941'
+          fill: '#0d453f'
         },
-        hover: {
-          fillOpacity: 0.5,
-          fill: 'blue'
-        },
-        selected: {
-          fill: 'blue'
-        }
+        // hover: {
+        //   fillOpacity: 0.5,
+        //   fill: '#869d84'
+        // },
+        // selected: {
+        //   fill: '#869d84'
+        // }
       },
 
       regionLabelStyle: {
@@ -71,7 +71,7 @@ export class UsComponent implements OnInit {
           fontSize: '12',
           fontWeight: 'bold',
           cursor: 'default',
-          fill: '#ff5566'
+          fill: '#869d84'
         },
         hover: {
           cursor: 'pointer'
@@ -83,7 +83,7 @@ export class UsComponent implements OnInit {
           {
             attribute: 'fill',
             scale: {
-              'visitados': 'blue',
+              'visitados': '#869d84',
             },
             values: {
               ES: 'visitados',
