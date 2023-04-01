@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CountryComponent } from './country/country.component';
 import { TravelersComponent } from './travelers/travelers.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { NgParticlesModule } from 'ng-particles';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    NgSelectModule
+    NgSelectModule,
+    NgParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
