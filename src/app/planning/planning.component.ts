@@ -63,7 +63,6 @@ export class PlanningComponent implements OnInit, OnDestroy {
         }
       }
     }, 1000);
-
   }
 
   ngOnDestroy(): void {

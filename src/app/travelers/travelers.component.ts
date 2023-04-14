@@ -19,7 +19,8 @@ export class TravelersComponent implements OnInit, OnDestroy {
     document.getElementById('footer')!.classList.add('on-hover');
     document.querySelector('body')!.style.overflow = 'hidden';
     document.querySelector('body')!.style.position = 'relative';
-    document.querySelector('body')!.style.backgroundColor = '#131520';
+    document.querySelector('body')!.style.backgroundColor = '#0d453f';
+    document.querySelector('main')!.style.backgroundColor = 'initial';
     document.querySelector('html')!.style.overflow = 'hidden';
 
     this.utilsService.swapNodes(document.getElementById(this.utilsService.randomNumber(1, 5)), document.getElementById(this.utilsService.randomNumber(1, 5)))
@@ -32,7 +33,8 @@ export class TravelersComponent implements OnInit, OnDestroy {
     document.getElementById('footer')!.classList.remove('on-hover');
     document.querySelector('body')!.style.overflow = 'initial';
     document.querySelector('body')!.style.position = 'initial';
-    document.querySelector('body')!.style.backgroundColor = 'initial';
+    document.querySelector('body')!.style.backgroundColor = '#0d453f';
+    document.querySelector('main')!.style.backgroundColor = '#0d453f';
     document.querySelector('html')!.style.overflow = 'initial';
   }
 

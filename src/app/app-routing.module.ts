@@ -32,7 +32,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'destinos',
+    path: 'nosotros',
     component: UsComponent,
     canActivate: [AuthGuard]
   },

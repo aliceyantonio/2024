@@ -1,5 +1,5 @@
 <header id="header">
-  <nav class="navbar navbar-expand-lg bg-color-primary py-3 py-lg-0" id="navbar">
+  <nav class="navbar navbar-expand-lg py-3 py-lg-0" id="navbar">
     <div class="container-fluid align-self-end">
       <a class="navbar-brand" [routerLink]="'home'">
         <img src="assets/images/logo_white.png">
@@ -16,7 +16,7 @@
             <a class="nav-link" [routerLink]="'alojamiento'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Alojamiento</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="'destinos'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Destinos</a>
+            <a class="nav-link" [routerLink]="'nosotros'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Nosotros</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="'viajeros'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Viajeros</a>
@@ -25,11 +25,11 @@
             <a class="nav-link" [routerLink]="'checkin'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Check-in</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="'planing'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Planing de Vuelo</a>
+            <a class="nav-link" [routerLink]="'planing'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Planing</a>
           </li>
-          <li>
+          <li class="m-auto">
             <button (click)="fullScreen()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize">
                 <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
               </svg>
             </button>

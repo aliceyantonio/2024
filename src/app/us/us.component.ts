@@ -54,27 +54,10 @@ export class UsComponent implements OnInit {
       // estilos del mapa
       regionStyle: {
         initial: {
-          fill: '#0d453f'
-        },
-        // hover: {
-        //   fillOpacity: 0.5,
-        //   fill: '#869d84'
-        // },
-        // selected: {
-        //   fill: '#869d84'
-        // }
-      },
-
-      regionLabelStyle: {
-        initial: {
-          fontFamily: 'Verdana',
-          fontSize: '12',
-          fontWeight: 'bold',
-          cursor: 'default',
-          fill: '#869d84'
+          fill: '#ffffff'
         },
         hover: {
-          cursor: 'pointer'
+          fillOpacity: 0.5,
         }
       },
 
@@ -110,7 +93,7 @@ export class UsComponent implements OnInit {
               BU: 'visitados',
               CR: 'visitados'
             }
-          },
+          }
         ]
       }
     });

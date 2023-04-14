@@ -1,78 +1,26 @@
 <div id="homeComponent">
 
-  <div class="searcher row m-0" *ngIf="this.userService.currentUser.userRoles.includes('friend')">
-    <h4>Itinerario de viaje</h4>
-    <h6 *ngIf="this.userService.currentUser.userRoles.length > 1" class="mb-3">Escala 1</h6>
-    <div class="form-floating mb-3 col-lg-6 px-1">
-      <input type="text" class="form-control" id="floatingInput"
-        [value]="this.userService.currentUser.origin |titlecase">
-      <label for="floatingInput">Origen</label>
-    </div>
-    <div class="form-floating mb-3 col-lg-6 px-1">
-      <input type="text" class="form-control" id="floatingInput" value="Ávila">
-      <label for="floatingInput">Destino</label>
-    </div>
-    <div class="form-floating col-5 px-1">
-      <input type="text" class="form-control" id="floatingInput" value="08/09-JUN-2024">
-      <label for="floatingInput">Fecha de salida</label>
-    </div>
-    <div class="form-floating col-4 col-lg-5 px-1">
-      <input type="text" class="form-control" id="floatingInput"
-        [value]="this.userService.currentUser.dependientes + (this.userService.currentUser.dependientes > 1 ? ' Adultos' : ' Adulto')">
-      <label for="floatingInput">Pasajeros</label>
-    </div>
-    <div class="col-3 col-lg-2 p-0 ps-lg-2">
-      <button class="btn btn-light w-100 h-100" (click)="startTrip()">Empezar</button>
-    </div>
-  </div>
-  <div class="searcher row m-0" *ngIf="this.userService.currentUser.userRoles.includes('family')">
-    <h4 *ngIf="this.userService.currentUser.userRoles.length === 1">Itinerario de viaje</h4>
-    <h6 *ngIf="this.userService.currentUser.userRoles.length > 1" class="mb-3">Escala 2</h6>
-    <div class="form-floating mb-3 col-lg-6 px-1">
-      <input type="text" class="form-control" id="floatingInput"
-        [value]="this.userService.currentUser.origin |titlecase">
-      <label for="floatingInput">Origen</label>
-    </div>
-    <div class="form-floating mb-3 col-lg-6 px-1">
-      <input type="text" class="form-control" id="floatingInput" value="La Granja">
-      <label for="floatingInput">Destino</label>
-    </div>
-    <div class="form-floating col-5 px-1">
-      <input type="text" class="form-control" id="floatingInput" value="15-JUN-2024">
-      <label for="floatingInput">Fecha de salida</label>
-    </div>
-    <div class="form-floating col-4 col-lg-5 px-1">
-      <input type="text" class="form-control" id="floatingInput"
-        [value]="this.userService.currentUser.dependientes + (this.userService.currentUser.dependientes > 1 ? ' Adultos' : ' Adulto')">
-      <label for="floatingInput">Pasajeros</label>
-    </div>
-    <div class="col-3 col-lg-2 p-0 ps-lg-2">
-      <button class="btn btn-light w-100 h-100" (click)="startTrip()">Empezar</button>
-    </div>
-  </div>
-
   <div class="sections-container">
     <div class="row section s1 mt-5">
       <div class="col-lg-6 p-4 d-flex flex-column justify-content-center">
-        <h2 class="title text-anim">1.<br>ALOJAMIENTO</h2>
+        <h2 class="title text-anim">1.<br>RESERVA</h2>
         <p class="sub-title text-anim">
           Descubre el lugar en el que se celebrará el evento
         </p>
-        <!-- <p class="section-link text-anim" (click)="router.navigate(['/alojamiento'])">Saber más</p> -->
       </div>
       <div class="col-lg-6 p-0 position-relative">
-        <div class="section-image" (click)="router.navigate(['/alojamiento'])"></div>
+        <div class="section-image" (click)="router.navigate(['/reserva'])"></div>
         <div class="d-inline-block p-3 rounded bg-color-primary section-link text-anim">Saber más</div>
       </div>
     </div>
 
     <div class="row section s2">
       <div class="col-lg-6 p-0 position-relative">
-        <div class="section-image" (click)="router.navigate(['/reserva'])"></div>
+        <div class="section-image" (click)="router.navigate(['/alojamiento'])"></div>
         <div class="d-inline-block p-3 rounded bg-color-primary section-link text-anim">Saber más</div>
       </div>
       <div class="col-lg-6 p-4 d-flex flex-column justify-content-center">
-        <h2 class="title text-anim">2.<br>RESERVA</h2>
+        <h2 class="title text-anim">2.<br>ALOJAMIENTO</h2>
         <p class="sub-title text-anim">
           Revisa los datos de tu reserva y las recomendaciones de viaje
         </p>
@@ -81,21 +29,21 @@
 
     <div class="row section s3">
       <div class="col-lg-6 p-4 d-flex flex-column justify-content-center">
-        <h2 class="title text-anim">3.<br>DESTINOS</h2>
+        <h2 class="title text-anim">3.<br>NOSOTROS</h2>
         <p class="sub-title text-anim">
-          Conoce un poco de los destinos a los que hemos viajado estos años
+          Conoce un poco de nosotros y los lugares a los que hemos viajado estos años
         </p>
       </div>
       <div class="col-lg-6 p-0 position-relative">
-        <div class="section-image" (click)="router.navigate(['/destinos'])"></div>
-        <div class="d-inline-block p-3 rounded bg-color-primary section-link text-anim" >Saber más</div>
+        <div class="section-image" (click)="router.navigate(['/nosotros'])"></div>
+        <div class="d-inline-block p-3 rounded bg-color-primary section-link text-anim">Saber más</div>
       </div>
     </div>
 
     <div class="row section s4">
       <div class="col-lg-6 p-0 position-relative">
         <div class="section-image" (click)="router.navigate(['/viajeros'])"></div>
-        <div class="d-inline-block p-3 rounded bg-color-primary section-link text-anim" >Saber más</div>
+        <div class="d-inline-block p-3 rounded bg-color-primary section-link text-anim">Saber más</div>
       </div>
       <div class="col-lg-6 p-4 d-flex flex-column justify-content-center">
         <h2 class="title text-anim">4.<br>VIAJEROS</h2>
@@ -109,24 +57,24 @@
       <div class="col-lg-6 p-4 d-flex flex-column justify-content-center">
         <h2 class="title text-anim">5.<br>CHECK-IN</h2>
         <p class="sub-title text-anim">
-          Confirma tus datos antes de viajar (cuanto antes mejor)
+          Confirma tus datos antes del día (cuanto antes mejor)
         </p>
       </div>
       <div class="col-lg-6 p-0 position-relative">
         <div class="section-image" (click)="router.navigate(['/checkin'])"></div>
-        <div class="d-inline-block p-3 rounded bg-color-primary section-link text-anim" >Saber más</div>
+        <div class="d-inline-block p-3 rounded bg-color-primary section-link text-anim">Saber más</div>
       </div>
     </div>
 
     <div class="row section s6 mb-5">
       <div class="col-lg-6 p-0 position-relative">
         <div class="section-image" (click)="router.navigate(['/planing'])"></div>
-        <div class="d-inline-block p-3 rounded bg-color-primary section-link text-anim" >Saber más</div>
+        <div class="d-inline-block p-3 rounded bg-color-primary section-link text-anim">Saber más</div>
       </div>
       <div class="col-lg-6 p-4 d-flex flex-column justify-content-center">
         <h2 class="title text-anim">6.<br>PLANING</h2>
         <p class="sub-title text-anim">
-          Averígua todo lo que va a ocurrir <b>el día del viaje</b>
+          Averígua todo lo que va a ocurrir <b>el día</b>
         </p>
       </div>
     </div>

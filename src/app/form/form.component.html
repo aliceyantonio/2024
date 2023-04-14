@@ -1,11 +1,14 @@
-<div class="header">
-  <h1 id="title" class="text-center">Formulario de Check-in</h1>
-  <p id="description" class="text-center">
-    Gracias por volar con nosotros, en breves podrás confirmar tu reserva
-  </p>
+<div id="formComponent">
+  <div class="page-header">
+    <h1 class="title">5. Check-In</h1>
+    <p class="subtitle"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem soluta quisquam, illum, atque, saepe molestiae ab modi nemo dignissimos officiis eos perferendis. Hic omnis unde totam. Nobis, nulla deleniti.</p>
+  </div>
 </div>
+
 <div class="form-wrap">
-  <form method="POST" ngNoForm action="https://script.google.com/macros/s/AKfycbyX6kzYOpLEKSFs2t37ajilEp3ONZMGgym-epjG6rpojL8s9bXkgzJjCYKSgd8JR0rN/exec" target="_blank">
+  <form method="POST" ngNoForm
+    action="https://script.google.com/macros/s/AKfycbyX6kzYOpLEKSFs2t37ajilEp3ONZMGgym-epjG6rpojL8s9bXkgzJjCYKSgd8JR0rN/exec"
+    target="_blank">
     <div class="row">
       <div class="col-lg-6">
         <div class="form-group">
@@ -51,7 +54,8 @@
       <div class="col-lg-6">
         <div class="form-group">
           <label for="bebida">Bebida</label>
-          <ng-select class="custom" [items]="drinks" bindLabel="name" bindValue="name" [(ngModel)]="drinksSelected" [multiple]="true" groupBy="kind" placeholder="Selecciona que tomarás de bebida">
+          <ng-select class="custom" [items]="drinks" bindLabel="name" bindValue="name" [(ngModel)]="drinksSelected"
+            [multiple]="true" groupBy="kind" placeholder="Selecciona que tomarás de bebida">
             <ng-template ng-optgroup-tmp let-item="item">{{item.kind || 'Otros'}}</ng-template>
           </ng-select>
           <input hidden type="text" name="bebida" id="bebida" [value]="drinksSelected">
@@ -63,7 +67,8 @@
       <div class="col-12">
         <div class="form-group">
           <label id="name-label" for="alergia">Alergias</label>
-          <input type="text" name="alergia" id="alergia" placeholder="Rellena si tienes alguna alergia" class="form-control">
+          <input type="text" name="alergia" id="alergia" placeholder="Rellena si tienes alguna alergia"
+            class="form-control">
         </div>
       </div>
     </div>

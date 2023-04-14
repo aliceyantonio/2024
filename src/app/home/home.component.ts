@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
       .from(".s1 .text-anim", { y: -50, opacity: 0, stagger: 0.4 })
       .to(".s1 .section-image",
         {
-          backgroundPosition: "0", opacity: 0.4, onComplete: function () {
+          backgroundPosition: "0", opacity: 0.6, onComplete: function () {
             (document.querySelector('.s1 .section-image') as HTMLElement).classList.add('animationCompleted'); // then only replace with blue div with new height and width
           }
         });

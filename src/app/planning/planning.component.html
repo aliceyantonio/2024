@@ -1,13 +1,18 @@
 <div id="planingComponent">
-  <div class="mt-3 mb-5">
-    <h2>Próximamente</h2>
-    <p>Sabemos que te mueres de ganas de conocer todos los detalles del evento pero tenemos que pedirte que suportes la
-      espera un poco más.</p>
+
+  <div class="page-header">
+    <h1 class="title">6. Planning</h1>
+    <ng-container *ngIf="this.userService.currentUser.userRoles.length > 1">
+      <p class="subtitle" *ngIf="!itsTheDay1 && !itsTheDay2"> Sabemos que te mueres de ganas de conocer todos los detalles del evento pero tenemos que pedirte que aguantes un poco más.</p>
+      <p class="subtitle" *ngIf="itsTheDay1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem soluta quisquam, illum, atque, saepe molestiae ab modi nemo dignissimos officiis eos perferendis. Hic omnis unde totam. Nobis, nulla deleniti.</p>
+      <p class="subtitle" *ngIf="itsTheDay2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem soluta quisquam, illum, atque, saepe molestiae ab modi nemo dignissimos officiis eos perferendis. Hic omnis unde totam. Nobis, nulla deleniti.</p>
+    </ng-container>
   </div>
 
   <ng-container *ngIf="this.userService.currentUser.userRoles.includes('family')">
-    <h3>Tiempo hasta la fecha de salida</h3>
-    <h6 *ngIf="this.userService.currentUser.userRoles.length > 1" class="mt-4">Escala 1</h6>
+    <div class="page-header mt-4">
+      <h2>Boda Amigos</h2>
+    </div>
     <div id="countdown">
       <div>
         <span>Días</span>
@@ -25,7 +30,9 @@
   </ng-container>
 
   <ng-container *ngIf="this.userService.currentUser.userRoles.includes('friend')">
-    <h6 *ngIf="this.userService.currentUser.userRoles.length > 1" class="mt-4">Escala 2</h6>
+    <div class="page-header mt-4">
+      <h2>Boda Familia</h2>
+    </div>
     <div id="countdown">
       <div>
         <span>Días</span>
