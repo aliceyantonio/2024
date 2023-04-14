@@ -9,7 +9,7 @@
 
   // --color-primary: #0f1941;
   --color-primary: #0d453f;
-  --color-secondary: #869d84;
+  --color-secondary: #bdd2bb;
   --color-tertiary: #6ba5b4;
 }
 
@@ -64,7 +64,7 @@
 }
 
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body,
@@ -140,7 +140,7 @@ input:-webkit-autofill:active {
   }
 
   .subtitle {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: var(--color-secondary);
     width: 70%;
     margin: 0 auto;

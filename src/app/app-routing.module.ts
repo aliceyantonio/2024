@@ -2,7 +2,6 @@ import { TravelersComponent } from './travelers/travelers.component';
 import { CountryComponent } from './country/country.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AccommodationComponent } from './accommodation/accommodation.component';
 import { AuthGuard } from './auth.guard';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
@@ -10,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { PlanningComponent } from './planning/planning.component';
 import { UsComponent } from './us/us.component';
+import { PlaceComponent } from './place/place.component';
 
 const routes: Routes = [
   {
@@ -27,8 +27,8 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'alojamiento',
-    component: AccommodationComponent,
+    path: 'lugar',
+    component: PlaceComponent,
     canActivate: [AuthGuard]
   },
   {

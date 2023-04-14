@@ -1,9 +1,15 @@
 <div id="homeComponent">
 
+  <div class="page-header">
+    <h1 class="title"><span></span> {{userService.currentUser.gender === 'male' ? 'Bienvenido': 'Bienvenida'}} {{ userService.currentUser.name | titlecase }}</h1>
+    <p class="subtitle"> Nos alegramos de hayas entrado en nuestra web donde podrás conocer todos los detalles de nuestra boda (al menos los que Alice me deja contar) y confirmarnos tu asistencia.</p>
+    <p class="subtitle"> Para ello hemos preparado una sencillo recorrido que te llevará por todas las páginas y te descubrirá todos los secretos que me han permitido contarte de momento. ¡Adelante! </p>
+  </div>
+
   <div class="sections-container">
     <div class="row section s1 mt-5">
       <div class="col-lg-6 p-4 d-flex flex-column justify-content-center">
-        <h2 class="title text-anim">1.<br>RESERVA</h2>
+        <h2 class="title text-anim">1.<br>LUGAR</h2>
         <p class="sub-title text-anim">
           Descubre el lugar en el que se celebrará el evento
         </p>
@@ -16,11 +22,11 @@
 
     <div class="row section s2">
       <div class="col-lg-6 p-0 position-relative">
-        <div class="section-image" (click)="router.navigate(['/alojamiento'])"></div>
+        <div class="section-image" (click)="router.navigate(['/lugar'])"></div>
         <div class="d-inline-block p-3 rounded bg-color-primary section-link text-anim">Saber más</div>
       </div>
       <div class="col-lg-6 p-4 d-flex flex-column justify-content-center">
-        <h2 class="title text-anim">2.<br>ALOJAMIENTO</h2>
+        <h2 class="title text-anim">2.<br>RESERVA</h2>
         <p class="sub-title text-anim">
           Revisa los datos de tu reserva y las recomendaciones de viaje
         </p>
