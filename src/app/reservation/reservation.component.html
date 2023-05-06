@@ -1,21 +1,20 @@
+<div class="page-header">
+  <h1 class="title">2. Reserva</h1>
+  <p class="subtitle">Revisa los datos de tu reserva y las recomendaciones de viaje</p>
+</div>
 <div id="reservationComponent">
-  <div class="page-header">
-    <h1 class="title">1. Reserva</h1>
-    <p class="subtitle"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem soluta quisquam, illum, atque, saepe molestiae ab modi nemo dignissimos officiis eos perferendis. Hic omnis unde totam. Nobis, nulla deleniti.</p>
-  </div>
+  <button class="btn btn-light" (click)="utilsService.logOut()">logOut</button>
+  <button class="btn btn-light" (click)="userService.setUsers()">update</button>
+  <button class="btn btn-light" (click)="openModal()">invitación</button>
 </div>
 
-<button class="btn btn-light" (click)="utilsService.logOut()">logOut</button>
-<button class="btn btn-light" (click)="userService.setUsers()">update</button>
-<button class="btn btn-light" (click)="openModal()">invitación</button>
-
-<!-- cosas a llevar (poner cosas graciosas como llevra flotador, pantalon de perreo (para que no te apse lo que a jaime)) -->
-<!-- datos de pago https://codepen.io/emacampa/pen/MWOygoV -->
-<ng-template ng-template #invitationModal let-modal>
-  <section class="cartridge">
-    <div class="case">
-      <figure class="front">
-        <figure></figure>
+  <!-- cosas a llevar (poner cosas graciosas como llevra flotador, pantalon de perreo (para que no te apse lo que a jaime)) -->
+  <!-- datos de pago https://codepen.io/emacampa/pen/MWOygoV -->
+  <ng-template ng-template #invitationModal let-modal>
+    <section class="cartridge">
+      <div class="case">
+        <figure class="front">
+          <figure></figure>
         <figure class="label"></figure>
       </figure>
 

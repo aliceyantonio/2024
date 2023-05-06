@@ -21,8 +21,8 @@ nav {
   }
 
   .active-link {
-    background-color: var(--color-primary);
-    color: var(--color-light);
+    background-color: white;
+    color: var(--color-primary);
     position: relative;
     border: 1px solid var(--color-light);
   }
@@ -50,6 +50,7 @@ button {
     .active-link {
       position: relative;
       border-bottom: 1px solid var(--color-primary);
+      border-bottom: none;
     }
   }
 }

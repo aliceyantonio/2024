@@ -1,139 +1,139 @@
+<div class="page-header">
+  <h1 class="title">5. Check-In</h1>
+  <p class="subtitle">Confirma tus datos antes del día (cuanto antes mejor)</p>
+</div>
 <div id="formComponent">
-  <div class="page-header">
-    <h1 class="title">5. Check-In</h1>
-    <p class="subtitle"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem soluta quisquam, illum, atque, saepe molestiae ab modi nemo dignissimos officiis eos perferendis. Hic omnis unde totam. Nobis, nulla deleniti.</p>
+  <div class="form-wrap">
+    <form method="POST" ngNoForm
+      action="https://script.google.com/macros/s/AKfycbyX6kzYOpLEKSFs2t37ajilEp3ONZMGgym-epjG6rpojL8s9bXkgzJjCYKSgd8JR0rN/exec"
+      target="_blank">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label id="name-label" for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre" class="form-control">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label id="name-label" for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Introduce tu apellido" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Introduce tu email" class="form-control">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label id="telefono-label" for="telefono">Teléfono</label>
+            <input type="telefono" name="telefono" id="telefono" placeholder="Introduce tu teléfono" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label for="menu">Menú</label>
+            <select id="menu" name="menu" class="form-control">
+              <option disabled selected value>Selecciona una opción de comida</option>
+              <option value="normal">Normal</option>
+              <option value="vegetariano">Vegetariano</option>
+              <option value="celiaco">Sin gluten</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label for="bebida">Bebida</label>
+            <ng-select class="custom" [items]="drinks" bindLabel="name" bindValue="name" [(ngModel)]="drinksSelected"
+              [multiple]="true" groupBy="kind" placeholder="Selecciona que tomarás de bebida">
+              <ng-template ng-optgroup-tmp let-item="item">{{item.kind || 'Otros'}}</ng-template>
+            </ng-select>
+            <input hidden type="text" name="bebida" id="bebida" [value]="drinksSelected">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label id="name-label" for="alergia">Alergias</label>
+            <input type="text" name="alergia" id="alergia" placeholder="Rellena si tienes alguna alergia"
+              class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label>Transporte</label>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="transporte1" value="si" name="transporte" class="custom-control-input" checked="">
+              <label class="custom-control-label" for="transporte1">Si</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="transporte2" value="no" name="transporte" class="custom-control-input">
+              <label class="custom-control-label" for="transporte2">No</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label>Alojamiento</label>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="alojamiento1" value="si" name="alojamiento" class="custom-control-input" checked="">
+              <label class="custom-control-label" for="alijamiento1">Si</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="alojamiento2" value="no" name="alojamiento" class="custom-control-input">
+              <label class="custom-control-label" for="alojamiento2">No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label>Otros</label>
+            <textarea id="otros" class="form-control" name="otros"
+              placeholder="Dinos si tienes alguna otra información relevante..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label id="name-label" for="descuento">Código de descuento</label>
+            <input type="text" name="descuento" id="descuento" placeholder="Introduce tu código de descuento"
+              class="form-control">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label id="name-label" for="musica">Música</label>
+            <input type="text" name="musica" id="musica" placeholder="Introduce el titulo-artista" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <button type="submit" id="submitbtn" class="btn btn-primary btn-block">Enviar</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
 
-<div class="form-wrap">
-  <form method="POST" ngNoForm
-    action="https://script.google.com/macros/s/AKfycbyX6kzYOpLEKSFs2t37ajilEp3ONZMGgym-epjG6rpojL8s9bXkgzJjCYKSgd8JR0rN/exec"
-    target="_blank">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="form-group">
-          <label id="name-label" for="nombre">Nombre</label>
-          <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre" class="form-control">
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="form-group">
-          <label id="name-label" for="apellido">Apellido</label>
-          <input type="text" name="apellido" id="apellido" placeholder="Introduce tu apellido" class="form-control">
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="form-group">
-          <label id="email-label" for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="Introduce tu email" class="form-control">
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="form-group">
-          <label id="telefono-label" for="telefono">Teléfono</label>
-          <input type="telefono" name="telefono" id="telefono" placeholder="Introduce tu teléfono" class="form-control">
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="form-group">
-          <label for="menu">Menú</label>
-          <select id="menu" name="menu" class="form-control">
-            <option disabled selected value>Selecciona una opción de comida</option>
-            <option value="normal">Normal</option>
-            <option value="vegetariano">Vegetariano</option>
-            <option value="celiaco">Sin gluten</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="form-group">
-          <label for="bebida">Bebida</label>
-          <ng-select class="custom" [items]="drinks" bindLabel="name" bindValue="name" [(ngModel)]="drinksSelected"
-            [multiple]="true" groupBy="kind" placeholder="Selecciona que tomarás de bebida">
-            <ng-template ng-optgroup-tmp let-item="item">{{item.kind || 'Otros'}}</ng-template>
-          </ng-select>
-          <input hidden type="text" name="bebida" id="bebida" [value]="drinksSelected">
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12">
-        <div class="form-group">
-          <label id="name-label" for="alergia">Alergias</label>
-          <input type="text" name="alergia" id="alergia" placeholder="Rellena si tienes alguna alergia"
-            class="form-control">
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="form-group">
-          <label>Transporte</label>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="transporte1" value="si" name="transporte" class="custom-control-input" checked="">
-            <label class="custom-control-label" for="transporte1">Si</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="transporte2" value="no" name="transporte" class="custom-control-input">
-            <label class="custom-control-label" for="transporte2">No</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6">
-        <div class="form-group">
-          <label>Alojamiento</label>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="alojamiento1" value="si" name="alojamiento" class="custom-control-input" checked="">
-            <label class="custom-control-label" for="alijamiento1">Si</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="alojamiento2" value="no" name="alojamiento" class="custom-control-input">
-            <label class="custom-control-label" for="alojamiento2">No</label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-12">
-        <div class="form-group">
-          <label>Otros</label>
-          <textarea id="otros" class="form-control" name="otros"
-            placeholder="Dinos si tienes alguna otra información relevante..."></textarea>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="form-group">
-          <label id="name-label" for="descuento">Código de descuento</label>
-          <input type="text" name="descuento" id="descuento" placeholder="Introduce tu código de descuento"
-            class="form-control">
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="form-group">
-          <label id="name-label" for="musica">Música</label>
-          <input type="text" name="musica" id="musica" placeholder="Introduce el titulo-artista" class="form-control">
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-4">
-        <button type="submit" id="submitbtn" class="btn btn-primary btn-block">Enviar</button>
-      </div>
-    </div>
-  </form>
-</div>

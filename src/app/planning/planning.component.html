@@ -4,13 +4,13 @@
     <h1 class="title">6. Planning</h1>
     <ng-container *ngIf="this.userService.currentUser.userRoles.length > 1">
       <p class="subtitle" *ngIf="!itsTheDay1 && !itsTheDay2"> Sabemos que te mueres de ganas de conocer todos los detalles del evento pero tenemos que pedirte que aguantes un poco más.</p>
-      <p class="subtitle" *ngIf="itsTheDay1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem soluta quisquam, illum, atque, saepe molestiae ab modi nemo dignissimos officiis eos perferendis. Hic omnis unde totam. Nobis, nulla deleniti.</p>
-      <p class="subtitle" *ngIf="itsTheDay2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem soluta quisquam, illum, atque, saepe molestiae ab modi nemo dignissimos officiis eos perferendis. Hic omnis unde totam. Nobis, nulla deleniti.</p>
+      <p class="subtitle" *ngIf="itsTheDay1"> Averígua todo lo que va a ocurrir</p>
+      <p class="subtitle" *ngIf="itsTheDay2"> Averígua todo lo que va a ocurrir</p>
     </ng-container>
   </div>
 
   <ng-container *ngIf="this.userService.currentUser.userRoles.includes('family')">
-    <div class="page-header mt-4">
+    <div>
       <h2>Boda Amigos</h2>
     </div>
     <div id="countdown">
@@ -30,7 +30,7 @@
   </ng-container>
 
   <ng-container *ngIf="this.userService.currentUser.userRoles.includes('friend')">
-    <div class="page-header mt-4">
+    <div class="mt-4">
       <h2>Boda Familia</h2>
     </div>
     <div id="countdown">

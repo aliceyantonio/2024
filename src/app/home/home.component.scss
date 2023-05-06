@@ -64,6 +64,14 @@
 
 }
 
+.page-header {
+  height: 400px;
+}
+
+.page-header + div{
+  padding-top: 400px;
+}
+
 @media (max-width: 575px) {
   #homeComponent {
     .searcher {
