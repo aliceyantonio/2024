@@ -1,4 +1,3 @@
-import { TravelersComponent } from './travelers/travelers.component';
 import { CountryComponent } from './country/country.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -6,10 +5,11 @@ import { AuthGuard } from './auth.guard';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { ReservationComponent } from './reservation/reservation.component';
 import { PlanningComponent } from './planning/planning.component';
 import { UsComponent } from './us/us.component';
 import { PlaceComponent } from './place/place.component';
+import { InvitationComponent } from './invitacion/invitation.component';
+import { GuestsComponent } from './guests/guests.component';
 
 const routes: Routes = [
   {
@@ -23,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: 'reserva',
-    component: ReservationComponent,
+    component: InvitationComponent,
     canActivate: [AuthGuard]
   },
   {
@@ -42,17 +42,17 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'viajeros',
-    component: TravelersComponent,
+    path: 'invitados',
+    component: GuestsComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'checkin',
+    path: 'confirmacion',
     component: FormComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'planing',
+    path: 'planning',
     component: PlanningComponent,
     canActivate: [AuthGuard]
   },

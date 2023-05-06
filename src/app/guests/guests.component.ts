@@ -1,13 +1,13 @@
-import { UtilsService } from './../services/utils.service';
+import { UtilsService } from '../services/utils.service';
 import { Component, ViewEncapsulation, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'app-travelers',
-  templateUrl: './travelers.component.html',
-  styleUrls: ['./travelers.component.scss'],
+  selector: 'app-guests',
+  templateUrl: './guests.component.html',
+  styleUrls: ['./guests.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class TravelersComponent implements OnInit, OnDestroy {
+export class GuestsComponent implements OnInit, OnDestroy {
 
   constructor(
     private utilsService: UtilsService

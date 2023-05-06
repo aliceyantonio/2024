@@ -1,15 +1,15 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { UtilsService } from '../services/utils.service';
-import { UserService } from './../services/user.service';
+import { UserService } from '../services/user.service';
 
 
 @Component({
-  selector: 'app-reservation',
-  templateUrl: './reservation.component.html',
-  styleUrls: ['./reservation.component.scss']
+  selector: 'app-invitation',
+  templateUrl: './invitation.component.html',
+  styleUrls: ['./invitation.component.scss']
 })
-export class ReservationComponent {
+export class InvitationComponent {
 
   modalRef!: NgbModalRef;
   @ViewChild('invitationModal') invitationModal: any;
