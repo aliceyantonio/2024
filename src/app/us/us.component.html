@@ -1,16 +1,139 @@
 <div class="page-header">
   <h1 class="title">3. Nosotros</h1>
-  <p class="subtitle"> Conoce un poco de nosotros y los lugares a los que hemos viajado estos años</p>
+  <p class="subtitle"> Conócenos un poco mejor y descubre los lugares a los que hemos viajado estos años</p>
 </div>
 <div id="usComponent">
-  HABLAR SOBRE NOSOTROS Y QUIZA EL JUEGO
 
-  <div>
-    <h2 class="title">Nuestros viajes</h2>
-    <p class="subtitle"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem soluta quisquam, illum, atque, saepe molestiae ab modi nemo dignissimos officiis eos perferendis.</p>
+  <div id="usSection" class="border border-light rounded p-4">
+    <h2 class="text-center">¿Cuánto sabes de nosotros?</h2>
+    <p class="mt-4 mb-0 color-secondary font-size-1_1">
+      Para nosotros eres MUY importante {{'nombre'}} y nos pondríamos muy tristes de no serlo para ti también...
+      <br> Pero sabemos que nos conoces SUPER bien (yo díría que incluso nos amas) y para demostrárnoslo te hemos preparado este sencillo quiz, el cual tienes que aprobar para poder asistir a nuestra boda.
+    </p>
+    <form [formGroup]="usForm" (ngSubmit)="checkForm()" id="usForm">
+      <div class="form-row row">
+        <div class="form-group col-lg-6 mt-5">
+          <label>¿Qué atacó a Alice en la Hacienda Nápoles?</label>
+          <div class="answer">
+            <input type="radio" formControlName="question1" value=1 id="answer1_1">
+            <label class="answer-text" for="answer1_1">Un cebrasno (mezcla perfecta entra cebra y asno)</label>
+          </div>
+          <div class="answer">
+            <input type="radio" formControlName="question1" value=2 id="answer1_2">
+            <label class="answer-text" for="answer1_2">Un avestruz</label>
+          </div>
+          <div class="answer">
+            <input type="radio" formControlName="question1" value=3 id="answer1_3">
+            <label class="answer-text" for="answer1_3">Un extranjero borracho</label>
+          </div>
+          <img *ngIf="answerShown" src="../../assets/travelers/1.webp" class="w-100">
+        </div>
+        <div class="form-group col-lg-6 mt-5">
+          <label>¿Qué da más miedo a Antonio?</label>
+          <div class="answer">
+            <input type="radio" formControlName="question2" value=1 id="answer2_1">
+            <label class="answer-text" for="answer2_1">Una víbora venenosa</label>
+          </div>
+          <div class="answer">
+            <input type="radio" formControlName="question2" value=2 id="answer2_2">
+            <label class="answer-text" for="answer2_2">Un león que lleva sin comer 3 meses</label>
+          </div>
+          <div class="answer">
+            <input type="radio" formControlName="question2" value=3 id="answer2_3">
+            <label class="answer-text" for="answer2_3">Alice con la ceja levantada</label>
+          </div>
+          <img *ngIf="answerShown" src="../../assets/travelers/1.webp" class="w-100">
+        </div>
+        <div class="form-group col-lg-6 mt-4">
+          <label>¿Por que Alice tiene tantos (TANTOS) hermanos?</label>
+          <div class="answer">
+            <input type="radio" formControlName="question3" value=1 id="answer3_1">
+            <label class="answer-text" for="answer3_1">Son del Opus</label>
+          </div>
+          <div class="answer">
+            <input type="radio" formControlName="question3" value=2 id="answer3_2">
+            <label class="answer-text" for="answer3_2">Su padre quería un heredero pero sólo le salian niñas chillonas</label>
+          </div>
+          <div class="answer">
+            <input type="radio" formControlName="question3" value=3 id="answer3_3">
+            <label class="answer-text" for="answer3_3">No tenían televisión</label>
+          </div>
+          <img *ngIf="answerShown" src="../../assets/travelers/1.webp" class="w-100">
+        </div>
+        <div class="form-group col-lg-6 mt-4">
+          <label>¿Qué es lo que más odia Alice en el mundo?</label>
+          <div class="answer">
+            <input type="radio" formControlName="question4" value=1 id="answer4_1">
+            <label class="answer-text" for="answer4_1">Las agujas</label>
+          </div>
+          <div class="answer">
+            <input type="radio" formControlName="question4" value=2 id="answer4_2">
+            <label class="answer-text" for="answer4_2">El desorden de Paula</label>
+          </div>
+          <div class="answer">
+            <input type="radio" formControlName="question4" value=3 id="answer4_3">
+            <label class="answer-text" for="answer4_3">Que Antonio le haga participar en este quiz</label>
+          </div>
+          <img *ngIf="answerShown" src="../../assets/travelers/1.webp" class="w-100">
+        </div>
+        <div class="form-group col-lg-6 mt-4">
+          <label>¿Cual es el animal favorito de Antonio?</label>
+          <div class="answer">
+            <input type="radio" formControlName="question5" value=1 id="answer5_1">
+            <label class="answer-text" for="answer5_1">El guepardo, el animal mas rápido del mundo</label>
+          </div>
+          <div class="answer">
+            <input type="radio" formControlName="question5" value=2 id="answer5_2">
+            <label class="answer-text" for="answer5_2">El percebe, con el pene 1,5 veces más grande que su cuerpo</label>
+          </div>
+          <div class="answer">
+            <input type="radio" formControlName="question5" value=3 id="answer5_3">
+            <label class="answer-text" for="answer5_3">El burro, que viven muchos años</label>
+          </div>
+          <img *ngIf="answerShown" src="../../assets/travelers/1.webp" class="w-100">
+        </div>
+
+        <div class="col-lg-6 d-flex flex-column mt-5 justify-content-end color-secondary position-relative">
+          <ng-container *ngIf="!answerShown">
+            <button class="btn color-primary bg-color-secondary w-25 mx-auto" type="submit" [disabled]="usForm.invalid">enviar</button>
+            PD: Si lo suspendes no queremos volver a verte, te odiamos y lo peor de todo: ESTÁS DESINVITADO
+          </ng-container>
+          <ng-container *ngIf="answerShown">
+            <button type="button" class="btn bg-color-secondary color-primary w-50 position-absolute" style="top:50%; left:50%; transform: translate(-50%,-50%);" (click)="null"><ng-container *ngIf="score>2">Ir al Juego</ng-container><ng-container *ngIf="score<=2">Ir a Recuperación</ng-container></button>
+          </ng-container>
+        </div>
+
+      </div>
+    </form>
   </div>
-  <div class="container-fluid container-md mt-5">
-    <hr class="mb-5">
-    <div id="map" class="mb-4 mb-md-0"></div>
+
+  <div id="travelsSection" class="mt-5 border border-light rounded p-4">
+    <h2 class="text-center">Nuestros viajes</h2>
+    <p class="color-secondary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem soluta quisquam, illum, atque, saepe molestiae ab modi nemo dignissimos officiis eos perferendis.</p>
+    <div class="container-fluid container-md mt-5">
+      <hr class="mb-5">
+      <div id="map" class="mb-4 mb-md-0"></div>
+    </div>
   </div>
 </div>
+
+<ng-template #answersModal let-modal>
+  <div class="modal-header border-bottom-0">
+    <h5 class="modal-title">
+      <ng-container *ngIf="score>2">Nos conoces casi tanto como nuestra madre</ng-container>
+      <ng-container *ngIf="score<=2">¿Enserio? Te odiamos</ng-container>
+    </h5>
+  </div>
+
+  <div class="modal-body">
+    <p>
+      <ng-container *ngIf="score>2">¡Enhorabuena! <br> Has aprobado con {{score}}/5 y sigues invitado a la boda (ya puedes ir haciéndonos el regalo 😬). <br> Como amante de nosotros sabemos que nunca te cansas de saber más de nosotros. Para ello hemos preparado un pequeño jueguito.</ng-container>
+      <ng-container *ngIf="score<=2">Has suspendido con {{score}}/5. <br> No estás preparado para venir a nuestra boda... pero estás de suerte y hemos preparado un curso de recuperación para que puedas volver a caernos bien.</ng-container>
+    </p>
+</div>
+  <div class="modal-footer justify-content-center row m-0">
+    <button type="button" class="btn bg-color-primary color-light col-5" (click)="modal.dismiss('cancel click')"><ng-container *ngIf="score>2">Ir al Juego</ng-container><ng-container *ngIf="score<=2">Ir a Recuperación</ng-container></button>
+    <button type="button" class="btn bg-color-light color-primary col-5" (click)="modal.dismiss('cancel click'); showAnswers()">Ver respuestas correctas</button>
+  </div>
+
+</ng-template>

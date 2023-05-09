@@ -1,3 +1,30 @@
+#usSection {
+  .answer {
+    border: 1px solid var(--color-secondary);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: var(--color-secondary);
+  }
+
+  .answer:hover, .answer:has(input[type="radio"]:checked) {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+  }
+
+  .answer-text {
+    cursor: pointer;
+    display: block;
+  }
+
+  input[type=radio]{
+    display: none;
+  }
+
+  label:not(.answer-text) {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+}
 
 #map {
   height: 60vh;
@@ -33,6 +60,7 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
+
   .box-text {
     font-size: 1rem;
   }
@@ -42,8 +70,8 @@
   box-shadow: 0 0 6px red;
 }
 
-.btn {
-  background-color: #4d0707;
+#map .btn {
+  background-color: transparent;
   color: white;
 }
 
@@ -87,6 +115,7 @@ table {
 
   .box {
     height: 250px;
+
     .box-text {
       font-size: 0.8rem;
     }
