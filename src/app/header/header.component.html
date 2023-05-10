@@ -9,6 +9,14 @@
 
       <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav py-3 py-lg-0">
+          <li class="nav-item" ngbDropdown *ngIf="selectedWedding">
+            <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button"> {{ selectedWedding === 'friends' ? 'Boda Amigos' : 'Boda Familia' }} </a>
+            <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault(); weddingSelect('friends')">Boda Amigos</a>
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault(); weddingSelect('family')">Boda Familia</a>
+            </div>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link" [routerLink]="'lugar'"  routerLinkActive="active-link" (click)="isMenuCollapsed = true">Lugar</a>
           </li>
@@ -40,3 +48,20 @@
   </nav>
 
 </header>
+
+<ng-template #weddingDateModal let-modal>
+  <div class="modal-header border-bottom-0">
+    <h5 class="modal-title">{{userService.currentUser.gender === 'male' ? 'Bienvenido': 'Bienvenida'}} {{ userService.currentUser.name | titlecase }}</h5>
+  </div>
+
+  <div class="modal-body font-size-1_1">
+    <p>
+      Eres especialmente importante para nosotros y te consideramos amigo y familia 🥰. <br>
+      Por favor indica de que enlace quieres conocer los detalles.
+    </p>
+</div>
+  <div class="modal-footer justify-content-center row m-0">
+    <button type="button" class="btn bg-color-secondary color-primary col-5" (click)="modal.dismiss('cancel click'); weddingSelect('friends')">Boda Amigos <br> 08-09/0/2024</button>
+    <button type="button" class="btn bg-color-primary color-light col-5" (click)="modal.dismiss('cancel click'); weddingSelect('family')">Boda Familia <br> 15/06/2024</button>
+  </div>
+</ng-template>

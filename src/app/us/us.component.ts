@@ -143,7 +143,7 @@ export class UsComponent implements OnInit {
 
 
     if (!this.modal.hasOpenModals()) {
-      this.modalRef = this.modal.open(this.answersModal, { ariaLabelledBy: 'Eliminar-Proceso', size: 'l', centered: true, backdrop: 'static' });
+      this.modalRef = this.modal.open(this.answersModal, { ariaLabelledBy: '', size: 'l', centered: true, backdrop: 'static' });
       this.modalRef.result.then((result) => {
         this.closeResult = 'Closed with: ' + result;
       });

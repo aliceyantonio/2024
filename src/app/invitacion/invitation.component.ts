@@ -23,7 +23,7 @@ export class InvitationComponent {
 
   openModal() {
     if (!this.modal.hasOpenModals()) {
-      this.modalRef = this.modal.open(this.invitationModal, { ariaLabelledBy: 'adnExamples', size: 'xl' });
+      this.modalRef = this.modal.open(this.invitationModal, { ariaLabelledBy: '', size: 'xl' });
     }
   }
 

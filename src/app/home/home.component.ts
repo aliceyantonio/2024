@@ -1,7 +1,8 @@
 import { Router } from '@angular/router';
 import { UserService } from './../services/user.service';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import gsap from 'gsap';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -21,7 +22,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     public userService: UserService,
-    public router: Router
+    public router: Router,
+    public modal: NgbModal,
   ) { }
 
   ngOnInit(): void {

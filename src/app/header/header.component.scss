@@ -37,6 +37,15 @@ button {
   cursor: pointer;
 }
 
+
+::ng-deep {
+  .modal-content {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    padding: 10px;
+  }
+}
+
 @media (min-width: 768px) {
   nav {
     height: 63px;
@@ -54,3 +63,4 @@ button {
     }
   }
 }
+
