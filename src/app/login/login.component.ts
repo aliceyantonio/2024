@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
     localStorage.clear();
 
     this.userService.getUsers().subscribe(res => {
-      const currentUser = JSON.parse(res.value).find((user: User) =>
+      const currentUser = res.find((user: User) =>
         user.username === this.loginForm.value.username
         && user.bookingIds.includes(this.loginForm.value.bookingId!)
       );
@@ -135,11 +135,11 @@ export class LoginComponent implements OnInit {
   };
 
   particlesLoaded(container: any): void {
-    console.log(container);
+    // console.log(container);
   }
 
   async particlesInit(engine: any): Promise<void> {
-    console.log(engine);
+    // console.log(engine);
     // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size

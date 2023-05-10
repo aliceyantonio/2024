@@ -1,15 +1,15 @@
 var users = [
   {
     "name": "Antonio",
-    "username": "rugon",
+    "username": "anva",
     "bookingIds": [
-      "AA08062024"
+      "AA15062024"
     ],
     "userRoles": [
-      "friend"
+      "friend",
+      "family"
     ],
-    "origin": "pinto",
-    "relations": [],
+    "origin": "La Granja",
     "gender": "male",
     "group": ""
   },
@@ -23,7 +23,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -37,7 +36,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -51,7 +49,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -65,7 +62,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -79,7 +75,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -93,7 +88,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -107,7 +101,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -121,7 +114,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -135,7 +127,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -149,7 +140,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -163,7 +153,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -177,7 +166,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -191,7 +179,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -205,7 +192,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -219,7 +205,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -233,7 +218,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -247,7 +231,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -261,7 +244,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -275,7 +257,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -289,7 +270,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -303,7 +283,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -317,7 +296,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -331,7 +309,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -345,7 +322,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -359,7 +335,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -373,7 +348,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -387,7 +361,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -401,7 +374,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -415,7 +387,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -429,7 +400,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -443,7 +413,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -457,7 +426,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -471,7 +439,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -485,7 +452,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -499,7 +465,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -513,7 +478,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -527,7 +491,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -541,7 +504,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -555,7 +517,6 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   },
@@ -569,8 +530,8 @@ var users = [
       "friend"
     ],
     "origin": "pinto",
-    "relations": [],
     "gender": "male",
     "group": ""
   }
 ]
+ export default users;
