@@ -20,20 +20,22 @@ export class PlanningComponent implements OnInit, OnDestroy {
     let countDownDate1: any;
     let countDownDate2: any;
 
-    countDownDate1 = new Date("Jun 8, 2024 00:00:00").getTime();
-    countDownDate2 = new Date("Jun 15, 2024 00:00:00").getTime();
+    countDownDate1 = new Date("Jun 8, 2024 10:00:00").getTime();
+    countDownDate2 = new Date("Jun 15, 2024 17:00:00").getTime();
 
     this.interval = setInterval(() => {
       var now = new Date().getTime();
 
-      if (this.userService.currentUser.userRoles.includes('family')) {
+      if (this.userService.selectedWedding == 'friend') {
         var distance1 = countDownDate1 - now;
 
-        var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24));
+        var months1 = Math.floor(distance1 / (1000 * 60 * 60 * 24 * 30));
+        var days1 = Math.floor(distance1 % (1000 * 60 * 60 * 24 * 30) / (1000 * 60 * 60 * 24));
         var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
         var seconds1 = Math.floor((distance1 % (1000 * 60)) / 1000);
 
+        document.getElementById("months_1")!.innerHTML = months1.toString();
         document.getElementById("days_1")!.innerHTML = days1.toString();
         document.getElementById("hours_1")!.innerHTML = hours1.toString();
         document.getElementById("minutes_1")!.innerHTML = minutes1.toString();
@@ -45,13 +47,15 @@ export class PlanningComponent implements OnInit, OnDestroy {
         }
       }
 
-      if (this.userService.currentUser.userRoles.includes('friend')) {
+      if (this.userService.selectedWedding == 'family') {
         var distance2 = countDownDate2 - now;
-        var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+        var months2 = Math.floor(distance2 / (1000 * 60 * 60 * 24 * 30));
+        var days2 = Math.floor(distance2 % (1000 * 60 * 60 * 24 * 30) / (1000 * 60 * 60 * 24));
         var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
         var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
 
+        document.getElementById("months_2")!.innerHTML = months2.toString();
         document.getElementById("days_2")!.innerHTML = days2.toString();
         document.getElementById("hours_2")!.innerHTML = hours2.toString();
         document.getElementById("minutes_2")!.innerHTML = minutes2.toString();

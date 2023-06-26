@@ -1,26 +1,31 @@
-<div id="planingComponent">
+<div class="page-header">
+  <h1 class="title">6. Planning</h1>
+  <ng-container *ngIf="this.userService.selectedWedding == 'friend'">
+    <p class="subtitle" *ngIf="!itsTheDay1"> Sabemos que te mueres de ganas de conocer todos los detalles del evento pero tenemos que pedirte que aguantes un poco más.</p>
+    <p class="subtitle" *ngIf="itsTheDay1"> Averígua todo lo que va a ocurrir</p>
+  </ng-container>
+  <ng-container *ngIf="this.userService.selectedWedding == 'family'">
+    <p class="subtitle" *ngIf="!itsTheDay2"> Sabemos que te mueres de ganas de conocer todos los detalles del evento pero tenemos que pedirte que aguantes un poco más.</p>
+    <p class="subtitle" *ngIf="itsTheDay2"> Averígua todo lo que va a ocurrir</p>
+  </ng-container>
+</div>
 
-  <div class="page-header">
-    <h1 class="title">6. Planning</h1>
-    <ng-container *ngIf="this.userService.currentUser.userRoles.length > 1">
-      <p class="subtitle" *ngIf="!itsTheDay1 && !itsTheDay2"> Sabemos que te mueres de ganas de conocer todos los detalles del evento pero tenemos que pedirte que aguantes un poco más.</p>
-      <p class="subtitle" *ngIf="itsTheDay1"> Averígua todo lo que va a ocurrir</p>
-      <p class="subtitle" *ngIf="itsTheDay2"> Averígua todo lo que va a ocurrir</p>
-    </ng-container>
-  </div>
+<div id="planingComponent" class="container">
 
-  <ng-container *ngIf="this.userService.currentUser.userRoles.includes('family')">
+  <ng-container *ngIf="this.userService.selectedWedding == 'friend'">
     <div>
       <h2>Boda Amigos</h2>
     </div>
     <div id="countdown">
       <div>
+        <span>Meses</span>
         <span>Días</span>
         <span>Horas</span>
         <span>Minutos</span>
         <span>Segundos</span>
       </div>
       <div class="numbers">
+        <span id="months_1">00</span>
         <span id="days_1">00</span>
         <span id="hours_1">00</span>
         <span id="minutes_1">00</span>
@@ -28,19 +33,20 @@
       </div>
     </div>
   </ng-container>
-
-  <ng-container *ngIf="this.userService.currentUser.userRoles.includes('friend')">
+  <ng-container *ngIf="this.userService.selectedWedding == 'family'">
     <div class="mt-4">
       <h2>Boda Familia</h2>
     </div>
     <div id="countdown">
       <div>
+        <span>Meses</span>
         <span>Días</span>
         <span>Horas</span>
         <span>Minutos</span>
         <span>Segundos</span>
       </div>
       <div class="numbers">
+        <span id="months_2">00</span>
         <span id="days_2">00</span>
         <span id="hours_2">00</span>
         <span id="minutes_2">00</span>

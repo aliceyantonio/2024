@@ -9,7 +9,7 @@
 
       <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav py-3 py-lg-0">
-          <li class="nav-item" ngbDropdown *ngIf="selectedWedding">
+          <li class="nav-item" ngbDropdown *ngIf="userService.currentUser.userRoles.length > 1">
             <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button"> {{ selectedWedding === 'friends' ? 'Boda Amigos' : 'Boda Familia' }} </a>
             <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
               <a ngbDropdownItem href="#" (click)="$event.preventDefault(); weddingSelect('friends')">Boda Amigos</a>
@@ -57,7 +57,7 @@
   <div class="modal-body font-size-1_1">
     <p>
       Eres especialmente importante para nosotros y te consideramos amigo y familia 🥰. <br>
-      Por favor indica de que enlace quieres conocer los detalles.
+      Por favor dinos, ¿de qué enlace quieres conocer los detalles?
     </p>
 </div>
   <div class="modal-footer justify-content-center row m-0">

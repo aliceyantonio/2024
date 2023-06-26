@@ -2,30 +2,40 @@
   <div class="container">
     <div class="row m-0">
       <div class="col-lg-6 mx-auto p-0">
-        <img class="w-100" src="../../assets/images/marcoRectangular.png" alt="">
       </div>
     </div>
   </div>
   <div class="container">
     <div class="row m-0">
-      <div class="col-lg-6 border-0 rounded p-4 mx-auto bg-color-light">
-        <div class="row m-0">
-          <div class="col-lg-6 p-0">
-            Este viaje...
+      <div class="col-lg-6 mx-auto">
+        <img src="../../assets/images/marcoRectangular_arriba.png" class="w-100">
+        <div class="row m-0 border-0 rounded p-4 bg-color-light">
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <p class="mb-1">
+              Bienvenido a la web de nuestra boda.
+            </p>
+            <p class="mb-1">
+              Para acceder y ver todos los detalles introduce el usuario y la
+              contraseña que encontrarás en la invitación.
+            </p>
+            <p class="mb-1">
+              Si tienes algún problema no dudes en contactarnos.
+            </p>
           </div>
-          <div class="col-lg-6 p-0 pt-3 pt-lg-0">
+          <div class="col-lg-6">
             <form [formGroup]="loginForm" (ngSubmit)="login()">
               <div class="form-row">
                 <div class="form-group">
-                  <label for="username">Nombre del Pasajero/a</label>
-                  <input type="text" class="form-control" id="username" formControlName="username" maxlength="10">
+                  <label for="username">Usuario</label>
+                  <input type="text" class="form-control" id="username" formControlName="username" maxlength="30">
                 </div>
                 <div class="form-group mt-2">
-                  <label for="bookingId">Id de Reserva</label>
+                  <label for="bookingId">Contraseña</label>
                   <input type="text" class="form-control" id="bookingId" formControlName="bookingId" maxlength="10">
                 </div>
                 <div class="form-group mt-3">
-                  <button type="submit" class="btn color-light bg-color-primary form-control" [disabled]="loginForm.invalid">
+                  <button type="submit" class="btn color-light bg-color-primary form-control"
+                    [disabled]="loginForm.invalid">
                     <i class="fa fa-search"></i> Entrar
                   </button>
                 </div>
@@ -33,14 +43,11 @@
             </form>
           </div>
         </div>
+        <img src="../../assets/images/marcoRectangular_abajo.png" class="w-100">
       </div>
     </div>
   </div>
 </div>
 
-<ng-particles
-    [id]="id"
-    [options]="particlesOptions"
-    [particlesInit]="particlesInit"
-    (particlesLoaded)="particlesLoaded($event)"
-></ng-particles>
+<ng-particles [id]="id" [options]="particlesOptions" [particlesInit]="particlesInit"
+  (particlesLoaded)="particlesLoaded($event)"></ng-particles>

@@ -1,17 +1,5 @@
 #homeComponent {
-  .searcher {
-    border-radius: 5px;
-    background-color: var(--color-primary);
-    width: 100%;
-    padding: 20px;
-    color: white;
-    border: 1px solid white;
 
-    .form-floating {
-      pointer-events: none;
-      color: var(--color-primary);
-    }
-  }
 
   .sections-container {
 
@@ -64,18 +52,13 @@
 
 }
 
-.page-header {
-  height: 400px;
-}
+// .page-header {
+//   height: 400px;
+// }
 
-.page-header + div{
-  padding-top: 400px;
-}
+// .page-header + div{
+//   padding-top: 400px;
+// }
 
 @media (max-width: 575px) {
-  #homeComponent {
-    .searcher {
-      padding: 10px 5px;
-    }
-  }
 }

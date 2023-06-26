@@ -3,14 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:wght@400;700;900&family=Libre+Bodoni:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --color-light: #ffffff;
+  --color-light: #FFFFFF;
   --color-medium: #828282;
   --color-dark: #000000;
 
   // --color-primary: #0f1941;
-  --color-primary: #0d453f;
-  --color-secondary: #bdd2bb;
-  --color-tertiary: #6ba5b4;
+  --color-primary: #0D453F;
+  --color-secondary: #8cac97;
+  --color-tertiary: #6BA5B4;
 }
 
 .color-light {
@@ -181,12 +181,9 @@ input:-webkit-autofill:active {
 
 .page-header {
   text-align: center;
-  position: absolute;
   width: 100%;
-  left: 0;
   background-color: white;
   padding: 30px;
-  height: 150px;
 
   .title {
     font-size: 2.8em;
@@ -202,7 +199,7 @@ input:-webkit-autofill:active {
 }
 
 .page-header+div {
-  padding-top: 190px;
+  padding-top: 30px;
 }
 
 *:focus {
@@ -215,4 +212,13 @@ input:-webkit-autofill:active {
   background-color: var(--color-secondary);
   color: var(--color-primary);
   padding: 10px;
+}
+
+
+@media screen and (max-width: 991px) {
+  .page-header {
+    .subtitle {
+      width: 100%;
+    }
+  }
 }

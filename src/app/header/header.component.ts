@@ -42,6 +42,8 @@ export class HeaderComponent implements AfterViewInit {
       this.modalRef.result.then((result) => {
         this.closeResult = 'Closed with: ' + result;
       });
+    } else {
+      this.weddingSelect(currentUser.userRoles[0])
     }
   }
 
