@@ -27,7 +27,7 @@
 }
 
 #map {
-  height: 60vh;
+  height: 80vh;
   text-align: center;
 }
 
@@ -46,6 +46,7 @@
     height: unset;
     width: unset;
     left: 20px;
+    border: 1px solid white;
   }
 }
 
@@ -66,10 +67,6 @@
   }
 }
 
-.box:hover {
-  box-shadow: 0 0 6px red;
-}
-
 #map .btn {
   background-color: transparent;
   color: white;
@@ -80,9 +77,6 @@
   margin: 0 auto;
 }
 
-a i {
-  color: red;
-}
 
 table {
   font-size: 0.8rem;
@@ -106,12 +100,18 @@ table {
   display: flex;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 991px) {
   #map {
     height: auto;
     width: 100%;
     text-align: center;
   }
+  // #map {
+  //   height: 90vw;
+  //   width: 100%;
+  //   text-align: center;
+  //   rotate: 270deg;
+  // }
 
   .box {
     height: 250px;
@@ -150,7 +150,7 @@ table {
     }
 
     .jsvmap-zoom-btn {
-      background-color: red;
+      background-color: transparent;
       padding: 5px;
       height: unset;
       width: unset;

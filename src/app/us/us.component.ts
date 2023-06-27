@@ -145,7 +145,10 @@ export class UsComponent implements OnInit {
     if (!this.modal.hasOpenModals()) {
       this.modalRef = this.modal.open(this.answersModal, { ariaLabelledBy: '', size: 'l', centered: true, backdrop: 'static' });
       this.modalRef.result.then((result) => {
+        this.score = 0;
         this.closeResult = 'Closed with: ' + result;
+      }, (reason) => {
+        this.score = 0;
       });
     }
   }

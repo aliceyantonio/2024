@@ -12,7 +12,7 @@
     </p>
     <form [formGroup]="usForm" (ngSubmit)="checkForm()" id="usForm">
       <div class="form-row row">
-        <div class="form-group col-lg-6 mt-5">
+        <div class="form-group col-lg-6 mt-4">
           <label>¿Qué atacó a Alice en la Hacienda Nápoles?</label>
           <div class="answer">
             <input type="radio" formControlName="question1" value=1 id="answer1_1">
@@ -28,7 +28,7 @@
           </div>
           <img *ngIf="answerShown" src="../../assets/travelers/1.webp" class="w-100">
         </div>
-        <div class="form-group col-lg-6 mt-5">
+        <div class="form-group col-lg-6 mt-4">
           <label>¿Qué da más miedo a Antonio?</label>
           <div class="answer">
             <input type="radio" formControlName="question2" value=1 id="answer2_1">
@@ -95,7 +95,7 @@
 
         <div class="col-lg-6 d-flex flex-column mt-5 justify-content-end color-secondary position-relative">
           <ng-container *ngIf="!answerShown">
-            <button class="btn color-primary bg-color-secondary w-25 mx-auto" type="submit" [disabled]="usForm.invalid">enviar</button>
+            <button class="btn color-primary bg-color-secondary w-25 mx-auto" type="submit" [disabled]="usForm.invalid">Enviar</button>
             PD: Si lo suspendes no queremos volver a verte, te odiamos y lo peor de todo: ESTÁS DESINVITADO
           </ng-container>
           <ng-container *ngIf="answerShown">
@@ -109,10 +109,10 @@
 
   <div id="travelsSection" class="mt-5 border border-light rounded p-4">
     <h2 class="text-center">Nuestros viajes</h2>
-    <p class="color-secondary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem soluta quisquam, illum, atque, saepe molestiae ab modi nemo dignissimos officiis eos perferendis.</p>
+    <p class="color-secondary"> A lo largo de estos años hemos tenido la oportunidad de conocer muchos paises. Hemos pensado en hacernos travel-bloggers muchas veces... pero nunca damos el paso. Quizá este sea el comienzo de ______ (insertar nombre guay de influencer de viajes)</p>
     <div class="container-fluid container-md mt-5">
       <hr class="mb-5">
-      <div id="map" class="mb-4 mb-md-0"></div>
+      <div id="map" class="mb-0"></div>
     </div>
   </div>
 </div>

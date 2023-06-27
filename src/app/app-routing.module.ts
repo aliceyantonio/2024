@@ -22,7 +22,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'reserva',
+    path: 'consejos',
     component: InvitationComponent,
     canActivate: [AuthGuard]
   },
