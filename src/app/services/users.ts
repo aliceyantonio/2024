@@ -15,10 +15,12 @@ var users = [
     "name": "Alice",
     "username": "aliceilopezg",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "Bogotá",
     "gender": "female",

@@ -3,6 +3,14 @@
   <p class="subtitle"> Descubre el lugar en el que se celebrará el evento.</p>
 </div>
 <div id="placeComponent" class="container">
+
+  <ng-container *ngIf="userService.selectedWedding == 'friend'">
+    amigos
+
+  </ng-container>
+  <ng-container *ngIf="userService.selectedWedding == 'family'">
+    familia
+  </ng-container>
 </div>
 
 <!-- lugar y fecha -->

@@ -1,11 +1,13 @@
 <div class="page-header">
   <h1 class="title">6. Planning</h1>
   <ng-container *ngIf="this.userService.selectedWedding == 'friend'">
-    <p class="subtitle" *ngIf="!itsTheDay1"> Sabemos que te mueres de ganas de conocer todos los detalles del evento pero tenemos que pedirte que aguantes un poco más.</p>
+    <p class="subtitle" *ngIf="!itsTheDay1"> Sabemos que te mueres de ganas de conocer todos los detalles del evento
+      pero tenemos que pedirte que aguantes un poco más.</p>
     <p class="subtitle" *ngIf="itsTheDay1"> Averígua todo lo que va a ocurrir</p>
   </ng-container>
   <ng-container *ngIf="this.userService.selectedWedding == 'family'">
-    <p class="subtitle" *ngIf="!itsTheDay2"> Sabemos que te mueres de ganas de conocer todos los detalles del evento pero tenemos que pedirte que aguantes un poco más.</p>
+    <p class="subtitle" *ngIf="!itsTheDay2"> Sabemos que te mueres de ganas de conocer todos los detalles del evento
+      pero tenemos que pedirte que aguantes un poco más.</p>
     <p class="subtitle" *ngIf="itsTheDay2"> Averígua todo lo que va a ocurrir</p>
   </ng-container>
 </div>
@@ -13,45 +15,57 @@
 <div id="planingComponent" class="container">
 
   <ng-container *ngIf="this.userService.selectedWedding == 'friend'">
-    <div>
-      <h2>Boda Amigos</h2>
-    </div>
-    <div id="countdown">
+    <ng-container *ngIf="itsTheDay1">
+      <img src="assets/images/planing_friend_1.png" class="w-100 mx-auto">
+      <img src="assets/images/planing_friend_2.png" class="w-100 mx-auto">
+    </ng-container>
+    <ng-container *ngIf="!itsTheDay1">
       <div>
-        <span>Meses</span>
-        <span>Días</span>
-        <span>Horas</span>
-        <span>Minutos</span>
-        <span>Segundos</span>
+        <h2>Boda Amigos</h2>
       </div>
-      <div class="numbers">
-        <span id="months_1">00</span>
-        <span id="days_1">00</span>
-        <span id="hours_1">00</span>
-        <span id="minutes_1">00</span>
-        <span id="seconds_1">00</span>
+      <div id="countdown">
+        <div>
+          <span>Meses</span>
+          <span>Días</span>
+          <span>Horas</span>
+          <span>Min</span>
+          <span>Seg</span>
+        </div>
+        <div class="numbers">
+          <span id="months_1">00</span>
+          <span id="days_1">00</span>
+          <span id="hours_1">00</span>
+          <span id="minutes_1">00</span>
+          <span id="seconds_1">00</span>
+        </div>
       </div>
-    </div>
+    </ng-container>
   </ng-container>
   <ng-container *ngIf="this.userService.selectedWedding == 'family'">
-    <div class="mt-4">
-      <h2>Boda Familia</h2>
-    </div>
-    <div id="countdown">
+    <ng-container *ngIf="itsTheDay2">
+      <img src="assets/images/planing_framily_1.png" class="w-100 mx-auto">
+      <img src="assets/images/planing_framily_2.png" class="w-100 mx-auto">
+    </ng-container>
+    <ng-container *ngIf="!itsTheDay2">
       <div>
-        <span>Meses</span>
-        <span>Días</span>
-        <span>Horas</span>
-        <span>Minutos</span>
-        <span>Segundos</span>
+        <h2>Boda Familia</h2>
       </div>
-      <div class="numbers">
-        <span id="months_2">00</span>
-        <span id="days_2">00</span>
-        <span id="hours_2">00</span>
-        <span id="minutes_2">00</span>
-        <span id="seconds_2">00</span>
+      <div id="countdown">
+        <div>
+          <span>Meses</span>
+          <span>Días</span>
+          <span>Horas</span>
+          <span>Min</span>
+          <span>Seg</span>
+        </div>
+        <div class="numbers">
+          <span id="months_2">00</span>
+          <span id="days_2">00</span>
+          <span id="hours_2">00</span>
+          <span id="minutes_2">00</span>
+          <span id="seconds_2">00</span>
+        </div>
       </div>
-    </div>
+    </ng-container>
   </ng-container>
 </div>
