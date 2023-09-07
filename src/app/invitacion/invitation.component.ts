@@ -11,20 +11,21 @@ import { UserService } from '../services/user.service';
 })
 export class InvitationComponent {
 
-  modalRef!: NgbModalRef;
-  @ViewChild('invitationModal') invitationModal: any;
-
-
   constructor(
     public utilsService: UtilsService,
     public userService: UserService,
     public modal: NgbModal,
   ) {}
 
-  openModal() {
-    if (!this.modal.hasOpenModals()) {
-      this.modalRef = this.modal.open(this.invitationModal, { ariaLabelledBy: '', size: 'xl' });
-    }
+  openModal(content:any) {
+    this.modal.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
+      (result) => {
+        // this.closeResult = `Closed with: ${result}`;
+      },
+      (reason) => {
+        // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+      },
+    );
   }
 
 }
