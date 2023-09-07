@@ -33,9 +33,9 @@
                   <label for="bookingId">Contraseña</label>
                   <input type="text" class="form-control" id="bookingId" formControlName="bookingId" maxlength="10">
                 </div>
+                <div class="my-2 mx-0 text-danger" *ngIf="showError">Usuario o contraseña incorrectos. Recuerda que aparecen en la invicación</div>
                 <div class="form-group mt-3">
-                  <button type="submit" class="btn color-light bg-color-primary form-control"
-                    [disabled]="loginForm.invalid">
+                  <button type="submit" class="btn color-light bg-color-primary form-control" [disabled]="loginForm.invalid">
                     <i class="fa fa-search"></i> Entrar
                   </button>
                 </div>

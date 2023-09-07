@@ -17,6 +17,7 @@ import { loadFull } from 'tsparticles';
 export class LoginComponent implements OnInit {
 
   password: any;
+  showError = false;
 
   loginForm: FormGroup = this.fb.group({
     username: ['', Validators.required],
@@ -51,7 +52,7 @@ export class LoginComponent implements OnInit {
         this.userService.setCurrentUser(currentUser);
         this.router.navigate(['home']);
       } else {
-        alert('¿plata o plomo extraño?');
+        this.showError = true
       };
     })
 
@@ -139,10 +140,6 @@ export class LoginComponent implements OnInit {
   }
 
   async particlesInit(engine: any): Promise<void> {
-    // console.log(engine);
-    // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
   }
 

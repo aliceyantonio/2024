@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../services/user.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-place',
@@ -8,6 +9,20 @@ import { UserService } from '../services/user.service';
 })
 export class PlaceComponent {
 
-  constructor(public userService: UserService
+  constructor(
+    public userService: UserService,
+    private modalService: NgbModal
   ) { }
+
+  openMap(content: any) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
+      (result) => {
+        // this.closeResult = `Closed with: ${result}`;
+      },
+      (reason) => {
+        // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+      },
+    );
+  }
+
 }

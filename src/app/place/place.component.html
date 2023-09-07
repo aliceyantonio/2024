@@ -5,7 +5,86 @@
 <div id="placeComponent" class="container">
 
   <ng-container *ngIf="userService.selectedWedding == 'friend'">
-    amigos
+
+
+    <h2>Lo primero de todo ¿Dónde será la boda?</h2>
+    <ngb-carousel [interval]="100000">
+      <ng-template ngbSlide>
+        <div class="carousel-caption border rounded p-5">
+          <h2>¡Tachán Tachán!</h2>
+          <h6>¡El mayor misterio de la humanidad está a punto de ser revelado!</h6>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="carousel-caption border rounded p-5">
+          <h2>Te preguntarás</h2>
+          <h6>
+            ¿El origen de la vida? <br>
+            ¿Qué hay despues de la muerte? <br>
+            ¿Un fruto seco en una piscina sigue siendo un fruto seco?
+          </h6>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="carousel-caption border rounded p-5">
+          <h2>¡NO! Uno MUCHO MÁS importante</h2>
+          <h6>¡Ni más ni menos que el lugar donde será nuestro casamiento!</h6>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="carousel-caption border rounded p-5">
+          <h2>Finalmente Alice me ha dejado deciros que la Boda va a ser en</h2>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="carousel-caption">
+          <div class="picsum-img-wrapper">
+            <img src="assets/images/Como.png" class="w-100 h-100" alt="Random second slide" />
+          </div>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+
+    <div class="row mt-5">
+      <div class="col-4">
+        <img
+          src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"
+          alt="" class="w-100">
+      </div>
+      <div class="col-8">
+        <h2>Y entonces...¿Cómo hago para llegar?</h2>
+        <p>Para llegar a al lugar tienes 2 opciones</p>
+        <div class="mt-3">
+          <h6 class="text-decoration-underline">Si vienes en autobús</h6>
+          <p>Hemos contratado un bus para llegar hasta el lugar. Esta es la opción que más recomendamos ya que es lo más cómodo para vosotros... y nos aseguramos de que nadie llegue tarde. El punto de encuentro del bus será el <strong class="text-decoration-underline"> Sábado 9 de Junio a las 9:00 a en P.º de Moret, 1, 28008 Madrid</strong>. Alli encontrarás un bus de la empresa ______ con un cartel de la boda y una persona para gestionar que todo el mundo esté.</p>
+          <div class="text-center my-2">
+            <button class="btn btn-outline-light" role="button" (click)="openMap(busModal)">Ver en el mapa</button>
+            <a href="https://calendar.google.com/calendar/r/eventedit?text=Boda+Alice+y+Antonio&dates=20240608T070000Z/20240609T150000Z&details=Si+tienes+problemas+llama+a+María+(wedding+planner):+672380316&location=P.º+de+Moret,+1,+28008+Madrid" class="btn btn-outline-light ms-2" role="button" (click)="openMap(busModal)">Añadir al calendario</a>
+          </div>
+        </div>
+        <div class="mt-3">
+          <h6 class="text-decoration-underline">Si vienes por tu propia cuenta</h6>
+          <p>En este caso escríbenos para que te digamos cual es el punto de encuentro ¡No queremos dar pistas!</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <ng-template #busModal let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Lugar de recogida</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body text-center">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1518.4197697668485!2d-3.721311066456714!3d40.43455186111445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422841b271b6d7%3A0x5e7869cfc05475d0!2sP.%C2%BA%20de%20Moret%2C%201%2C%2028008%20Madrid!5e0!3m2!1ses!2ses!4v1693947232615!5m2!1ses!2ses"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </ng-template>
+
+
 
   </ng-container>
   <ng-container *ngIf="userService.selectedWedding == 'family'">
@@ -13,6 +92,6 @@
   </ng-container>
 </div>
 
-<!-- lugar y fecha -->
-<!-- como llegar -->
-<!-- box de booking con hotel recomendado -->
+<!-- Lugar y fecha -->
+<!-- Como llegar -->
+<!-- Hotel recomendado -->

@@ -1,0 +1,43 @@
+::ng-deep {
+  .carousel-inner {
+    margin-top: -30px;
+
+    .carousel-item {
+      height: 350px;
+    }
+
+    .carousel-caption {
+      max-width: 500px !important;
+      left: 50%;
+      top: 50%;
+      right: unset;
+      bottom: unset;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  img {
+    max-height: 450px;
+  }
+
+
+  .accordion {
+
+    .accordion-body,
+    .accordion-button:not(.collapsed),
+    .accordion-button.collapsed {
+      background-color: var(--color-primary);
+      color: white;
+      box-shadow: none;
+
+    }
+
+    button {
+      font-size: 2rem;
+    }
+  }
+}
+
+p {
+  margin-bottom: 0;
+}
