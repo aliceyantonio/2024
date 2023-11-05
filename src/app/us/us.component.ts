@@ -8,6 +8,7 @@ import { Country } from '../models/country.model';
 import { CountriesService } from '../services/countries.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-us',
   templateUrl: './us.component.html',
@@ -41,6 +42,7 @@ export class UsComponent implements OnInit {
     private location: Location,
     private fb: FormBuilder,
     public modal: NgbModal,
+    public userService: UserService
   ) { }
 
   ngOnInit(): void {

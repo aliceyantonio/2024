@@ -7,12 +7,17 @@
   <div class="row mt-4">
     <div class="col-lg-8">
       <div class="card p-3 p-lg-4">
-        <h3 class="text-center">Recuérdame ¿Cómo era la invitación?</h3>
+        <h3 class="mb-3">Recuérdame ¿cómo era la invitación?</h3>
         <p>
-          Esto seguramente no sea para nada necesario porque para acceder a la web has tenido que tener la invitación delante...pero ya que somos programadores... ¡Dejanos lucirnos lucirnos con esta animación 3D tan guay!
+          Esto seguramente no sea para nada necesario porque para acceder a la web has tenido que tener la invitación delante... pero ya que somos programadores...
         </p>
-        <button class="btn btn-light" (click)="utilsService.logOut()">logOut</button>
-        <button class="btn btn-light" (click)="openModal(invitationModal)">invitación</button>
+        <p>
+          ¡Déjanos lucirnos lucirnos con esta <strong>animación 3D</strong> tan guay!
+        </p>
+        <!-- <button class="btn btn-light" (click)="utilsService.logOut()">logOut</button> -->
+        <div class="text-center">
+          <button class="btn btn-light w-50" (click)="openModal(invitationModal)">Ver invitación</button>
+        </div>
       </div>
     </div>
     <div class="col-lg-4">
@@ -27,33 +32,40 @@
     </div>
     <div class="col-lg-8">
       <div class="card p-3 p-lg-4">
-        <h3 class="text-center">Son 2 días...¿Qué ropa me recomendáis llevar?</h3>
-        <p>
-          Como bien dices, son 2 días y es importante organizar bien la mochila/maletita (por favor no vengas con un maletón que cobramos sobrepeso como Ryanair).
-        </p>
-        <p class="mb-0">Para estar cómodos estos 2 días te recomendamos traer:</p>
-        <ul>
-            <li>Un look casual para la llegada (como te vestirías un día normal para salir con amigos)</li>
-            <li>Zapato cómodo para andar al llegar (no vas a subir una montaña pero no vengas en tacones por favor)</li>
-            <li>Traje tipo cocktail para la tarde-noche (tacones welcome... pero no de aguja mejor)</li>
-            <li>Pijama divertido ya que habrá concurso (totalmente obligatorio participar)</li>
-            <li>Algo ligero con lo que cubrirte en al noche (chaqueta por ejemplo) por si refresca.</li>
-            <li>Bañador (No se te olvide o te arrepentirás mucho)</li>
-            <li>Look business casual para el 2º día (lo mismo que para llegar pero un pelín más arreglado)</li>
-        </ul>
+        <ng-container *ngIf="userService.selectedWedding == 'friend'">
+          <h3 class="mb-3">Son 2 días...¿qué ropa me recomendáis llevar?</h3>
+          <p>
+            Como bien dices, son 2 días y es importante organizar bien la mochila/maletita (por favor no vengas con un maletón que <strong>cobramos sobrepeso</strong> como Ryanair).
+          </p>
+          <p class="mb-0">Para estar cómodos estos 2 días te recomendamos traer:</p>
+          <ul>
+              <li><strong>Look casual</strong> para la llegada (como te vestirías un día normal para salir con amigos).</li>
+              <li><strong>Zapato cómodo</strong> para andar al llegar (no vas a subir una montaña pero no vengas en tacones por favor).</li>
+              <li><strong>Traje tipo cocktail</strong> para la tarde-noche (tacones welcome... pero no de aguja).</li>
+              <li><strong>Pijama divertido</strong> ya que habrá concurso (totalmente obligatorio participar).</li>
+              <li><strong>Abrigo ligero</strong> con lo que cubrirte en la noche (chaqueta por ejemplo) por si refresca.</li>
+              <li><strong>Bañador</strong> (No se te olvide o te arrepentirás mucho).</li>
+              <li><strong>Look ibicenco/blanco</strong> para el 2º día.</li>
+          </ul>
+        </ng-container>
       </div>
     </div>
   </div>
   <div class="row mt-4">
     <div class="col-lg-8">
       <div class="card p-3 p-lg-4">
-        <h3 class="text-center">Para esa noche... ¿He de buscar dónde dormir?</h3>
-        <p>
-          ¡Por supuesto que no! Esto es una experiencia <i>all included</i> (insertar gif lanzando billetes).
-        </p>
-        <p>
-          La noche del 8 al 9 nos encargamos nosotros de proporcionarte alojamiento (no es un hotel, imagínate algo mas rollo...glamping). Solo recuerda traer lo que puedas necesitar de acomodamiento (toalla, liquido lentillas, cepillo de dientes...). Eso y buen humor porque lo vamos a pasar genial.
-        </p>
+        <ng-container *ngIf="userService.selectedWedding == 'friend'">
+          <h3 class="mb-3">Para esa noche... ¿he de buscar dónde dormir?</h3>
+          <p>
+            ¡Por supuesto que no! Esto es una experiencia <strong>all included</strong> (insertar gif lanzando billetes).
+          </p>
+          <p>
+            La noche del 8 al 9 nos encargamos nosotros de proporcionarte alojamiento (no es un hotel, imagínate algo mas rollo campamento de verano).
+          </p>
+          <p>
+            Sólo recuerda traer lo que puedas necesitar de uso personal (toalla, liquido lentillas, cepillo de dientes...). Eso y buen humor porque lo vamos a pasar genial.
+          </p>
+        </ng-container>
       </div>
     </div>
     <div class="col-lg-4">
@@ -68,22 +80,20 @@
     </div>
     <div class="col-lg-8">
       <div class="card p-3 p-lg-4">
-        <h3 class="text-center">Me caéis super bien y me gustaría haceros un regalo</h3>
-        <p>
-          Uy! ¡Qué inesperado! La verdad es que no esperabamos caer bien a la gente que hemos <strong>invitado a nuestra boda</strong>.
-        </p>
-        <p>
-          Por supuesto todos los regalos son bienvenidos porque aunque sabemos, que el mejor regalo es vuestra amistad... lamentablemente el viaje de novios no de paga con cariño. Por ello hemos habilitado una cuenta bancaria común (esto si es compromiso) en la que podéis darnos el regalo que estiméis que vale nuestra amistad (2k en adelante).
-        </p>
-        <p class="text-center">ES 12 3456 7890 12 34567890 <br> (por supuesto en mano también es bien recibido)</p>
+        <ng-container *ngIf="userService.selectedWedding == 'friend'">
+          <h3 class="mb-3">Me caéis super bien y me gustaría haceros un regalo</h3>
+          <p>
+            Uy! ¡Qué inesperado! La verdad es que no esperabamos caer bien a la gente que hemos <strong>invitado a nuestra boda</strong>.
+          </p>
+          <p>
+            Por supuesto todos los regalos son bienvenidos porque aunque sabemos, que el mejor regalo es vuestra amistad... lamentablemente el viaje de novios no se paga con cariño. Por ello hemos habilitado una cuenta bancaria común (esto si es compromiso) en la que podéis darnos el regalo que estiméis que vale nuestra amistad (2k en adelante).
+          </p>
+          <p class="text-center"><strong>ES74 0182 5322 2002 0578 3245</strong><br> (por supuesto en metálico también es bien recibido)</p>
+        </ng-container>
       </div>
     </div>
   </div>
 </div>
-
-<!-- cosas a llevar (poner cosas graciosas como llevra flotador, pantalon de perreo (para que no te apse lo que a jaime)) -->
-<!-- datos de pago https://codepen.io/emacampa/pen/MWOygoV -->
-
 
 <ng-template ng-template #invitationModal let-modal>
   <section class="cartridge">
@@ -95,6 +105,7 @@
 
       <figure class="back">
         <figure></figure>
+        <figure class="label"></figure>
       </figure>
 
       <figure class="rightside">

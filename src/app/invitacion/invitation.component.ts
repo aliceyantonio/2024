@@ -11,6 +11,10 @@ import { UserService } from '../services/user.service';
 })
 export class InvitationComponent {
 
+  modalRef!: NgbModalRef;
+  @ViewChild('invitationModal') invitationModal: any;
+
+
   constructor(
     public utilsService: UtilsService,
     public userService: UserService,
@@ -26,6 +30,9 @@ export class InvitationComponent {
         // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
       },
     );
+    // if (!this.modal.hasOpenModals()) {
+    //   this.modalRef = this.modal.open(this.invitationModal, { ariaLabelledBy: '', size: 'xl' });
+    // }
   }
 
 }

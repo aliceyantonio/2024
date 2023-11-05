@@ -4,10 +4,10 @@
 </div>
 <div id="usComponent" class="container">
 
-  <div id="usSection" class="border border-light rounded p-4">
+  <div id="usSection" class="card rounded p-4">
     <h2 class="text-center">¿Cuánto sabes de nosotros?</h2>
-    <p class="mt-4 mb-0 color-secondary font-size-1_1">
-      Para nosotros eres MUY importante {{'nombre'}} y nos pondríamos muy tristes de no serlo para ti también...
+    <p class="mt-4 mb-0 font-size-1_1">
+      Para nosotros eres MUY importante {{ userService.currentUser.name | titlecase }} y nos pondríamos muy tristes de no serlo para ti también...
       <br> Pero sabemos que nos conoces SUPER bien (yo díría que incluso nos amas) y para demostrárnoslo te hemos preparado este sencillo quiz, el cual tienes que aprobar para poder asistir a nuestra boda.
     </p>
     <form [formGroup]="usForm" (ngSubmit)="checkForm()" id="usForm">
@@ -26,7 +26,7 @@
             <input type="radio" formControlName="question1" value=3 id="answer1_3">
             <label class="answer-text" for="answer1_3">Un extranjero borracho</label>
           </div>
-          <img *ngIf="answerShown" src="../../assets/travelers/1.webp" class="w-100">
+          <img *ngIf="answerShown" src=" assets/travelers/1.webp" class="w-100">
         </div>
         <div class="form-group col-lg-6 mt-4">
           <label>¿Qué da más miedo a Antonio?</label>
@@ -42,7 +42,7 @@
             <input type="radio" formControlName="question2" value=3 id="answer2_3">
             <label class="answer-text" for="answer2_3">Alice con la ceja levantada</label>
           </div>
-          <img *ngIf="answerShown" src="../../assets/travelers/1.webp" class="w-100">
+          <img *ngIf="answerShown" src=" assets/travelers/1.webp" class="w-100">
         </div>
         <div class="form-group col-lg-6 mt-4">
           <label>¿Por que Alice tiene tantos (TANTOS) hermanos?</label>
@@ -58,7 +58,7 @@
             <input type="radio" formControlName="question3" value=3 id="answer3_3">
             <label class="answer-text" for="answer3_3">No tenían televisión</label>
           </div>
-          <img *ngIf="answerShown" src="../../assets/travelers/1.webp" class="w-100">
+          <img *ngIf="answerShown" src=" assets/travelers/1.webp" class="w-100">
         </div>
         <div class="form-group col-lg-6 mt-4">
           <label>¿Qué es lo que más odia Alice en el mundo?</label>
@@ -74,7 +74,7 @@
             <input type="radio" formControlName="question4" value=3 id="answer4_3">
             <label class="answer-text" for="answer4_3">Que Antonio le haga participar en este quiz</label>
           </div>
-          <img *ngIf="answerShown" src="../../assets/travelers/1.webp" class="w-100">
+          <img *ngIf="answerShown" src=" assets/travelers/1.webp" class="w-100">
         </div>
         <div class="form-group col-lg-6 mt-4">
           <label>¿Cual es el animal favorito de Antonio?</label>
@@ -90,12 +90,12 @@
             <input type="radio" formControlName="question5" value=3 id="answer5_3">
             <label class="answer-text" for="answer5_3">El burro, que viven muchos años</label>
           </div>
-          <img *ngIf="answerShown" src="../../assets/travelers/1.webp" class="w-100">
+          <img *ngIf="answerShown" src=" assets/travelers/1.webp" class="w-100">
         </div>
 
         <div class="col-lg-6 d-flex flex-column mt-5 justify-content-end color-secondary position-relative">
           <ng-container *ngIf="!answerShown">
-            <button class="btn color-primary bg-color-secondary w-25 mx-auto" type="submit" [disabled]="usForm.invalid">Enviar</button>
+            <button class="answer w-25 mx-auto" type="submit" [disabled]="usForm.invalid">Enviar</button>
             PD: Si lo suspendes no queremos volver a verte, te odiamos y lo peor de todo: ESTÁS DESINVITADO
           </ng-container>
           <ng-container *ngIf="answerShown">
@@ -109,7 +109,7 @@
 
   <div id="travelsSection" class="mt-5 border border-light rounded p-4">
     <h2 class="text-center">Nuestros viajes</h2>
-    <p class="color-secondary"> A lo largo de estos años hemos tenido la oportunidad de conocer muchos paises. Hemos pensado en hacernos travel-bloggers muchas veces... pero nunca damos el paso. Quizá este sea el comienzo de ______ (insertar nombre guay de influencer de viajes)</p>
+    <p class="color-secondary">A lo largo de estos años hemos tenido la oportunidad de conocer muchos paises. Hemos pensado en hacernos travel-bloggers muchas veces... pero nunca damos el paso. Quizá este sea el comienzo de ______ (insertar nombre guay de influencer de viajes)</p>
     <div class="container-fluid container-md mt-5">
       <hr class="mb-5">
       <div id="map" class="mb-0"></div>
@@ -120,15 +120,15 @@
 <ng-template #answersModal let-modal>
   <div class="modal-header border-bottom-0">
     <h5 class="modal-title">
-      <ng-container *ngIf="score>2">Nos conoces casi tanto como nuestra madre</ng-container>
-      <ng-container *ngIf="score<=2">¿Enserio? Te odiamos</ng-container>
+      <ng-container *ngIf="score>3">Nos conoces casi tanto como nuestra madre</ng-container>
+      <ng-container *ngIf="score<=3">¿Enserio? Te odiamos</ng-container>
     </h5>
   </div>
 
   <div class="modal-body">
     <p>
-      <ng-container *ngIf="score>2">¡Enhorabuena! <br> Has aprobado con {{score}}/5 y sigues invitado a la boda (ya puedes ir haciéndonos el regalo 😬). <br> Como amante de nosotros sabemos que nunca te cansas de saber más de nosotros. Para ello hemos preparado un pequeño jueguito.</ng-container>
-      <ng-container *ngIf="score<=2">Has suspendido con {{score}}/5. <br> No estás preparado para venir a nuestra boda... pero estás de suerte y hemos preparado un curso de recuperación para que puedas volver a caernos bien.</ng-container>
+      <ng-container *ngIf="score>3">¡Enhorabuena! <br> Has aprobado con {{score}}/5 y sigues invitado a la boda (ya puedes ir haciéndonos el regalo 😬). <br> Como amante de nosotros sabemos que nunca te cansas de saber más de nosotros y para ello hemos preparado un pequeño jueguito.</ng-container>
+      <ng-container *ngIf="score<=3">Has suspendido con {{score}}/5. <br> No estás preparado para venir a nuestra boda... pero estás de suerte y hemos preparado un curso de recuperación para que puedas volver a caernos bien.</ng-container>
     </p>
 </div>
   <div class="modal-footer justify-content-center row m-0">

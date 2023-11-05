@@ -1,5 +1,5 @@
 // variables
-$height:calc(500px * 0.4);
+$height:calc(750px * 0.4);
 
 figure {
   margin: 0;
@@ -8,14 +8,16 @@ figure {
 
 .cartridge {
   display: inline-block;
-  width: 500px;
+  // width: 500px;
+  width: 425px;
+  height: 300px;
   height: $height;
   perspective: 1000px;
   transform-style: preserve-3d;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 100%);
+  transform: translate(-50%, 50%);
   transition: 1s;
 
   .case {
@@ -32,7 +34,7 @@ figure {
     width: 100%;
 
     figure {
-      background-color: var(--color-tertiary);
+      background-color: var(--color-primary);
       height: 100%;
       width: 100%;
       bottom: 0;
@@ -40,12 +42,27 @@ figure {
     }
   }
 
+  .label {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   .front {
     transform: translateZ(calc(500px / 10 / 10));
+    .label {
+      background-image: url(/assets/images/Amigos.jpg);
+    }
   }
 
   .back {
     transform: translateZ(calc(-500px / 10 / 10));
+    .label {
+      background-image: url(/assets/images/logo_dorado.png);
+      background-size: 25%;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
   }
 
   .rightside,
@@ -59,7 +76,7 @@ figure {
 
     figure {
       bottom: 0;
-      background-color: var(--color-tertiary);
+      background-color: var(--color-primary);
       filter: brightness(90%);
       width: 100%;
       height: 100%;
@@ -79,7 +96,7 @@ figure {
     transform-style: preserve-3d;
 
     figure {
-      background-color: var(--color-tertiary);
+      background-color: var(--color-primary);
       filter: brightness(80%);
       width: 100%;
       height: 100%;
@@ -91,12 +108,12 @@ figure {
     top: calc(-500px / 10 / 10);
   }
 
-  .label {
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(../../assets/users/aliceilopezg.jpeg);
-  }
+  // .label {
+  //   background-position: center;
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  //   background-image: url(/assets/images/Amigos.jpg);
+  // }
 
 }
 
@@ -150,5 +167,13 @@ figure {
 
   100% {
     transform: rotateZ(360deg) rotateX(360deg)
+  }
+}
+
+::ng-deep {
+  .modal-content{
+    background-color: transparent;
+    outline: none;
+    border: none;
   }
 }

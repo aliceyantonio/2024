@@ -46,7 +46,6 @@ export class HomeComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if ((window.pageYOffset > (document.querySelectorAll('.section')[1]! as HTMLElement).offsetTop - 500) && !this.section2Animated) {
-      console.log('aqui 2');
       this.section2Animated = true
       this.tl
         .from(".s2 .text-anim", { y: -50, opacity: 0, stagger: 0.4 })
@@ -58,7 +57,6 @@ export class HomeComponent implements OnInit {
           });
 
     } else if ((window.pageYOffset > (document.querySelectorAll('.section')[2]! as HTMLElement).offsetTop - 500) && !this.section3Animated) {
-      console.log('aqui 3');
       this.section3Animated = true
       this.tl
         .from(".s3 .text-anim", { y: -50, opacity: 0, stagger: 0.4 })
@@ -69,7 +67,6 @@ export class HomeComponent implements OnInit {
         });
 
     } else if ((window.pageYOffset > (document.querySelectorAll('.section')[3]! as HTMLElement).offsetTop - 500) && !this.section4Animated) {
-      console.log('aqui 4');
       this.section4Animated = true
       this.tl
         .from(".s4 .text-anim", { y: -50, opacity: 0, stagger: 0.4 })
@@ -80,7 +77,6 @@ export class HomeComponent implements OnInit {
         });
 
     } else if ((window.pageYOffset > (document.querySelectorAll('.section')[4]! as HTMLElement).offsetTop - 500) && !this.section5Animated) {
-      console.log('aqui 5');
       this.section5Animated = true
       this.tl
         .from(".s5 .text-anim", { y: -50, opacity: 0, stagger: 0.4 })
@@ -91,7 +87,6 @@ export class HomeComponent implements OnInit {
         });
 
     } else if ((window.pageYOffset > (document.querySelectorAll('.section')[5]! as HTMLElement).offsetTop - 500) && !this.section6Animated) {
-      console.log('aqui 6');
       this.section6Animated = true
       this.tl
         .from(".s6 .text-anim", { y: -50, opacity: 0, stagger: 0.4 })
