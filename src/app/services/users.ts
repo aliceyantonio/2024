@@ -1,19 +1,21 @@
 var users = [
   {
     "name": "Antonio",
-    "username": "sr_vallejo",
+    "username": "an_va",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family",
     ],
     "origin": "La Granja",
     "gender": "male",
   },
   {
     "name": "Alice",
-    "username": "aliceilopezg",
+    "username": "al_lo",
     "bookingIds": [
       "AA08062024",
       "AA15062024"
@@ -27,19 +29,21 @@ var users = [
   },
   {
     "name": "Paula",
-    "username": "vanessalopez_g_",
+    "username": "pau_lo",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "Bogotá",
     "gender": "female",
   },
   {
     "name": "Stephany",
-    "username": "steffyylolo_",
+    "username": "ste_lo",
     "bookingIds": [
       "AA08062024"
     ],
@@ -50,202 +54,137 @@ var users = [
     "gender": "female",
   },
   {
-    "name": "Raquel",
-    "username": "raquelpl13",
+    "name": "Raquel y David",
+    "username": "ra_da",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "Ciudad Real",
-    "gender": "female",
-  },
-  {
-    "name": "David",
-    "username": "montanes18",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Ciudad Real",
-    "gender": "male",
+    "gender": "multiple",
   },
   {
     "name": "Lucia",
-    "username": "luciaapl10",
+    "username": "lu_pe",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "La Granja",
     "gender": "female",
   },
   {
-    "name": "Pablo",
-    "username": "pabloza",
+    "name": "Pablo e Iván",
+    "username": "pa_i",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "La Granja",
-    "gender": "male",
+    "gender": "multiple",
   },
   {
-    "name": "Iván",
-    "username": "ivanure",
+    "name": "Patricia y Germán",
+    "username": "pa_ger",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
-    ],
-    "origin": "Ciudad Real",
-    "gender": "male",
-  },
-  {
-    "name": "Patricia",
-    "username": "patriciavv59",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
+      "family"
     ],
     "origin": "La Granja",
-    "gender": "female",
+    "gender": "multiple",
   },
-  {
-    "name": "Germán",
-    "username": "german_2023",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "La Granja",
-    "gender": "male",
-  },
+
   {
     "name": "Rubén",
-    "username": "rubenx360",
+    "username": "ru_gon",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "Pinto",
     "gender": "male",
   },
   {
     "name": "Paula",
-    "username": "sandelsaire",
+    "username": "pa_ru",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "Madrid",
     "gender": "female",
   },
   {
     "name": "Carlos",
-    "username": "carluis2209",
+    "username": "car_a",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
-    "origin": "Caracas",
-    "gender": "male",
+    "origin": "Caracas y París",
+    "gender": "multiple",
   },
   {
-    "name": "Amandine",
-    "username": "amandine_bchrd",
+    "name": "Vivi y Omar",
+    "username": "vi_o",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
-    ],
-    "origin": "París",
-    "gender": "female",
-  },
-  {
-    "name": "Vivi",
-    "username": "bgvivi",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
+      "family"
     ],
     "origin": "Barranquilla",
-    "gender": "female",
+    "gender": "multiple",
   },
   {
-    "name": "Omar",
-    "username": "omaralejo1214",
+    "name": "Michelle y Francisco",
+    "username": "mi_fran",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
-    "origin": "Barranquilla",
-    "gender": "male",
-  },
-  {
-    "name": "Michele",
-    "username": "michellewallisd",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Caracas",
-    "gender": "female",
-  },
-  {
-    "name": "Francisco",
-    "username": "francisco_2023",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Cáceres",
-    "gender": "male",
-  },
-  {
-    "name": "Anita",
-    "username": "anamaria.mendozad",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Bogotá",
-    "gender": "female",
+    "origin": "Caracas y Medellín",
+    "gender": "multiple",
   },
   {
     "name": "Bárbara",
-    "username": "bmarie0519",
+    "username": "bar_ba",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
     ],
     "userRoles": [
       "friend",
@@ -255,9 +194,9 @@ var users = [
   },
   {
     "name": "Geraldine",
-    "username": "geraldinevelazco",
+    "username": "ge_ve",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
     ],
     "userRoles": [
       "friend",
@@ -266,8 +205,8 @@ var users = [
     "gender": "female",
   },
   {
-    "name": "Pedro",
-    "username": "boticarious",
+    "name": "Pedro y Luna",
+    "username": "pe_lu",
     "bookingIds": [
       "AA08062024"
     ],
@@ -275,23 +214,11 @@ var users = [
       "friend",
     ],
     "origin": "Córdoba",
-    "gender": "male",
-  },
-  {
-    "name": "Luna",
-    "username": "lunaaprt",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Córdoba",
-    "gender": "female",
+    "gender": "multiple",
   },
   {
     "name": "Jorge",
-    "username": "jorvesal",
+    "username": "jor_ve",
     "bookingIds": [
       "AA08062024"
     ],
@@ -303,7 +230,33 @@ var users = [
   },
   {
     "name": "Gloria",
-    "username": "mglorialb",
+    "username": "glo_a",
+    "bookingIds": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Madrid",
+    "gender": "female",
+  },
+  {
+    "name": "Gracia y Pablo",
+    "username": "gra_pa",
+    "bookingIds": [
+      "AA08062024",
+      "AA15062024"
+    ],
+    "userRoles": [
+      "friend",
+      "family"
+    ],
+    "origin": "Alicante y Sevilla",
+    "gender": "multiple",
+  },
+  {
+    "name": "Jaime Y Raquel",
+    "username": "ja_ra",
     "bookingIds": [
       "AA08062024"
     ],
@@ -311,35 +264,11 @@ var users = [
       "friend",
     ],
     "origin": "Madrid",
-    "gender": "female",
+    "gender": "multiple",
   },
   {
-    "name": "Gracia",
-    "username": "graenr",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Alicante",
-    "gender": "female",
-  },
-  {
-    "name": "Pablo",
-    "username": "pablopricar",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Sevilla",
-    "gender": "male",
-  },
-  {
-    "name": "Jaime",
-    "username": "osunaj92",
+    "name": "Quirós y Yaiza",
+    "username": "qui_ya",
     "bookingIds": [
       "AA08062024"
     ],
@@ -347,71 +276,23 @@ var users = [
       "friend",
     ],
     "origin": "Madrid",
-    "gender": "male",
+    "gender": "multiple",
   },
   {
-    "name": "Raquel",
-    "username": "raquelcorot",
+    "name": "Anabel y Juan Pablo",
+    "username": "a_ju",
     "bookingIds": [
       "AA08062024"
     ],
     "userRoles": [
       "friend",
     ],
-    "origin": "Madrid",
-    "gender": "female",
-  },
-  {
-    "name": "Quirós",
-    "username": "lbertoquiros",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Madrid",
-    "gender": "male",
-  },
-  {
-    "name": "Yaiza",
-    "username": "yaipg",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Madrid",
-    "gender": "female",
-  },
-  {
-    "name": "Anabel",
-    "username": "anabelcantador",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Córdoba",
-    "gender": "female",
-  },
-  {
-    "name": "Juan Pablo",
-    "username": "juampi_ba_9",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Bolivia",
-    "gender": "male",
+    "origin": "Córdoba y Bolivia",
+    "gender": "multiple",
   },
   {
     "name": "Lempetu",
-    "username": "lempetu",
+    "username": "lem_car",
     "bookingIds": [
       "AA08062024"
     ],
@@ -423,7 +304,7 @@ var users = [
   },
   {
     "name": "Carmen",
-    "username": "transformer_",
+    "username": "car_be",
     "bookingIds": [
       "AA08062024"
     ],
@@ -434,8 +315,8 @@ var users = [
     "gender": "female",
   },
   {
-    "name": "Vane",
-    "username": "vannepires",
+    "name": "Vane y Plata",
+    "username": "va_pla",
     "bookingIds": [
       "AA08062024"
     ],
@@ -443,23 +324,11 @@ var users = [
       "friend",
     ],
     "origin": "Madrid",
-    "gender": "female",
-  },
-  {
-    "name": "Plata",
-    "username": "plata_2023",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Madrid",
-    "gender": "male",
+    "gender": "multiple",
   },
   {
     "name": "Andrea",
-    "username": "andreaonthehell",
+    "username": "an_da",
     "bookingIds": [
       "AA08062024"
     ],
@@ -471,7 +340,7 @@ var users = [
   },
   {
     "name": "Gómez",
-    "username": "mudito.jpg",
+    "username": "al_go",
     "bookingIds": [
       "AA08062024"
     ],
@@ -483,7 +352,7 @@ var users = [
   },
   {
     "name": "Patri",
-    "username": "patri_2023",
+    "username": "pa_ma",
     "bookingIds": [
       "AA08062024"
     ],
@@ -494,8 +363,8 @@ var users = [
     "gender": "female",
   },
   {
-    "name": "Ivonne",
-    "username": "ivonnenatalia.ibanez",
+    "name": "Ivonne y William",
+    "username": "i_wi",
     "bookingIds": [
       "AA08062024"
     ],
@@ -503,44 +372,19 @@ var users = [
       "friend",
     ],
     "origin": "Bogotá",
-    "gender": "female",
+    "gender": "multiple",
   },
   {
-    "name": "Wilson",
-    "username": "willian20_10",
+    "name": "Daniel y Kaisa",
+    "username": "da_ka",
     "bookingIds": [
       "AA08062024"
     ],
     "userRoles": [
       "friend",
     ],
-    "origin": "Bogotá",
-    "gender": "male",
-  },
-  {
-    "name": "Kaisa",
-    "username": "kaisasy",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Finlandia",
-    "gender": "female",
-  },
-  {
-    "name": "San Eusebio",
-    "username": "danii9490",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Torrecaballeros",
-    "gender": "male",
-  },
-
+    "origin": "Torrecaballeros y Finlandia",
+    "gender": "multiple",
+  }
 ]
  export default users;
