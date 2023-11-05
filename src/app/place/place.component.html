@@ -6,18 +6,22 @@
 
   <ng-container *ngIf="userService.selectedWedding == 'friend'">
 
+    <div class="row">
+      <div class="col-12 px-4">
+        <h2>Lo primero de todo ¿dónde será la boda?</h2>
+      </div>
+    </div>
 
-    <h2>Lo primero de todo ¿dónde será la boda?</h2>
     <ng-container *ngIf="userService.selectedWedding == 'friend'">
       <ngb-carousel [interval]="100000">
         <ng-template ngbSlide>
-          <div class="carousel-caption p-5 card">
+          <div class="carousel-caption p-lg-4 p-2 card">
             <h2>¡Tachán Tachán!</h2>
             <h6>¡El mayor misterio de la humanidad está a punto de ser revelado!</h6>
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="carousel-caption p-5 card">
+          <div class="carousel-caption p-lg-4 p-2 card">
             <h2>Te preguntarás</h2>
             <h6>
               ¿El origen de la vida? <br>
@@ -27,13 +31,13 @@
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="carousel-caption p-5 card">
+          <div class="carousel-caption p-lg-4 p-2 card">
             <h2>¡NO! Uno MUCHO MÁS importante</h2>
             <h6>¡Ni más ni menos que el lugar donde será nuestro casamiento!</h6>
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="carousel-caption p-5 card">
+          <div class="carousel-caption p-lg-4 p-2 card">
             <h2>Finalmente Alice me ha dejado deciros que la boda va a ser en</h2>
           </div>
         </ng-template>
@@ -45,38 +49,35 @@
           </div>
         </ng-template>
       </ngb-carousel>
-    </ng-container>
-
-    <div class="row mt-5">
-      <div class="col-lg-4">
-        <img
-          src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"
-           class="w-100">
-      </div>
-      <div class="col-lg-8">
-        <div class="card p-3 p-lg-4">
-          <ng-container *ngIf="userService.selectedWedding == 'friend'">
-            <h3 class="text-center mb-4">Y entonces...¿cómo hago para llegar?</h3>
-            <p>Para llegar a al lugar tienes 2 opciones:</p>
-            <div class="mt-2">
-              <h6 class="text-decoration-underline">Si vienes en autobús</h6>
-              <p>Hemos contratado un bus para llegar hasta el lugar. Esta es la opción que más recomendamos ya que es lo más cómodo para vosotros... y nos aseguramos de que nadie llegue tarde. El punto de encuentro del bus será el <strong class="text-decoration-underline"> <a class="text-decoration-none color-primary" href="https://calendar.google.com/calendar/r/eventedit?text=Boda+Alice+y+Antonio&dates=20240608T070000Z/20240609T150000Z&details=Si+tienes+problemas+llama+a+María+(wedding+planner):+672380316&location=P.º+de+Moret,+1,+28008+Madrid" target="_blank">Sábado 9 de Junio a las 9:00 a en P.º de Moret, 1, 28008 Madrid</a></strong>. Alli encontrarás un bus de la empresa ______ con un cartel de la boda y una persona para gestionar que todo el mundo llege a tiempo.</p>
-              <div class="text-center my-2">
-                <button class="btn btn-outline-dark" role="button" (click)="openMap(busModal)">Ver en el mapa</button>
-                <a href="https://calendar.google.com/calendar/r/eventedit?text=Boda+Alice+y+Antonio&dates=20240608T070000Z/20240609T150000Z&details=Si+tienes+problemas+llama+a+María+(wedding+planner):+672380316&location=P.º+de+Moret,+1,+28008+Madrid" target="_blank" class="btn btn-outline-dark ms-2" role="button" (click)="openMap(busModal)">Añadir al calendario</a>
-              </div>
-            </div>
-
-            <div class="mt-3">
-              <h6 class="text-decoration-underline">Si vienes por tu propia cuenta</h6>
-              <p>En este caso escríbenos para que te digamos cual es el punto de encuentro ¡No queremos dar pistas!</p>
-            </div>
-          </ng-container>
+      <div class="row mt-5">
+        <div class="col-lg-5">
+          <img src="assets/images/nosotros/27.webp" class="w-100 d-lg-none">
+          <div class="image_1 d-none d-lg-block"></div>
         </div>
+        <div class="col-lg-7">
+          <div class="card p-3 p-lg-4">
+            <ng-container *ngIf="userService.selectedWedding == 'friend'">
+              <h3 class="mb-4">Y entonces...¿cómo hago para llegar?</h3>
+              <p>Para llegar a al lugar tienes 2 opciones:</p>
+              <div class="mt-2">
+                <h6 class="text-decoration-underline">Si vienes en autobús</h6>
+                <p>Hemos contratado un bus para llegar hasta el lugar. Esta es la opción que más recomendamos ya que es lo más cómodo para vosotros... y nos aseguramos de que nadie llegue tarde. El punto de encuentro del bus será el <strong class="text-decoration-underline"> <a class="text-decoration-none color-primary" href="https://calendar.google.com/calendar/r/eventedit?text=Boda+Alice+y+Antonio&dates=20240608T070000Z/20240609T150000Z&details=Si+tienes+problemas+llama+a+María+(wedding+planner):+672380316&location=P.º+de+Moret,+1,+28008+Madrid" target="_blank">Sábado 9 de Junio a las 9:00 a en P.º de Moret, 1, 28008 Madrid</a></strong>. Alli encontrarás un bus de la empresa ______ con un cartel de la boda y una persona para gestionar que todo el mundo llege a tiempo.</p>
+                <div class="text-center my-2">
+                  <button class="btn btn-outline-dark" role="button" (click)="openMap(busModal)">Ver en el mapa</button>
+                  <a href="https://calendar.google.com/calendar/r/eventedit?text=Boda+Alice+y+Antonio&dates=20240608T070000Z/20240609T150000Z&details=Si+tienes+problemas+llama+a+María+(wedding+planner):+672380316&location=P.º+de+Moret,+1,+28008+Madrid" target="_blank" class="btn btn-outline-dark ms-2" role="button" (click)="openMap(busModal)">Añadir al calendario</a>
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <h6 class="text-decoration-underline">Si vienes por tu propia cuenta</h6>
+                <p>En este caso escríbenos para que te digamos cual es el punto de encuentro ¡No queremos dar pistas!</p>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+
       </div>
-
-    </div>
-
+    </ng-container>
 
     <ng-template #busModal let-modal>
       <div class="modal-header">

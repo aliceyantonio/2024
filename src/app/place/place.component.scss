@@ -15,29 +15,23 @@
       transform: translate(-50%, -50%);
     }
   }
-
-  img {
-    max-height: 450px;
-  }
-
-
-  .accordion {
-
-    .accordion-body,
-    .accordion-button:not(.collapsed),
-    .accordion-button.collapsed {
-      background-color: var(--color-primary);
-      color: white;
-      box-shadow: none;
-
-    }
-
-    button {
-      font-size: 2rem;
+  @media (max-width: 991px) {
+    .carousel-inner .carousel-caption{
+      width: 70vw;
     }
   }
 }
 
 p {
   margin-bottom: 0;
+}
+
+img {
+  max-height: 100%;
+}
+
+.image_1{
+  background: url("/assets/images/nosotros/27.webp") no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
 }
