@@ -26,6 +26,7 @@
     "@ng-bootstrap/ng-bootstrap": "^14.0.1",
     "@ng-select/ng-select": "^10.0.3",
     "@popperjs/core": "^2.11.6",
+    "add-to-calendar-button": "^2.4.3",
     "bootstrap": "^5.2.3",
     "bootstrap-select": "^1.13.18",
     "gsap": "^3.11.4",

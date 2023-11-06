@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import 'add-to-calendar-button';
+
 
 @Component({
   selector: 'app-place',
@@ -24,5 +26,4 @@ export class PlaceComponent {
       },
     );
   }
-
 }

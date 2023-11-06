@@ -15,8 +15,9 @@
       transform: translate(-50%, -50%);
     }
   }
+
   @media (max-width: 991px) {
-    .carousel-inner .carousel-caption{
+    .carousel-inner .carousel-caption {
       width: 70vw;
     }
   }
@@ -30,7 +31,7 @@ img {
   max-height: 100%;
 }
 
-.image_1{
+.image_1 {
   background: url("../../assets/images/us/27.webp") no-repeat center center/cover;
   width: 100%;
   height: 100%;

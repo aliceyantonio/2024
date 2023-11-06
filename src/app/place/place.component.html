@@ -60,10 +60,26 @@
               <p>Para llegar a al lugar tienes 2 opciones:</p>
               <div class="mt-2">
                 <h6 class="text-decoration-underline">Si vienes en autobús</h6>
-                <p>Hemos contratado un bus para llegar hasta el lugar. Esta es la opción que más recomendamos ya que es lo más cómodo para vosotros... y nos aseguramos de que nadie llegue tarde. El punto de encuentro del bus será el <strong class="text-decoration-underline"> <a class="text-decoration-none color-primary" href="https://calendar.google.com/calendar/r/eventedit?text=Boda+Alice+y+Antonio&dates=20240608T070000Z/20240609T150000Z&details=Si+tienes+problemas+llama+a+María+(wedding+planner):+672380316&location=P.º+de+Moret,+1,+28008+Madrid" target="_blank">Sábado 9 de Junio a las 9:00 a en P.º de Moret, 1, 28008 Madrid</a></strong>. Alli encontrarás un bus de la empresa ______ con un cartel de la boda y una persona para gestionar que todo el mundo llege a tiempo.</p>
+                <p>Hemos contratado un bus para llegar hasta el lugar. Esta es la opción que más recomendamos ya que es lo más cómodo para vosotros... y nos aseguramos de que nadie llegue tarde. El punto de encuentro del bus será el <strong> Sábado 9 de Junio a las 9:00 a en P.º de Moret, 1, 28008 Madrid</strong>. Alli encontrarás un bus de la empresa ______ con un cartel de la boda y una persona para gestionar que todo el mundo llege a tiempo.</p>
                 <div class="text-center my-2">
-                  <button class="btn btn-outline-dark" role="button" (click)="openMap(busModal)">Ver en el mapa</button>
-                  <a href="https://calendar.google.com/calendar/r/eventedit?text=Boda+Alice+y+Antonio&dates=20240608T070000Z/20240609T150000Z&details=Si+tienes+problemas+llama+a+María+(wedding+planner):+672380316&location=P.º+de+Moret,+1,+28008+Madrid" target="_blank" class="btn btn-outline-dark ms-2" role="button" (click)="openMap(busModal)">Añadir al calendario</a>
+                  <button class="answer color-primary" role="button" (click)="openMap(busModal)">Ver en el mapa</button>
+                  <add-to-calendar-button
+                    inline
+                    hideCheckmark
+                    language="es"
+                    size="3"
+                    buttonStyle="3d"
+                    name="Boda Alice y Antonio"
+                    description="Si tienes cualquier problema puedes contactar con María nuestra wedding planner: 672380316"
+                    options="'Google','Apple','Outlook.com'"
+                    location="P.º de Moret, 1, 28008 Madrid"
+                    startDate="2024-06-08"
+                    endDate="2024-06-09"
+                    startTime="09:00"
+                    endTime="17:00"
+                    timeZone="Europe/Madrid">
+                  </add-to-calendar-button>
+
                 </div>
               </div>
 
