@@ -1,32 +1,31 @@
 nav {
   background-color: var(--color-primary);
-  // border-bottom: 1px solid var(--color-light);
+  height: 63px;
 
   .navbar-brand {
     padding: 0;
     margin-top: -15px;
 
     img {
-      // filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(106%) contrast(101%);
       max-height: 40px;
     }
   }
 
   .nav-link {
     padding: 10px;
-    border-radius: 5px;
     font-size: 1rem;
     color: var(--color-light);
     text-align: center;
+    margin: 0 10px;
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: -1px !important;
   }
 
   .active-link {
     background-color: white;
     color: var(--color-primary);
     position: relative;
-    // border: 1px solid var(--color-light);
   }
-
 }
 
 button {
@@ -46,20 +45,18 @@ button {
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 991px) {
   nav {
-    height: 63px;
+    height: unset;
 
-    .nav-link {
-      margin: 0 10px;
-      border-radius: 5px 5px 0px 0px;
-      margin-bottom: -1px !important;
+    .navbar-brand {
+      margin-top: 0;
     }
 
-    .active-link {
-      position: relative;
-      // border-bottom: 1px solid var(--color-primary);
-      // border-bottom: none;
+    .nav-link {
+      margin: unset;
+      border-radius: 5px;
+      margin-bottom: unset;
     }
   }
 }
