@@ -26,7 +26,9 @@
             <input type="radio" formControlName="question1" value=3 id="answer1_3">
             <label class="answer-text" for="answer1_3">Un extranjero borracho</label>
           </div>
-          <img *ngIf="answerShown" src=" assets/travelers/1.webp" class="w-100">
+          <div *ngIf="answerShown" class="text-center">
+              <img class="mt-2" src="assets/images/us/38.gif">
+          </div>
         </div>
         <div class="form-group col-lg-6 mt-4">
           <label>¿Qué da más miedo a Antonio?</label>
@@ -42,7 +44,9 @@
             <input type="radio" formControlName="question2" value=3 id="answer2_3">
             <label class="answer-text" for="answer2_3">Alice con la ceja levantada</label>
           </div>
-          <img *ngIf="answerShown" src=" assets/travelers/1.webp" class="w-100">
+          <div *ngIf="answerShown" class="text-center">
+              <img class="mt-2" src="assets/images/us/37.jpeg">
+          </div>
         </div>
         <div class="form-group col-lg-6 mt-4">
           <label>¿Por que Alice tiene tantos (TANTOS) hermanos?</label>
@@ -58,7 +62,9 @@
             <input type="radio" formControlName="question3" value=3 id="answer3_3">
             <label class="answer-text" for="answer3_3">No tenían televisión</label>
           </div>
-          <img *ngIf="answerShown" src=" assets/travelers/1.webp" class="w-100">
+          <div *ngIf="answerShown" class="text-center">
+              <img class="mt-2" src="assets/images/us/36.jpeg">
+          </div>
         </div>
         <div class="form-group col-lg-6 mt-4">
           <label>¿Qué es lo que más odia Alice en el mundo?</label>
@@ -74,7 +80,9 @@
             <input type="radio" formControlName="question4" value=3 id="answer4_3">
             <label class="answer-text" for="answer4_3">Que Antonio le haga participar en este quiz</label>
           </div>
-          <img *ngIf="answerShown" src=" assets/travelers/1.webp" class="w-100">
+          <div *ngIf="answerShown" class="text-center">
+              <img class="mt-2" src="assets/images/us/39.gif">
+          </div>
         </div>
         <div class="form-group col-lg-6 mt-4">
           <label>¿Cual es el animal favorito de Antonio?</label>
@@ -90,7 +98,9 @@
             <input type="radio" formControlName="question5" value=3 id="answer5_3">
             <label class="answer-text" for="answer5_3">El burro, que viven muchos años</label>
           </div>
-          <img *ngIf="answerShown" src=" assets/travelers/1.webp" class="w-100">
+          <div *ngIf="answerShown" class="text-center">
+              <img class="mt-2" src="assets/images/us/35.jpg">
+          </div>
         </div>
 
         <div class="col-lg-6 d-flex flex-column mt-5 justify-content-end color-secondary position-relative">
@@ -119,14 +129,14 @@
 <ng-template #answersModal let-modal>
   <div class="modal-header border-bottom-0">
     <h5 class="modal-title">
-      <ng-container *ngIf="score>3">Nos conoces casi tanto como nuestra madre</ng-container>
+      <ng-container *ngIf="score>2">Nos conoces casi tanto como nuestra madre</ng-container>
       <ng-container *ngIf="score<=3">¿Enserio? Te odiamos</ng-container>
     </h5>
   </div>
 
   <div class="modal-body">
     <p>
-      <ng-container *ngIf="score>3">¡Enhorabuena! <br> Has aprobado con {{score}}/5 y sigues invitado a la boda (ya puedes ir haciéndonos el regalo 😬). <br> Como amante de nosotros sabemos que nunca te cansas de saber más de nosotros y para ello hemos preparado un pequeño jueguito.</ng-container>
+      <ng-container *ngIf="score>2">¡Enhorabuena! <br> Has aprobado con {{score}}/5 y sigues invitado a la boda (ya puedes ir haciéndonos el regalo 😬). <br> Como amante de nosotros sabemos que nunca te cansas de saber más de nosotros y para ello hemos preparado un pequeño jueguito.</ng-container>
       <ng-container *ngIf="score<=3">Has suspendido con {{score}}/5. <br> No estás preparado para venir a nuestra boda... pero estás de suerte y hemos preparado un curso de recuperación para que puedas volver a caernos bien.</ng-container>
     </p>
 </div>

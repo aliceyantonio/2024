@@ -1,11 +1,16 @@
 #usSection {
-  input[type=radio]{
+  input[type=radio] {
     display: none;
   }
 
   label:not(.answer-text) {
     font-size: 1.1rem;
     margin-bottom: 5px;
+  }
+
+  img {
+    height: 250px;
+    max-width: 100%;
   }
 }
 
@@ -89,6 +94,7 @@ table {
     width: 100%;
     text-align: center;
   }
+
   // #map {
   //   height: 90vw;
   //   width: 100%;
