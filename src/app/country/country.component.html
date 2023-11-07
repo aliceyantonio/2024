@@ -1,34 +1,44 @@
-<div class="row border rounded mx-3 color-light bg-color-primary p-3">
-  <div class="col-lg-4 text-center d-flex align-items-center justify-content-center">
-    <img class="w-50" [src]="countryData.flag">
+<div class="container mt-3">
+  <div class="row border rounded color-light bg-color-primary p-3">
+    <div class="col-lg-4 text-center d-flex align-items-center justify-content-center">
+      <img class="w-50" [src]="countryData.flag">
+    </div>
+    <div class="col-lg-8 p-0 pt-3 pt-lg-0 d-flex flex-column justify-content-center">
+      <h2 class="text-center">{{countryData.translations.spa.common ? countryData.translations.spa.common : countryData.translations.spa.official}}</h2>
+    </div>
   </div>
-  <div class="col-lg-8 p-0 pt-3 pt-lg-0 d-flex flex-column justify-content-center">
-    <h2 class="text-center">{{countryData.translations.spa.common ? countryData.translations.spa.common : countryData.translations.spa.official}}</h2>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-lg-4 px-4 pt-lg-4" *ngFor="let countryPost of countryPosts">
-    <div class="card my-3 py-1">
-      <div class="userRow m-1 d-flex align-items-center">
-        <div class="p-0 text-center">
-          <img [src]="countryPost.avatar">
+  <div class="row">
+    <div class="col-lg-4 px-4 pt-lg-4" *ngFor="let countryPost of countryPosts">
+      <div class="card my-3 py-1">
+        <div class="userRow m-1 d-flex align-items-center">
+          <div class="p-0 text-center">
+            <img [src]="countryPost.avatar">
+          </div>
+          <div class="ms-2">
+            <div><b>{{ countryPost.username }}</b></div>
+            <div>{{ countryPost.location }}</div>
+          </div>
         </div>
-        <div class="ms-2">
-          <div><b>{{ countryPost.username }}</b></div>
-          <div>{{ countryPost.location }}</div>
+        <div class="imageRow">
+          <img class="w-100" [src]="countryPost.image">
+        </div>
+        <div class="socialRow mx-2 my-1">
+          <fa-icon [icon]="['fas', 'heart']"></fa-icon>
+          <fa-icon [icon]="['far', 'comment']"></fa-icon>
+          <fa-icon [icon]="['far', 'paper-plane']"></fa-icon>
+          <div>
+            <b>{{ countryPost.username }}</b> <span class="mx-2">{{ countryPost.comment }}</span>
+          </div>
         </div>
       </div>
-      <div class="imageRow">
-        <img class="w-100" [src]="countryPost.image">
-      </div>
-      <div class="socialRow mx-2 my-1">
-        <fa-icon [icon]="['fas', 'heart']"></fa-icon>
-        <fa-icon [icon]="['far', 'comment']"></fa-icon>
-        <fa-icon [icon]="['far', 'paper-plane']"></fa-icon>
-        <div>
-          <b>{{ countryPost.username }}</b> <span class="mx-2">{{ countryPost.comment }}</span>
-        </div>
+    </div>
+    <div *ngIf="!countryPosts">
+      <div class="col-lg-5 border rounded mx-auto p-3 mt-3">
+        <h3>Próximamente</h3>
+        <p class="mt-3">
+          Ya hemos estado en este precioso país pero lamentablemente aun no hemos subido las fotos. <br> Accede de nuevo en unos días y seguramente ya esté.
+        </p>
       </div>
     </div>
   </div>

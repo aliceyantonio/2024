@@ -11,34 +11,360 @@ export class CountriesService {
 
   countriesPosts: Country[] = [
     {
+      'country': 'MX',
+        'posts': [
+          {
+            username: "aliceilopezg",
+            location: "México",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "En Cancún fuimos a varios cenotes, cada cual más impresionante y profundo.  Nadamos con tortugas y peces.",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "México",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "Rumbo a México, pasamos el peor vuelo que hemos hecho juntos. Durante el vuelo, se encendieron varias veces las alertas de emergencia, las azafatas corrian de un lugar a otro. Estabamos muy asustados, pero todo estaba bien. También era nuestra primer viaje despues del covid y nos la pasamos muy bien.",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "México",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "Chichén Itzá fue nuestra primera maravilla del mundo moderno en visitar juntos. ",
+            likes: 21
+          }
+        ]
+    },
+    {
+      'country': 'IN',
+        'posts': [
+          {
+            username: "aliceilopezg",
+            location: "India",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "El Taj Majal, una más de las maravillas del mundo moderno que visitamos juntos. Nos gusto mucho, estaba lleno como todo en la India, el marmol se mantiene intacto y es una de la muestras de amor más profundo. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "India",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "En el Desierto de Jaisalmer, nos montamos en dromedario, dimos un paseo, tomamos una buena cerveza india y vimos el atardecer juntos.",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "India",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "El Gangés fue lo más impresionante de la India, un lugar autentico, lleno de vida desde muy temprano.  Y en la noche realizan una ceremonia Aarti que se combina de luces, tambores, fuego y flores. Nos impacto mucho.",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "India",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "Púshkar fue la ciudad más caotica que visitamos. Vivimos una feria autentica, con parque de atracciones, miles de vendedores y el único templo de Brahma en el mundo, es visitado por millones de personas y es algo desordenado visitarlo. Luego fuimos al lago de Púshkar a mojarnos un poco los pies, porque es sagrado para la religión hindu. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "India",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "En Sarnath visitamos el lugar donde Gautama Buddha dijo sus primeras enseñanzas. Y nos encontramos con un grupo de Budistas visitando el lugar. Lo mejor de la India es la diversidad religiosa y el respeto que tienen entre ellas. Apesar de que no siempre ha sido así.",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "India",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "El último día en la India, estuvimos en Delhi, teniamos la tarde libre para hacer lo que quisieramos y eso hicimos. Convencí a Antonio de irnos a conocer de cerca la Puerta de la India y dar un paseo por nuestra cuenta, sin internet, sin conocer y sin sabes hindi. Fuimos y volvimos sanos y salvos. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "India",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "El fuerte de Amber, es el lugar en donde nos prometimos. Encima de un elefante, un lugar precioso. ",
+            likes: 21
+          }
+        ]
+    },
+    {
+      'country': 'IT',
+        'posts': [
+          {
+            username: "aliceilopezg",
+            location: "Italia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Fue muy gracioso, el encontrarnos caminando con la Boca de la Verdad y por supuesto después de hacer una fila, llego el momento y mientras haciamos el video, Antonio y yo, dijimos 'te amo mucho' y vaya sorpresa la Boca se le empezo a comer la mano a Antonio y todos los de la fila empezaron a reirse. Inesperado y gracioso. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Italia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "Caminando desde el centro de Roma, llegamos al país más pequeño del mundo, El Vaticano. Y por supuesto, Antonio dio saltos entre Italia-El Vaticano. Subimos a la cupula de San Pedro y vimos la ciudad. Nos gusto mucho y descubrimos que San Pedro esta allí enterrado. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Italia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "El Coliseo Romano es uno más de las maravillas modernas que hemos visitado juntos, nos gusto mucho apesar de que Antonio por ser el mejor fotografo se lastimo su pie y estuvo casi cojo por meses. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Italia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "Roma fue el regalo de cumpleaños de Antonio de 2022, no se lo esperaba. El clima no nos acompaño, el covid y sus restricciones nos limito un poco, pero nos lo pasamos bien. ",
+            likes: 21
+          }
+        ]
+    },
+    {
       'country': 'ES',
-      'posts': [
-        {
-          username: "aliceilopezg",
-          location: "Zundert, Netherlands",
-          avatar: "assets/users/aliceilopezg.jpeg",
-          image: "assets/countries/ES/1.jpeg",
-          comment: "just took a few mushrooms lol",
-          likes: 21
-        },
-        {
-          username: "aliceilopezg",
-          location: "Zundert, Netherlands",
-          avatar: "assets/users/aliceilopezg.jpeg",
-          image: "assets/countries/ES/2.jpeg",
-          comment: "just took a few mushrooms lol",
-          likes: 21
-        },
-        {
-          username: "aliceilopezg",
-          location: "Zundert, Netherlands",
-          avatar: "assets/users/aliceilopezg.jpeg",
-          image: "assets/countries/ES/2.jpeg",
-          comment: "just took a few mushrooms lol",
-          likes: 21
-        }
-      ]
+        'posts': [
+          {
+            username: "aliceilopezg",
+            location: "España",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Caminando por las calles de Valladolid encontramos un hermoso centro comercial decorado con muchos detalles. Esa tarde nos sentamos a tomar algo y detallar el lugar. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "España",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "En Sevilla fuimos a la Plaza España, un lugar precioso y tiene cada una de las provincias de España, por supuesto nos tomamos foto en la de Madrid, nuestra segunda casa.  ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "España",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "Todo es motivo de celebración y cómo no lo va ser San Patricio, cada 17 de marzo. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "España",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "Nos gusta mucho el futbol, más a Antonio que a mi. Hemos celebrado varias veces en Cibeles y en el Bernabeu las copas del Real Madrid. Hasta quedarnos afonicos.",
+            likes: 21
+          }
+        ]
+    },
+    {
+      'country': 'FR',
+        'posts': [
+          {
+            username: "aliceilopezg",
+            location: "Francia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Nos fuimos a Disney, a conocer la nueva parte de Marvel y conocimos a muchos superheroes, casi morimos en una atracción, nos divertimos mucho. También nos encontramos con Thor, que media como 3 metros y cuando le perseguía para una foto, diciendole 'Thor aquí', él se giro y dijo 'aquí donde', sin verme porque era demasiado bajita. Antonio por supuesto no se río, ni le conto a todos la anecdota. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Francia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "Lo más divertido de todo el viaje, fue convencer a los papás de Antonio de esperar a que encendieran la torre Eiffel mientras bebiamos vino y queso en el césped. Luego esperando el Taxi, nos pusimos a bailar y cantar, Antonio se hizo el adulto responsable. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Francia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "El museo del Lovre nos encanto, la verdad no queriamos ni ir a comer por conocer todos espacios del museo. Sorprendente, es nuestro museo favorito, por encima del Prado y el British Museum. ",
+            likes: 21
+          }
+        ]
+    },
+    {
+      'country': 'SE',
+        'posts': [
+          {
+            username: "aliceilopezg",
+            location: "Suecia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Llevabamos meses viviendo en Inglaterra y la comida no es algo que les resalte. Así que mientras caminabamos por Estocolmo nos encontramos un restaurante español y sin dudarlo, nos tomamos una buena sangría, croquetas y alguna buena tapa. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Suecia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Estuvimos en un bar nordico, que hacia super buen clima como lo pueden ver en la foto. Aprendimos sobre las leyendas nordicas y sus dioses. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Suecia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Tuvimos la oportunidad de ver un cambio de armas/guardia de la corona sueca. Visitamos el luegar donde entregan los premios novel's y muchos más monumentos. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Suecia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "Nos quedamos en un hotel que era un barco, al principio mareaba un poco y además en la mañana siguiente nos despetamos muy pronto porque la alarma de incendios se activo. Fue muy gracioso ver correr a turistas en toalla, otros con maletas y otros en pijama como nosotros. Al final no paso nada, solo fueron unas tostadas en la cocina. ",
+            likes: 21
+          }
+        ]
+    },
+    {
+      'country': 'MT',
+        'posts': [
+          {
+            username: "aliceilopezg",
+            location: "Malta",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Cómo vamos a viajar sin una buena guía, pues si. Lo más divertido de cualquier viaje es ir días antes a la casa del libro y ver cada una de las guías. Aquí estamos en Malta leyendo un poco sobre cada uno de los lugares.",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Malta",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "Estamos un poco enfadados porque el clima no estaba lo bien que necesitabamos para conocer varios lugares. Así que nos fuimos al Templo Mnadjra - Qrendi, vimos primero un video respecto a la historia y luego al salir nos encontramos con la lluvia más fuerte posible, en la mitad de la nada, sin saber como volver al hotel y con miedo de pasar la noche en la nada. Cuando ya perdiamos la esperanza, aparecio el bus turistico y nos recogio. Mojado pero contentos de ver un templo tan impresionante y bien conservado.",
+            likes: 21
+          }
+        ]
+    },
+    {
+      'country': 'GB',
+        'posts': [
+          {
+            username: "aliceilopezg",
+            location: "Inglaterra",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Cuando era pequeña vi muchas muchas muchas veces la Era de Hielo, y en la pelicula Sid, consideraba que 'el arte moderno, nunca dura' mientras pasaban por las piedras de Stonehenge. Verlo y estar allí fue sorprendente, siguen ahí de pie, sin terminar de entender su función. Nos gusto mucho. Impresionante. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Inglaterra",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Londres, a una hora de Cambrigde, siempre gris, fria y con lluvia. Caminamos muchas veces por sus calles, recorrimos los museos y sus bares por supuesto.  ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Inglaterra",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "El barrio chino fue el favorito de Antonio, se compro casi una tienda entera de bebidas en chino, en donde no se entendía nada. Luego jugamos a adivinar a que sabian, fue muy divertido. ",
+            likes: 21
+          }
+        ]
+    },
+    {
+      'country': 'PT',
+        'posts': [
+          {
+            username: "aliceilopezg",
+            location: "Portugal",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Fue el primer viaje con los padres de Antonio. Todo empezo de maravilla, primero Antonio discutiendo porque la radio del coche no le permitia poner la musica que él quería, nos perdimos y a mitad de camino llamaron a decir que había fuego cerca al Palacio, poniendo eso en peligro nuestras vacaciones y a la Granja. Pero, luego todo mejoro, se controlo el fuego y nos hizo muy buen clima y comimos pulpo delicioso. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Portugal",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Fuimos a una playa hermosa, hicimos un picnic y luego con Antonio nos fuimos caminando a ver que más encontrabamos. Encontramos una bola atada a una cuerda, que por supuesto le hizo mucha gracia a Antonio, la estuvo jalando por todo el camino ahuyentando a las gabiotas.  ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Portugal",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "La útlima vez que fuimos a Portugal, fuimos a Miranda do Duero, una ciudad fronteriza. Allí visitando un castillo nos parecio de lo más divertido llevarnos una piedra de recuerdo, nos la llevamos y cuando ya estabamos en el hotel, Antonio reflexiono y en pijama nos devolvimos a dejarla. La vez que casi robamos una piedra pero al final no.",
+            likes: 21
+          }
+        ]
+    },
+    {
+      'country': 'CO',
+        'posts': [
+          {
+            username: "aliceilopezg",
+            location: "Colombia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Antonio viajo a Colombia el 07 de diciembre de 2018, sus padres estaban muy preocupados y me pidieron que le cuidará mucho. Llegue tarde a recogerlo y escuchando música a todo volumen.",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Colombia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Nos fuimos juntos a Bogotá, Neiva, Medellín y Cartagena.  ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Colombia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "Fuimos a Guatape y subimos los 700 pasos sin queja alguna, las piernas no temblaban pero vale la pena, es precioso. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Colombia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/1.jpeg",
+            comment: "La hacienda Napoles fue muy hermoso, porque todos los animales eran super cercanos y se dejaban consentir. Además Antonio es biologo y tiene mucha empatia con los animalitos. Eso si una avestruz me ataco y Antonio en lugar de advertirme, me grabo. Ahora tiene un gif divertidisimo. ",
+            likes: 21
+          },
+          {
+            username: "aliceilopezg",
+            location: "Colombia",
+            avatar: "assets/users/aliceilopezg.jpeg",
+            image: "assets/countries/ES/2.jpeg",
+            comment: "En mi primer cumpleaños juntos, fuimos a un restaurante en Cartagena con salsa en vivo, luego caminamos por las calles de Cartagena hasta el hotel y allí subimos a la terraza a ver las estrellas.  ",
+            likes: 21
+          }
+        ]
     }
+
   ]
 
   countriesDataEng: any = [
