@@ -1,6 +1,7 @@
 import { UserService } from './services/user.service';
-import { Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -19,9 +20,17 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getCurrentUser();
 
-    this.router.events.subscribe(event => {
-      this.isLogin = location.href.includes('login');
-    })
+    // ocultamos el chatbot
+    document.getElementById('iDuck')!.style.display = 'none';
 
+    // revisamos cuando ecambia de ruta
+    this.router.events.pipe(filter(event => event instanceof NavigationStart)).subscribe((event: any) => {
+      this.isLogin = event.url.includes('login')
+      // si en el cambio de ruta no va a login y no ha seteados los estilos de chat los setea
+      if (!this.isLogin) {
+        document.getElementById('iDuck')!.style.display = 'initial';
+      }
+    })
   }
+
 }

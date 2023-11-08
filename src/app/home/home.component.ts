@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    document.getElementById('iDuck')!.style.display = 'initial';
+    // document.getElementById('iDuck')!.style.display = 'initial';
 
     this.tl
       .from(".s1 .text-anim", { y: -50, opacity: 0, stagger: 0.4 })
