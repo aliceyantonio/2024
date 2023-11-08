@@ -37,13 +37,15 @@ export class HeaderComponent implements AfterViewInit {
     const currentUser = this.userService.getCurrentUser();
     const selectedWedding = this.userService.getSelectedWedding();
 
-    if (!this.modal.hasOpenModals() && currentUser.userRoles.length > 1 && !selectedWedding) {
-      this.modalRef = this.modal.open(this.weddingDateModal, { ariaLabelledBy: '', size: 'l', centered: true, backdrop: 'static' });
-      this.modalRef.result.then((result) => {
-        this.closeResult = 'Closed with: ' + result;
-      });
-    } else {
-      this.weddingSelect(currentUser.userRoles[0])
+    if(currentUser){
+      if (!this.modal.hasOpenModals() && currentUser.userRoles.length > 1 && !selectedWedding) {
+        this.modalRef = this.modal.open(this.weddingDateModal, { ariaLabelledBy: '', size: 'l', centered: true, backdrop: 'static' });
+        this.modalRef.result.then((result) => {
+          this.closeResult = 'Closed with: ' + result;
+        });
+      } else {
+        this.weddingSelect(currentUser.userRoles[0])
+      }
     }
   }
 

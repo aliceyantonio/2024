@@ -1,4 +1,4 @@
-<header id="header">
+<header id="header" *ngIf="userService.currentUser ">
   <nav class="navbar navbar-expand-lg py-3 py-lg-0" id="navbar">
     <div class="container-fluid align-self-end">
       <a class="navbar-brand" [routerLink]="'home'">
@@ -51,13 +51,12 @@
 
 <ng-template #weddingDateModal let-modal>
   <div class="modal-header border-bottom-0">
-    <h5 class="modal-title">{{userService.currentUser.gender === 'male' ? 'Bienvenido': 'Bienvenida'}} {{ userService.currentUser.name | titlecase }}</h5>
+    <h5 class="modal-title">{{userService.currentUser.gender === 'multiple' ? 'Bienvenidos': (userService.currentUser.gender === 'male' ?'Bienvenido' : 'Bienvenida')}} {{ userService.currentUser.name }}</h5>
   </div>
 
   <div class="modal-body font-size-1_1">
     <p>
-      Eres especialmente importante para nosotros y te consideramos amigo y familia 🥰. <br>
-      Por favor dinos, ¿de qué enlace quieres conocer los detalles?
+      {{ userService.currentUser.gender === 'multiple' ? 'Sois especialmente importantes para nosotros y os consideramos amigos y familia 🥰. Por favor decidnos, ¿de qué enlace quieres conocer los detalles?': 'Eres especialmente importante para nosotros y te consideramos amigo y familia 🥰. Por favor dinos, ¿de qué enlace quieres conocer los detalles?'}}
     </p>
 </div>
   <div class="modal-footer justify-content-center row m-0">
