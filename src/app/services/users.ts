@@ -45,10 +45,12 @@ var usersFriends = [
     "name": "Stephany",
     "username": "ste_lo",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "Bogotá",
     "gender": "female",
@@ -68,7 +70,7 @@ var usersFriends = [
     "gender": "multiple",
   },
   {
-    "name": "Lucia",
+    "name": "Lucía",
     "username": "lu_pe",
     "bookingIds": [
       "AA08062024",
@@ -109,7 +111,6 @@ var usersFriends = [
     "origin": "La Granja",
     "gender": "multiple",
   },
-
   {
     "name": "Rubén",
     "username": "ru_gon",
@@ -126,7 +127,7 @@ var usersFriends = [
   },
   {
     "name": "Paula",
-    "username": "pa_ru",
+    "username": "pau_ru",
     "bookingIds": [
       "AA08062024",
       "AA15062024"
@@ -139,7 +140,7 @@ var usersFriends = [
     "gender": "female",
   },
   {
-    "name": "Carlos",
+    "name": "Carlos y Amandine",
     "username": "car_a",
     "bookingIds": [
       "AA08062024",
@@ -339,7 +340,7 @@ var usersFriends = [
     "gender": "female",
   },
   {
-    "name": "Gómez",
+    "name": "Alberto",
     "username": "al_go",
     "bookingIds": [
       "AA08062024"
@@ -366,10 +367,12 @@ var usersFriends = [
     "name": "Ivonne y William",
     "username": "i_wi",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "Bogotá",
     "gender": "multiple",
@@ -378,10 +381,12 @@ var usersFriends = [
     "name": "Daniel y Kaisa",
     "username": "da_ka",
     "bookingIds": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "Torrecaballeros y Finlandia",
     "gender": "multiple",
@@ -415,7 +420,7 @@ var usersFamily = [
   },
   {
     "name": "Carmen y Luis",
-    "username": "ca_lu",
+    "username": "car_lu",
     "bookingIds": [
       "AA15062024"
     ],
@@ -462,8 +467,8 @@ var usersFamily = [
     "gender": "multiple",
   },
   {
-    "name": "Ivón, Rodrigo Isabella, Rodriguito",
-    "username": "i_ro",
+    "name": "Rodrigo, Ivón, Isabella y Rodriguito",
+    "username": "lo_go",
     "bookingIds": [
       "AA15062024"
     ],
@@ -498,7 +503,7 @@ var usersFamily = [
     "gender": "multiple",
   },
   {
-    "name": "Danna y Jaime Leonardo",
+    "name": "Jaime Leonardo y Danna",
     "username": "da_ja",
     "bookingIds": [
       "AA15062024"
@@ -510,7 +515,7 @@ var usersFamily = [
     "gender": "multiple",
   },
   {
-    "name": "Marta y Jaime",
+    "name": "Jaime y Marta",
     "username": "ma_ja",
     "bookingIds": [
       "AA15062024"
@@ -522,20 +527,20 @@ var usersFamily = [
     "gender": "multiple",
   },
   {
-    "nameOJO": "Javier esteban",
-    "username": "an_va",
+    "name": "Javier Esteban",
+    "username": "ja_lo",
     "bookingIds": [
       "AA15062024"
     ],
     "userRoles": [
       "family",
     ],
-    "origin": "La Granja",
+    "origin": "Madrid",
     "gender": "male",
   },
   {
-    "nameOJO": "Javier",
-    "username": "an_va",
+    "name": "Javier, Denis y Juan José",
+    "username": "ja_lo",
     "bookingIds": [
       "AA15062024"
     ],
@@ -543,35 +548,11 @@ var usersFamily = [
       "family",
     ],
     "origin": "La Granja",
-    "gender": "male",
-  },
-  {
-    "nameOJO": "Denis ",
-    "username": "an_va",
-    "bookingIds": [
-      "AA15062024"
-    ],
-    "userRoles": [
-      "family",
-    ],
-    "origin": "La Granja",
-    "gender": "male",
-  },
-  {
-    "nameOJO": "Juan José ",
-    "username": "an_va",
-    "bookingIds": [
-      "AA15062024"
-    ],
-    "userRoles": [
-      "family",
-    ],
-    "origin": "La Granja",
-    "gender": "male",
+    "gender": "multiple",
   },
   {
     "name": "Doña Himelda",
-    "username": "hi_go",
+    "username": "hi_sa",
     "bookingIds": [
       "AA15062024"
     ],
@@ -606,56 +587,20 @@ var usersFamily = [
     "gender": "multiple",
   },
   {
-    "OJOname": "Fernando",
-    "username": "an_va",
+    "name": "Fernando, Valentina y Sebastián",
+    "username": "fer_vi",
     "bookingIds": [
       "AA15062024"
     ],
     "userRoles": [
       "family",
     ],
-    "origin": "La Granja",
-    "gender": "male",
+    "origin": "Colombia",
+    "gender": "multiple",
   },
   {
-    "OJOname": "Valentina",
-    "username": "an_va",
-    "bookingIds": [
-      "AA15062024"
-    ],
-    "userRoles": [
-      "family",
-    ],
-    "origin": "La Granja",
-    "gender": "male",
-  },
-  {
-    "OJOname": "Sebastian",
-    "username": "an_va",
-    "bookingIds": [
-      "AA15062024"
-    ],
-    "userRoles": [
-      "family",
-    ],
-    "origin": "La Granja",
-    "gender": "male",
-  },
-  {
-    "OJOname": "Paula X",
-    "username": "an_va",
-    "bookingIds": [
-      "AA15062024"
-    ],
-    "userRoles": [
-      "family",
-    ],
-    "origin": "La Granja",
-    "gender": "male",
-  },
-  {
-    "OJOname": "Dani, novia Dani y Ander",
-    "username": "an_va",
+    "name": "Eva, Daniel y Ander",
+    "username": "e_da",
     "bookingIds": [
       "AA15062024"
     ],
@@ -664,6 +609,66 @@ var usersFamily = [
     ],
     "origin": "Madrid",
     "gender": "multiple",
+  },
+  {
+    "name": "Nelson",
+    "username": "nel_lo",
+    "bookingIds": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Colombia",
+    "gender": "male",
+  },
+  {
+    "name": "Juan Carlos, Diana y Juan Camilo",
+    "username": "di_ju",
+    "bookingIds": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Colombia",
+    "gender": "multiple",
+  },
+  {
+    "name": "Emith y Rosario",
+    "username": "e_ro",
+    "bookingIds": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Colombia",
+    "gender": "multiple",
+  },
+  {
+    "name": "Hernán y Cindy",
+    "username": "her_cin",
+    "bookingIds": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Colombia",
+    "gender": "multiple",
+  },
+  {
+    "name": "Clara",
+    "username": "cla_lo",
+    "bookingIds": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Colombia",
+    "gender": "female",
   }
 ];
 
