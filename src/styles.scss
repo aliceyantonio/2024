@@ -252,6 +252,10 @@ hr {
   display: block;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 input[type='radio']:checked:after {
   width: 15px;
   height: 15px;

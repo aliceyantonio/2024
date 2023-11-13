@@ -51,48 +51,44 @@
       </ngb-carousel>
       <div class="row mt-5">
         <div class="col-lg-5">
-          <div class="image_1"></div>
+          <div class="image image_2"></div>
         </div>
         <div class="col-lg-7">
           <div class="card p-3 p-lg-4">
-            <ng-container *ngIf="userService.selectedWedding == 'friend'">
-              <h3 class="mb-4">Y entonces...¿cómo hago para llegar?</h3>
-              <p>Para llegar a al lugar tienes 2 opciones:</p>
-              <div class="mt-2">
-                <h6 class="text-decoration-underline">Si vienes en autobús</h6>
-                <p>Hemos contratado un bus para llegar hasta el lugar. Esta es la opción que más recomendamos ya que es lo más cómodo para vosotros... y nos aseguramos de que nadie llegue tarde. El punto de encuentro del bus será el <strong> Sábado 9 de Junio a las 9:00 a en P.º de Moret, 1, 28008 Madrid</strong>. Alli encontrarás un bus de la empresa ______ con un cartel de la boda y una persona para gestionar que todo el mundo llege a tiempo.</p>
-                <div class="text-center my-2">
-                  <button class="answer color-primary" role="button" (click)="openMap(busModal)">Ver en el mapa</button>
-                  <add-to-calendar-button
-                    inline
-                    hideCheckmark
-                    language="es"
-                    size="3"
-                    name="Boda Alice y Antonio"
-                    description="Si tienes cualquier problema puedes contactar con María nuestra wedding planner: 672380316"
-                    options="'Google','Apple','Outlook.com'"
-                    location="P.º de Moret, 1, 28008 Madrid"
-                    startDate="2024-06-08"
-                    endDate="2024-06-09"
-                    startTime="09:00"
-                    endTime="17:00"
-                    timeZone="Europe/Madrid">
-                  </add-to-calendar-button>
-
-                </div>
+            <h3 class="mb-4">Y entonces...¿cómo hago para llegar?</h3>
+            <p>Para llegar a al lugar tienes 2 opciones:</p>
+            <div class="mt-2">
+              <h6 class="text-decoration-underline">Si vienes en autobús</h6>
+              <p>Hemos contratado un bus para llegar hasta el lugar. Esta es la opción que más recomendamos ya que es lo más cómodo para vosotros... y nos aseguramos de que nadie llegue tarde. El punto de encuentro del bus será el <strong> Sábado 9 de Junio a las 9:00 a en P.º de Moret, 1, 28008 Madrid</strong>. Alli encontrarás un bus de la empresa ______ con un cartel de la boda y una persona para gestionar que todo el mundo llege a tiempo.</p>
+              <div class="text-center my-2">
+                <button class="answer color-primary" role="button" (click)="openMap(busModal)">Ver en el mapa</button>
+                <add-to-calendar-button
+                  inline
+                  hideCheckmark
+                  language="es"
+                  size="3"
+                  name="Boda Alice y Antonio"
+                  description="Si tienes cualquier problema puedes contactar con María nuestra wedding planner: 672380316"
+                  options="'Google','Apple','Outlook.com'"
+                  location="P.º de Moret, 1, 28008 Madrid"
+                  startDate="2024-06-08"
+                  endDate="2024-06-09"
+                  startTime="09:00"
+                  endTime="17:00"
+                  timeZone="Europe/Madrid">
+                </add-to-calendar-button>
               </div>
+            </div>
 
-              <div class="mt-3">
-                <h6 class="text-decoration-underline">Si vienes por tu propia cuenta</h6>
-                <p>En este caso escríbenos para que te digamos cual es el punto de encuentro ¡No queremos dar pistas!</p>
-              </div>
-            </ng-container>
+            <div class="mt-3">
+              <h6 class="text-decoration-underline">Si vienes por tu propia cuenta</h6>
+              <p>En este caso escríbenos para que te digamos cual es el punto de encuentro ¡No queremos dar pistas!</p>
+            </div>
           </div>
         </div>
 
       </div>
     </ng-container>
-
     <ng-template #busModal let-modal>
       <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">Lugar de recogida</h4>
@@ -105,15 +101,121 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </ng-template>
-
-
-
   </ng-container>
   <ng-container *ngIf="userService.selectedWedding == 'family'">
-    familia
+
+    <div class="row mt-5">
+      <div class="col-lg-5">
+        <div class="image image_1"></div>
+      </div>
+      <div class="col-lg-7">
+        <div class="card p-3 p-lg-4">
+          <h3 class="mb-4">¿En qué lugar se celebrará la ceremonia?</h3>
+          <p>
+            El enlace será oficializado por el rito católico en la capilla de la <strong>Real Colegiata del Palacio de la Granja de San Ildefonso el día 15 de Junio de 2024 a las 17:00h.</strong>
+          </p>
+          <div class="text-center my-2">
+            <button class="answer color-primary" role="button" (click)="openMap(colegiataModal)">Ver en el mapa</button>
+            <add-to-calendar-button
+              inline
+              hideCheckmark
+              language="es"
+              size="3"
+              name="Boda Alice y Antonio"
+              description="Si tienes cualquier problema puedes contactarnos por whatsapp. Alice: 602503147 Antonio: 690832028"
+              options="'Google','Apple','Outlook.com'"
+              location="Pl. de España, 15, 40100 Real Sitio de San Ildefonso, Segovia"
+              startDate="2024-06-15"
+              endDate="2024-06-16"
+              startTime="17:00"
+              endTime="03:00"
+              timeZone="Europe/Madrid">
+            </add-to-calendar-button>
+          </div>
+          <a class="text-decoration-underline color-primary cursor-pointer" (click)="colegiataInfo = !colegiataInfo ">Leer {{colegiataInfo? 'menos': 'más'}}...</a>
+          <div *ngIf="colegiataInfo">
+            <p class="mt-2">
+              La Real Colegiata fue mandada construir por  <strong>Felipe V</strong> y diseñada originalmente por Teodoro Ardemans, quien inicialmente construyó una Capilla Real que posteriormente se convirtió en la Real Colegiata de la Santísima Trinidad.
+            </p>
+            <p class="mt-2">
+              En su interior, sobresale el retablo del <strong>Altar Mayor</strong>, obra también de Ardemans, con un cuadro al óleo de la Santísima Trinidad pintado por Francisco Solimena. Otros elementos destacados son la sillería del coro y la tribuna real que conecta con el Palacio Real, permitiendo a los Reyes presenciar las ceremonias religiosas.
+            </p>
+            <p class="mt-2">
+              La característica más notable de la Real Colegiata es la <strong>Capilla de las Reliquias</strong>, inicialmente destinada a albergar reliquias de santos mártires. Sin embargo, tras la muerte de Felipe V en 1746, su viuda Isabel de Farnesio decidió convertir el lugar en un mausoleo, cumpliendo así el deseo del difunto rey. Actualmente, los cuerpos de Felipe V e Isabel de Farnesio descansan en este templo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5 flex-column-reverse flex-lg-row">
+      <div class="col-lg-7">
+        <div class="card p-3 p-lg-4">
+          <h3 class="mb-4">¿Qué haremos tras el enlace?</h3>
+          <p>
+            Una vez oficializada la boda os invitamos a dar un paseo por los <strong>Jardines del Palacio de La Granja </strong>donde disfritaremos de una sesión de fotos.
+          </p>
+          <p class="mt-2">
+            Los Jardines del Palacio Real, construido en 1721 bajo el reinado del rey <strong>Felipe V</strong>, ocupan una extensión de 146 hectáreas divididas en bosque, jardines y partidas reservadas. Dentro de los jardines se encuentran 26 Fuentes Monumentales, todas ellas basadas en la mitología clásica.
+          </p>
+          <p class="mt-2">
+            Os invitamos a quedaros a ver las <strong>Fuentes Monumentales</strong> las cuales funcionan los miércoles y sábados a las 17:30hs y los domingos a las 13:00.
+          </p>
+          <a class="text-decoration-underline color-primary cursor-pointer" (click)="fuentesInfo = !fuentesInfo ">Leer {{fuentesInfo? 'menos': 'más'}}...</a>
+          <div *ngIf="fuentesInfo">
+            <p class="mt-2">
+              La importancia de estas fuentes, más alla de su indudable belleza, es su funcionamiento, el cual ha permanecido inalterado desde su construcción en el siglo XVIII. Este <strong>sistema hidráulico</strong> permite crear juegos de agua verdaderamente impresionantes, incluso para nuestros días, mediante la técnica de vasos comunicantes. Ésta tecnica permite, ayudandose de la altura a la que se encuentran los estanques que nutren de agua las fuentes, desafiar la gravedad sin el uso de motores. El verdadero poder de un rey.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="image image_2"></div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-lg-5">
+        <div class="image image_3"></div>
+      </div>
+      <div class="col-lg-7">
+        <div class="card p-3 p-lg-4">
+          <h3 class="mb-4">¿Dónde se celebrará el banquete?</h3>
+          <p>
+            El convite se celebrará en el <strong>Patio del Salón de Infantes en el Parador de la Granja</strong> ubicado en el número 3 de la calle Infantes en el Real Sitio de San Ildefonso.  Este impresionante edificio lo mandó construir Carlos III en el siglo XVIII para sus hijos, los infantes Gabriel y Antonio.
+          </p>
+          <div class="text-center my-2">
+            <button class="answer color-primary" role="button" (click)="openMap(paradorModal)">Ver en el mapa</button>
+          </div>
+          <p class="mt-2">
+            Tras el banquete, la fiesta tendrá lugar en el <strong>Salón Fuente del Príncipe en el edificio del Centro de Congresos</strong> ubicado en el nñumero 2 de la calle Alameda.
+          </p>
+          <p class="mt-2">
+            El coche se puede dejar en el parking gratuito que está detrás del Parador o en cualquier punto del pueblo, todo se encuentra relativamente cerca andando.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #colegiataModal let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Real Colegiata del Palacio de la Granja de San Ildefonso</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body text-center">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.811609338479!2d-4.007552588503549!3d40.897947226091965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4141e6466a6dbb%3A0x9974d4f4c041eb63!2sReal%20Colegiata%20del%20Palacio%20de%20la%20Granja%20de%20San%20Ildefonso!5e0!3m2!1ses!2ses!4v1699897863598!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </ng-template>
+    <ng-template #paradorModal let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Parador de La Granja</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body text-center">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.811609338479!2d-4.007552588503549!3d40.897947226091965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4141e6466a6dbb%3A0x9974d4f4c041eb63!2sReal%20Colegiata%20del%20Palacio%20de%20la%20Granja%20de%20San%20Ildefonso!5e0!3m2!1ses!2ses!4v1699897863598!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </ng-template>
   </ng-container>
 </div>
-
-<!-- Lugar y fecha -->
-<!-- Como llegar -->
-<!-- Hotel recomendado -->

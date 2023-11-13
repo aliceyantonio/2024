@@ -46,6 +46,20 @@
               <li><strong>Look ibicenco/blanco</strong> para el 2º día.</li>
           </ul>
         </ng-container>
+
+        <ng-container *ngIf="userService.selectedWedding == 'family'" >
+          <h3 class="mb-4">¿Cuál es el código de vestimenta?</h3>
+          <div>
+            <p>En cuanto a la ropa te recomendamos traer: </p>
+            <ul>
+              <li>Vestido/traje tipo cocktail (black tie)</li>
+              <li>Zapato cómodo de recambio</li>
+              <li>Gafas de sol</li>
+              <li>Chaqueta para la noche porque en la noche caen las temperaturas</li>
+              <li>Tu mejor sonrisa</li>
+            </ul>
+          </div>
+        </ng-container>
       </div>
     </div>
   </div>
@@ -64,6 +78,23 @@
             Sólo recuerda traer lo que puedas necesitar de uso personal (toalla, liquido lentillas, cepillo de dientes...). Eso y buen humor porque lo vamos a pasar genial.
           </p>
         </ng-container>
+        <ng-container *ngIf="userService.selectedWedding == 'family'" >
+          <h3 class="mb-4">¿Recomendais algún lugar para alojamiento?</h3>
+          <p>
+            El Real Sitio de San Ildefonso cuenta con una amplia oferta de alojamiento para la noche del 15 de Junio. No obstante, os recomendamos reservar <strong>cuanto antes</strong> para aseguraros que no hay problemas.
+          </p>
+          <div class="mt-2">
+            <ul>
+              <li><a href="https://www.booking.com/hotel/es/parador-de-la-granja.es.html" target="_blank" class="color-primary">Parador de turismo</a></li>
+              <li><a href="https://www.booking.com/hotel/es/ar-isabel-de-farnesio.es.html" target="_blank" class="color-primary">Hotel Isabel de Farnesio</a></li>
+              <li><a href="https://www.booking.com/hotel/es/hospedium-la-farm.es.html" target="_blank" class="color-primary">Hotel La Farm</a></li>
+              <li><a href="https://hotelrestauranteroma.es/" target="_blank" class="color-primary">Hotel Roma</a></li>
+            </ul>
+          </div>
+          <p class="mt-2">
+            En el caso de estar todos los alojamientos propuestos completos os recomendamos buscar en Segovia que se encuentra a penas 15 min de distancia.
+          </p>
+        </ng-container>
       </div>
     </div>
     <div class="col-lg-4">
@@ -76,16 +107,14 @@
     </div>
     <div class="col-lg-8">
       <div class="card p-3 p-lg-4">
-        <ng-container *ngIf="userService.selectedWedding == 'friend'">
           <h3 class="mb-3">Me caéis super bien y me gustaría haceros un regalo</h3>
           <p>
             Uy! ¡Qué inesperado! La verdad es que no esperabamos caer bien a la gente que hemos <strong>invitado a nuestra boda</strong>.
           </p>
           <p>
-            Por supuesto todos los regalos son bienvenidos porque aunque sabemos, que el mejor regalo es vuestra amistad... lamentablemente el viaje de novios no se paga con cariño. Por ello hemos habilitado una cuenta bancaria común (esto si es compromiso) en la que podéis darnos el regalo que estiméis que vale nuestra amistad (2k en adelante).
+            Por supuesto todos los regalos son bienvenidos porque, aunque sabemos que el mejor regalo es vuestra amistad... lamentablemente el viaje de novios no se paga con cariño. Por ello hemos habilitado una cuenta bancaria común (esto si es compromiso)<ng-container *ngIf="userService.selectedWedding == 'friend'"> en la que podéis darnos el regalo que estiméis que vale nuestra amistad (2k en adelante)</ng-container>.
           </p>
           <p class="text-center"><strong>ES74 0182 5322 2002 0578 3245</strong><br> (por supuesto en metálico también es bien recibido)</p>
-        </ng-container>
       </div>
     </div>
   </div>

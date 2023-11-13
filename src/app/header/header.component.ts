@@ -44,7 +44,11 @@ export class HeaderComponent implements AfterViewInit {
           this.closeResult = 'Closed with: ' + result;
         });
       } else {
-        this.weddingSelect(currentUser.userRoles[0])
+        if (selectedWedding) {
+          this.weddingSelect(selectedWedding)
+        } else{
+          this.weddingSelect(currentUser.userRoles[0])
+        }
       }
     }
   }

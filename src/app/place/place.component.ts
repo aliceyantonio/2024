@@ -11,6 +11,10 @@ import 'add-to-calendar-button';
 })
 export class PlaceComponent {
 
+  colegiataInfo = false;
+  fuentesInfo = false;
+  paradorInfo = false;
+
   constructor(
     public userService: UserService,
     private modalService: NgbModal
