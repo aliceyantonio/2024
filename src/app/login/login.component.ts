@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup = this.fb.group({
     username: ['', Validators.required],
-    bookingId: ['', Validators.required]
+    password: ['', Validators.required]
   });
 
   constructor(
@@ -33,6 +33,8 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.utilsService.logOut();
+
     document.getElementById('loginComponent')!.addEventListener("click", function () {
       var el = document.documentElement
       el.requestFullscreen();
@@ -40,12 +42,10 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    localStorage.clear();
-
     this.userService.getUsers().subscribe(res => {
       const currentUser = res.find((user: User) =>
-        user.username === this.loginForm.value.username
-        && user.bookingIds.includes(this.loginForm.value.bookingId!)
+        user.username === this.loginForm.value.username.toLowerCase()
+        && user.passwords.includes(this.loginForm.value.password!.toUpperCase())
       );
 
       if (currentUser) {
