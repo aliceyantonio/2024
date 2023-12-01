@@ -125,7 +125,9 @@
     <div class="case">
       <figure class="front">
         <figure></figure>
-        <figure class="label"></figure>
+        <figure class="label label1" *ngIf="userService.selectedWedding == 'friend'"></figure>
+        <figure class="label label2" *ngIf="userService.selectedWedding == 'family'"></figure>
+        <figure class="label label3" *ngIf="userService.currentUser.userRoles.length > 1"></figure>
       </figure>
 
       <figure class="back">
