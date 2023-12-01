@@ -16,7 +16,6 @@ export class UtilsService {
   logOut() {
     localStorage.clear();
     document.getElementById('iDuck')!.style.display = 'none';
-    this.router.navigate(['login']);
   }
 
   swapNodes(node1: any, node2: any) {

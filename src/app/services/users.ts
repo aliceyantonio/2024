@@ -1,22 +1,8 @@
 var usersFriends = [
   {
-    "name": "Antonio",
-    "username": "an_va",
-    "bookingIds": [
-      "AA08062024",
-      "AA15062024"
-    ],
-    "userRoles": [
-      "friend",
-      "family",
-    ],
-    "origin": "La Granja",
-    "gender": "male",
-  },
-  {
-    "name": "Alice",
-    "username": "al_lo",
-    "bookingIds": [
+    "name": "Alice y Antonio",
+    "username": "a_an",
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -24,13 +10,13 @@ var usersFriends = [
       "friend",
       "family"
     ],
-    "origin": "Bogotá",
-    "gender": "female",
+    "origin": "Madrid",
+    "gender": "multiple",
   },
   {
     "name": "Paula",
     "username": "pau_lo",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -44,7 +30,7 @@ var usersFriends = [
   {
     "name": "Stephany",
     "username": "ste_lo",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -58,7 +44,7 @@ var usersFriends = [
   {
     "name": "Raquel y David",
     "username": "ra_da",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -72,7 +58,7 @@ var usersFriends = [
   {
     "name": "Lucía",
     "username": "lu_pe",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -86,7 +72,7 @@ var usersFriends = [
   {
     "name": "Pablo e Iván",
     "username": "pa_i",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -100,7 +86,7 @@ var usersFriends = [
   {
     "name": "Patricia y Germán",
     "username": "pa_ger",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -114,7 +100,7 @@ var usersFriends = [
   {
     "name": "Rubén",
     "username": "ru_gon",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -128,7 +114,7 @@ var usersFriends = [
   {
     "name": "Paula",
     "username": "pau_ru",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -142,7 +128,7 @@ var usersFriends = [
   {
     "name": "Carlos y Amandine",
     "username": "car_a",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -156,7 +142,7 @@ var usersFriends = [
   {
     "name": "Vivi y Omar",
     "username": "vi_o",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -170,13 +156,11 @@ var usersFriends = [
   {
     "name": "Michelle y Francisco",
     "username": "mi_fran",
-    "bookingIds": [
-      "AA08062024",
-      "AA15062024"
+    "passwords": [
+      "AA08062024"
     ],
     "userRoles": [
-      "friend",
-      "family"
+      "friend"
     ],
     "origin": "Caracas y Medellín",
     "gender": "multiple",
@@ -184,7 +168,7 @@ var usersFriends = [
   {
     "name": "Bárbara",
     "username": "bar_ba",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
     ],
     "userRoles": [
@@ -196,7 +180,7 @@ var usersFriends = [
   {
     "name": "Geraldine",
     "username": "ge_ve",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
     ],
     "userRoles": [
@@ -208,7 +192,7 @@ var usersFriends = [
   {
     "name": "Pedro y Luna",
     "username": "pe_lu",
-    "bookingIds": [
+    "passwords": [
       "AA08062024"
     ],
     "userRoles": [
@@ -218,33 +202,23 @@ var usersFriends = [
     "gender": "multiple",
   },
   {
-    "name": "Jorge",
-    "username": "jor_ve",
-    "bookingIds": [
-      "AA08062024"
-    ],
-    "userRoles": [
-      "friend",
-    ],
-    "origin": "Cáceres",
-    "gender": "male",
-  },
-  {
-    "name": "Gloria",
-    "username": "glo_a",
-    "bookingIds": [
+    "name": "Gloria y Jorge",
+    "username": "glo_jor",
+    "passwords": [
+      "AA08062024",
       "AA15062024"
     ],
     "userRoles": [
+      "friend",
       "family",
     ],
-    "origin": "Madrid",
-    "gender": "female",
+    "origin": "Alemania",
+    "gender": "multiple",
   },
   {
     "name": "Gracia y Pablo",
     "username": "gra_pa",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -258,7 +232,7 @@ var usersFriends = [
   {
     "name": "Jaime Y Raquel",
     "username": "ja_ra",
-    "bookingIds": [
+    "passwords": [
       "AA08062024"
     ],
     "userRoles": [
@@ -270,7 +244,7 @@ var usersFriends = [
   {
     "name": "Quirós y Yaiza",
     "username": "qui_ya",
-    "bookingIds": [
+    "passwords": [
       "AA08062024"
     ],
     "userRoles": [
@@ -282,7 +256,7 @@ var usersFriends = [
   {
     "name": "Anabel y Juan Pablo",
     "username": "a_ju",
-    "bookingIds": [
+    "passwords": [
       "AA08062024"
     ],
     "userRoles": [
@@ -294,7 +268,7 @@ var usersFriends = [
   {
     "name": "Lempetu",
     "username": "lem_car",
-    "bookingIds": [
+    "passwords": [
       "AA08062024"
     ],
     "userRoles": [
@@ -306,7 +280,7 @@ var usersFriends = [
   {
     "name": "Carmen",
     "username": "car_be",
-    "bookingIds": [
+    "passwords": [
       "AA08062024"
     ],
     "userRoles": [
@@ -318,7 +292,7 @@ var usersFriends = [
   {
     "name": "Vane y Plata",
     "username": "va_pla",
-    "bookingIds": [
+    "passwords": [
       "AA08062024"
     ],
     "userRoles": [
@@ -330,7 +304,7 @@ var usersFriends = [
   {
     "name": "Andrea",
     "username": "an_da",
-    "bookingIds": [
+    "passwords": [
       "AA08062024"
     ],
     "userRoles": [
@@ -342,7 +316,7 @@ var usersFriends = [
   {
     "name": "Alberto",
     "username": "al_go",
-    "bookingIds": [
+    "passwords": [
       "AA08062024"
     ],
     "userRoles": [
@@ -354,7 +328,7 @@ var usersFriends = [
   {
     "name": "Patri",
     "username": "pa_ma",
-    "bookingIds": [
+    "passwords": [
       "AA08062024"
     ],
     "userRoles": [
@@ -366,7 +340,7 @@ var usersFriends = [
   {
     "name": "Ivonne y William",
     "username": "i_wi",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -380,7 +354,7 @@ var usersFriends = [
   {
     "name": "Daniel y Kaisa",
     "username": "da_ka",
-    "bookingIds": [
+    "passwords": [
       "AA08062024",
       "AA15062024"
     ],
@@ -390,6 +364,20 @@ var usersFriends = [
     ],
     "origin": "Torrecaballeros y Finlandia",
     "gender": "multiple",
+  },
+  {
+    "name": "Anita",
+    "username": "a_men",
+    "passwords": [
+      "AA08062024",
+      "AA15062024"
+    ],
+    "userRoles": [
+      "friend",
+      "family"
+    ],
+    "origin": "Bogotá",
+    "gender": "femail",
   }
 ];
 
@@ -397,7 +385,7 @@ var usersFamily = [
   {
     "name": "Conchi y Zaca",
     "username": "co_za",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -408,8 +396,8 @@ var usersFamily = [
   },
   {
     "name": "Abuela Antonia",
-    "username": "an_co",
-    "bookingIds": [
+    "username": "an_cor",
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -421,7 +409,7 @@ var usersFamily = [
   {
     "name": "Carmen y Luis",
     "username": "car_lu",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -433,7 +421,7 @@ var usersFamily = [
   {
     "name": "Abuela Daniela",
     "username": "da_ve",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -445,7 +433,7 @@ var usersFamily = [
   {
     "name": "Natalia y Alberto",
     "username": "na_al",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -457,7 +445,7 @@ var usersFamily = [
   {
     "name": "Sabel y Mariano",
     "username": "sa_ma",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -469,7 +457,7 @@ var usersFamily = [
   {
     "name": "Rodrigo, Ivón, Isabella y Rodriguito",
     "username": "lo_go",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -479,21 +467,9 @@ var usersFamily = [
     "gender": "multiple",
   },
   {
-    "name": "Gloria",
-    "username": "glo_va",
-    "bookingIds": [
-      "AA15062024"
-    ],
-    "userRoles": [
-      "family",
-    ],
-    "origin": "Madrid",
-    "gender": "female",
-  },
-  {
     "name": "Ie, Cesar, Luciana y Samuel",
     "username": "ie_ce",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -505,7 +481,7 @@ var usersFamily = [
   {
     "name": "Jaime Leonardo y Danna",
     "username": "da_ja",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -517,7 +493,7 @@ var usersFamily = [
   {
     "name": "Jaime y Marta",
     "username": "ma_ja",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -529,7 +505,7 @@ var usersFamily = [
   {
     "name": "Javier Esteban",
     "username": "ja_lo",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -540,8 +516,8 @@ var usersFamily = [
   },
   {
     "name": "Javier, Denis y Juan José",
-    "username": "ja_lo",
-    "bookingIds": [
+    "username": "ja_de",
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -553,7 +529,7 @@ var usersFamily = [
   {
     "name": "Doña Himelda",
     "username": "hi_sa",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -565,7 +541,7 @@ var usersFamily = [
   {
     "name": "Cristina y Jesús",
     "username": "cris_je",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -577,7 +553,7 @@ var usersFamily = [
   {
     "name": "Silvia y Antonio",
     "username": "sil_an",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -589,7 +565,7 @@ var usersFamily = [
   {
     "name": "Fernando, Valentina y Sebastián",
     "username": "fer_vi",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -601,7 +577,7 @@ var usersFamily = [
   {
     "name": "Eva, Daniel y Ander",
     "username": "e_da",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -613,7 +589,7 @@ var usersFamily = [
   {
     "name": "Nelson",
     "username": "nel_lo",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -625,7 +601,7 @@ var usersFamily = [
   {
     "name": "Juan Carlos, Diana y Juan Camilo",
     "username": "di_ju",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -637,7 +613,7 @@ var usersFamily = [
   {
     "name": "Emith y Rosario",
     "username": "e_ro",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -649,7 +625,7 @@ var usersFamily = [
   {
     "name": "Hernán y Cindy",
     "username": "her_cin",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -661,7 +637,7 @@ var usersFamily = [
   {
     "name": "Clara",
     "username": "cla_lo",
-    "bookingIds": [
+    "passwords": [
       "AA15062024"
     ],
     "userRoles": [
@@ -672,6 +648,6 @@ var usersFamily = [
   }
 ];
 
-var users: any = [...usersFriends, ...usersFamily ]
+var users: any = [...usersFriends, ...usersFamily]
 
 export default users;

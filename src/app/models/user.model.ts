@@ -1,7 +1,7 @@
 export class User {
   'name': string;
   'username': string;
-  'bookingIds': string[];
+  'passwords': string[];
   'userRoles': string[];
   'origin': string;
   'relations': string[];
