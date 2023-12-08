@@ -18,6 +18,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('version-1');
+
     this.userService.getCurrentUser();
 
     // ocultamos el chatbot
