@@ -1,5 +1,31 @@
 var usersFriends = [
   {
+    "name": "prueba simple",
+    "username": "a",
+    "passwords": [
+      "a",
+    ],
+    "userRoles": [
+      "friend",
+      "family"
+    ],
+    "origin": "Madrid",
+    "gender": "multiple",
+  },
+  {
+    "name": "prueba multiple",
+    "username": "b",
+    "passwords": [
+      "b",
+    ],
+    "userRoles": [
+      "friend",
+      "family"
+    ],
+    "origin": "Madrid",
+    "gender": "multiple",
+  },
+  {
     "name": "Alice y Antonio",
     "username": "a_an",
     "passwords": [

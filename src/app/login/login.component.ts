@@ -35,10 +35,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.utilsService.logOut();
 
-    document.getElementById('loginComponent')!.addEventListener("click", function () {
-      var el = document.documentElement
-      el.requestFullscreen();
-    });
+    // document.getElementById('loginComponent')!.addEventListener("click", function () {
+    //   var el = document.documentElement
+    //   el.requestFullscreen();
+    // });
   }
 
   login() {
