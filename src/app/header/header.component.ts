@@ -22,6 +22,7 @@ export class HeaderComponent implements AfterViewInit {
     public userService: UserService,
     private modal: NgbModal
   ) {
+    alert('me cree 2')
     this.selectedWedding = this.userService.getSelectedWedding();
   }
 

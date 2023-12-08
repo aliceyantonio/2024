@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('version-1');
+    console.log('version-3');
 
     this.userService.getCurrentUser();
 
@@ -27,6 +27,9 @@ export class AppComponent implements OnInit {
 
     // revisamos cuando cambia de ruta
     this.router.events.pipe(filter(event => event instanceof NavigationStart)).subscribe((event: any) => {
+      console.log(event);
+      console.log(event.url);
+
       this.isNotLogin = !event.url.includes('login')
       // si en el cambio de ruta no va a login y no ha seteados los estilos de chat los setea
       if (this.isNotLogin) {
