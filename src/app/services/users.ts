@@ -3,11 +3,10 @@ var usersFriends = [
     "name": "prueba simple",
     "username": "a",
     "passwords": [
-      "a",
+      "A",
     ],
     "userRoles": [
       "friend",
-      "family"
     ],
     "origin": "Madrid",
     "gender": "multiple",
@@ -16,7 +15,7 @@ var usersFriends = [
     "name": "prueba multiple",
     "username": "b",
     "passwords": [
-      "b",
+      "B",
     ],
     "userRoles": [
       "friend",

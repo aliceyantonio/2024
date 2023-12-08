@@ -171,10 +171,12 @@ figure {
 }
 
 ::ng-deep {
-  .modal-content {
-    background-color: transparent;
-    outline: none;
-    border: none;
+  .invitation-modal{
+    .modal-content {
+      background-color: transparent;
+      outline: none;
+      border: none;
+    }
   }
 }
 

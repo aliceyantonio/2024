@@ -22,7 +22,7 @@ export class InvitationComponent {
   ) {}
 
   openModal(content:any) {
-    this.modal.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
+    this.modal.open(content, { ariaLabelledBy: 'modal-basic-title', windowClass: 'invitation-modal' }).result.then(
       (result) => {
         // this.closeResult = `Closed with: ${result}`;
       },
@@ -30,9 +30,6 @@ export class InvitationComponent {
         // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
       },
     );
-    // if (!this.modal.hasOpenModals()) {
-    //   this.modalRef = this.modal.open(this.invitationModal, { ariaLabelledBy: '', size: 'xl' });
-    // }
   }
 
 }

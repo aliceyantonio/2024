@@ -108,41 +108,30 @@
             <button class="answer w-25 mx-auto" type="submit" [disabled]="usForm.invalid">Enviar</button>
             PD: Si lo suspendes no queremos volver a verte, te odiamos y lo peor de todo: ESTÁS DESINVITADO
           </ng-container>
-          <ng-container *ngIf="answerShown">
-            <button type="button" class="btn bg-color-secondary color-primary w-50 position-absolute" style="top:50%; left:50%; transform: translate(-50%,-50%);" (click)="null"><ng-container *ngIf="score>2">Ir al Juego</ng-container><ng-container *ngIf="score<=2">Ir a Recuperación</ng-container></button>
-          </ng-container>
         </div>
 
       </div>
     </form>
   </div>
-
-  <!-- <div id="travelsSection" class="mt-5 border border-light rounded p-4">
-    <h2>Nuestros viajes</h2>
-    <p class="color-secondary">A lo largo de estos años hemos tenido la oportunidad de conocer muchos paises. Hemos pensado en hacernos travel-bloggers muchas veces... pero nunca damos el paso. Quizá este sea el comienzo de ______ (insertar nombre guay de influencer de viajes)</p>
-    <div class="container-fluid container-md mt-lg-5">
-      <div id="map" class="mb-0"></div>
-    </div>
-  </div> -->
 </div>
 
 <ng-template #answersModal let-modal>
   <div class="modal-header border-bottom-0">
     <h5 class="modal-title">
       <ng-container *ngIf="score>2">Nos conoces casi tanto como nuestra madre</ng-container>
-      <ng-container *ngIf="score<=3">¿Enserio? Te odiamos</ng-container>
+      <ng-container *ngIf="score<3">¿Enserio? Te odiamos</ng-container>
     </h5>
   </div>
 
   <div class="modal-body">
     <p>
       <ng-container *ngIf="score>2">¡Enhorabuena! <br> Has aprobado con {{score}}/5 y sigues invitado a la boda (ya puedes ir haciéndonos el regalo 😬). <br> Como amante de nosotros sabemos que nunca te cansas de saber más de nosotros y para ello hemos preparado un pequeño jueguito.</ng-container>
-      <ng-container *ngIf="score<=3">Has suspendido con {{score}}/5. <br> No estás preparado para venir a nuestra boda... pero estás de suerte y hemos preparado un curso de recuperación para que puedas volver a caernos bien.</ng-container>
+      <ng-container *ngIf="score<3">Has suspendido con {{score}}/5. <br> No estás preparado para venir a nuestra boda... pero estás de suerte y puedes volver a repetir el test para aprender más sobre nosotros.</ng-container>
     </p>
 </div>
   <div class="modal-footer justify-content-center row m-0">
-    <button type="button" class="btn bg-color-primary color-light col-5" (click)="modal.dismiss('cancel click')"><ng-container *ngIf="score>2">Ir al Juego</ng-container><ng-container *ngIf="score<=2">Ir a Recuperación</ng-container></button>
-    <button type="button" class="btn bg-color-light color-primary col-5" (click)="modal.dismiss('cancel click'); showAnswers()">Ver respuestas correctas</button>
+    <button type="button" class="btn bg-color-light color-primary col-5 border" (click)="modal.dismiss('cancel click')"><ng-container *ngIf="score>2">Cerrar</ng-container><ng-container *ngIf="score<3">Repetir Test</ng-container></button>
+    <button type="button" class="btn bg-color-primary color-light col-5" (click)="modal.dismiss('cancel click'); showAnswers()">Ver respuestas correctas</button>
   </div>
 
 </ng-template>
