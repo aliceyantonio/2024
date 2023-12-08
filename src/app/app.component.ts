@@ -1,5 +1,5 @@
 import { UserService } from './services/user.service';
-import { NavigationStart, Router } from '@angular/router';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { filter } from 'rxjs';
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('version-3');
+    console.log('version-4');
 
     this.userService.getCurrentUser();
 
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
     document.getElementById('iDuck')!.style.display = 'none';
 
     // revisamos cuando cambia de ruta
-    this.router.events.pipe(filter(event => event instanceof NavigationStart)).subscribe((event: any) => {
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: any) => {
       console.log(event);
       console.log(event.url);
 
