@@ -1,10 +1,10 @@
-<app-header *ngIf="!isLogin"></app-header>
-<main [class]="isLogin ? 'loginStyle': null">
+<app-header *ngIf="isNotLogin"></app-header>
+<main [class]="isNotLogin ? null: 'loginStyle'">
   <!-- <div [class]="isLogin ? null : 'container pb-4'"> -->
     <router-outlet></router-outlet>
   <!-- </div> -->
 </main>
-<app-footer *ngIf="!isLogin"></app-footer>
+<app-footer *ngIf="isNotLogin"></app-footer>
 
 <div id="preloadImages">
   <div style="background-image:url(assets/travelers/1.webp)"></div>
