@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('version-4');
+    console.log('version-5');
 
     this.userService.getCurrentUser();
 
@@ -29,8 +29,9 @@ export class AppComponent implements OnInit {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: any) => {
       console.log(event);
       console.log(event.url);
+      console.log(event.urlAfterRedirects);
 
-      this.isNotLogin = !event.url.includes('login')
+      this.isNotLogin = !event.urlAfterRedirects.includes('login')
       // si en el cambio de ruta no va a login y no ha seteados los estilos de chat los setea
       if (this.isNotLogin) {
         document.getElementById('iDuck')!.style.display = 'initial';
