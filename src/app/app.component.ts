@@ -18,8 +18,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('version-5');
-
     this.userService.getCurrentUser();
 
     // ocultamos el chatbot
@@ -27,10 +25,6 @@ export class AppComponent implements OnInit {
 
     // revisamos cuando cambia de ruta
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: any) => {
-      console.log(event);
-      console.log(event.url);
-      console.log(event.urlAfterRedirects);
-
       this.isNotLogin = !event.urlAfterRedirects.includes('login')
       // si en el cambio de ruta no va a login y no ha seteados los estilos de chat los setea
       if (this.isNotLogin) {

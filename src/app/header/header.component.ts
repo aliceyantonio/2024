@@ -34,13 +34,8 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log('aqui');
-
     const currentUser = this.userService.getCurrentUser();
     const selectedWedding = this.userService.getSelectedWedding();
-
-    console.log(currentUser);
-
 
     if (currentUser) {
       if (currentUser.userRoles.length > 1 && !selectedWedding) {
