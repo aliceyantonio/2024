@@ -15,7 +15,7 @@ export class GuestsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     document.getElementById('iDuck')!.style.display = 'none';
-    document.getElementById('header')!.classList.add('on-hover');
+    // document.getElementById('header')!.classList.add('on-hover');
     document.getElementById('footer')!.classList.add('on-hover');
     document.querySelector('body')!.style.overflow = 'hidden';
     document.querySelector('body')!.style.position = 'relative';
@@ -29,7 +29,7 @@ export class GuestsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     document.getElementById('iDuck')!.style.display = 'initial';
-    document.getElementById('header')!.classList.remove('on-hover');
+    // document.getElementById('header')!.classList.remove('on-hover');
     document.getElementById('footer')!.classList.remove('on-hover');
     document.querySelector('body')!.style.overflow = 'initial';
     document.querySelector('body')!.style.position = 'initial';

@@ -23,9 +23,9 @@
       background-position: 50% 50%;
       background-size: cover;
       flex: none;
-      height: 19vh;
+      height: 16vh;
       margin: clamp(10px, 1vw, 20px);
-      width: 28vh;
+      width: 19vh;
       position: relative;
       transition: ease-in-out all 0.3s;
       border-radius: 1rem;
@@ -104,4 +104,21 @@
       }
     }
   }
+}
+
+@media (max-width: 991px) {
+  #gestComponent {
+    .images-line {
+      .line {
+        height: 14vh;
+        width: 17vh;
+      }
+    }
+  }
+
+  .dev{
+    padding: 0.5rem !important;
+    font-size: 0.8rem !important;
+  }
+
 }
