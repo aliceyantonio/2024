@@ -70,16 +70,29 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-6">
+        <div [class]="userService.currentUser.userRoles.length > 1 ? 'col-lg-3 col-6 pe-0' : 'col-lg-6'">
           <div class="form-group">
             <label>Transporte</label>
             <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="transporte1" value="si" name="transporte" class="custom-control-input" checked="">
-              <label class="custom-control-label" for="transporte1">Si</label>
+              <input type="radio" id="transporte1" value="si" name="transporte" class="custom-control-input">
+              <label class="custom-control-label ms-1" for="transporte1">Si</label>
             </div>
             <div class="custom-control custom-radio custom-control-inline">
               <input type="radio" id="transporte2" value="no" name="transporte" class="custom-control-input">
-              <label class="custom-control-label" for="transporte2">No</label>
+              <label class="custom-control-label ms-1" for="transporte2">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 p-0" [class]="userService.currentUser.userRoles.length > 1 ? 'd-flex' : 'd-none'" >
+          <div class="form-group">
+            <label>Boda</label>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="boda1" value="amigos" name="boda" class="custom-control-input" [checked] = "userService.selectedWedding == 'friend'">
+              <label class="custom-control-label ms-1" for="boda1">Amigos</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="boda2" value="familia" name="boda" class="custom-control-input" [checked] = "userService.selectedWedding == 'family'">
+              <label class="custom-control-label ms-1" for="boda2">Familia</label>
             </div>
           </div>
         </div>

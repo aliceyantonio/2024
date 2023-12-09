@@ -1,3 +1,4 @@
+import { UserService } from './../services/user.service';
 import { UtilsService } from './../services/utils.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, ViewEncapsulation } from '@angular/core';
@@ -23,5 +24,9 @@ export class FormComponent {
     { name: 'Ginebra', kind: 'Duro' },
     { name: 'Vodka', kind: 'Duro' },
   ];
+
+  constructor (
+    public userService: UserService
+  ){}
 
 }
