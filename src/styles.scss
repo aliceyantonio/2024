@@ -270,11 +270,16 @@ input[type='radio']:checked:after {
   border: 2px solid white;
 }
 
+.input-container input {
+  font-size: 16px;
+}
+
 
 @media screen and (max-width: 991px) {
 
   html {
     font-size: 16px !important;
+    touch-action: manipulation;
   }
 
   .page-header {
