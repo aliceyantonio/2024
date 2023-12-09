@@ -1,6 +1,6 @@
 import { UserService } from './services/user.service';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { filter } from 'rxjs';
 
 @Component({
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(1);
+    console.log(3);
 
     this.userService.getCurrentUser();
 
@@ -33,6 +33,14 @@ export class AppComponent implements OnInit {
         document.getElementById('iDuck')!.style.display = 'initial';
       }
     })
+
+    document.addEventListener('gesturestart', function (e) {
+      e.preventDefault();
+    });
   }
 
+  @HostListener('gesturestart', [])
+  gesturestart(e: any) {
+    e.preventDefault();
+  }
 }
