@@ -41,7 +41,8 @@
             <label for="menu">Menú</label>
             <select id="menu" name="menu" class="form-control">
               <option disabled selected value>Selecciona una opción de comida</option>
-              <option value="normal">Normal</option>
+              <option value="carne">Carne</option>
+              <option value="pescado" *ngIf="userService.selectedWedding == 'family'">Pescado</option>
               <option value="vegetariano">Vegetariano</option>
               <option value="celiaco">Sin gluten</option>
             </select>
@@ -70,7 +71,7 @@
       </div>
 
       <div class="row">
-        <div [class]="userService.currentUser.userRoles.length > 1 ? 'col-lg-3 col-6 pe-0' : 'col-lg-6'">
+        <div class="col-lg-3 col-6" [class]="userService.selectedWedding == 'friend' ? 'd-flex' : 'd-none'">
           <div class="form-group">
             <label>Transporte</label>
             <div class="custom-control custom-radio custom-control-inline">
@@ -78,12 +79,12 @@
               <label class="custom-control-label ms-1" for="transporte1">Si</label>
             </div>
             <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="transporte2" value="no" name="transporte" class="custom-control-input">
+              <input type="radio" id="transporte2" value="no" name="transporte" class="custom-control-input" [checked] = "userService.selectedWedding == 'family'">
               <label class="custom-control-label ms-1" for="transporte2">No</label>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-6 p-0" [class]="userService.currentUser.userRoles.length > 1 ? 'd-flex' : 'd-none'" >
+        <div class="col-lg-3 col-6 pe-0" [class]="userService.currentUser.userRoles.length > 1 ? 'd-flex' : 'd-none'" >
           <div class="form-group">
             <label>Boda</label>
             <div class="custom-control custom-radio custom-control-inline">

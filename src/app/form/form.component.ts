@@ -23,6 +23,8 @@ export class FormComponent {
     { name: 'Ron', kind: 'Duro' },
     { name: 'Ginebra', kind: 'Duro' },
     { name: 'Vodka', kind: 'Duro' },
+    { name: 'Aguardiente', kind: 'Duro' },
+    { name: 'Jagger', kind: 'Duro' },
   ];
 
   constructor (
