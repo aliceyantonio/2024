@@ -612,6 +612,18 @@ var usersFamily = [
     "gender": "multiple",
   },
   {
+    "name": "Cristina y Miguel",
+    "username": "cris_mi",
+    "passwords": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Madrid",
+    "gender": "multiple",
+  },
+  {
     "name": "Nelson",
     "username": "nel_lo",
     "passwords": [
