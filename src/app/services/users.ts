@@ -682,7 +682,55 @@ var usersFamily = [
     ],
     "origin": "Colombia",
     "gender": "female",
-  }
+  },
+  {
+    "name": "Lucía",
+    "username": "lu_cla",
+    "passwords": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Colombia",
+    "gender": "female",
+  },
+  {
+    "name": "Angélica",
+    "username": "an_pri",
+    "passwords": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Colombia",
+    "gender": "female",
+  },
+  {
+    "name": "Carmen",
+    "username": "car_za",
+    "passwords": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Perú",
+    "gender": "female",
+  },
+  {
+    "name": "Diego",
+    "username": "die_pri",
+    "passwords": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Argentina",
+    "gender": "male",
+  },
 ];
 
 var users: any = [...usersFriends, ...usersFamily]
