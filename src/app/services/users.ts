@@ -730,7 +730,7 @@ var usersFamily = [
     ],
     "origin": "Argentina",
     "gender": "male",
-  },
+  }
 ];
 
 var users: any = [...usersFriends, ...usersFamily]
