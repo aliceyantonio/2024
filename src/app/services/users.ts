@@ -327,16 +327,18 @@ var usersFriends = [
     "gender": "multiple",
   },
   {
-    "name": "Andrea",
+    "name": "Andrea y Esposo",
     "username": "an_da",
     "passwords": [
-      "AA08062024"
+      "AA08062024",
+      "AA15062024"
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "Alcalá de Henares",
-    "gender": "female",
+    "gender": "multiple",
   },
   {
     "name": "Alberto",
