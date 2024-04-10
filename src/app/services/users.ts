@@ -732,6 +732,30 @@ var usersFamily = [
     ],
     "origin": "Argentina",
     "gender": "male",
+  },
+  {
+    "name": "Angel",
+    "username": "an_tar",
+    "passwords": [
+      "AA08062024"
+    ],
+    "userRoles": [
+      "friend",
+    ],
+    "origin": "Madrid",
+    "gender": "male",
+  },
+  {
+    "name": "Andrea",
+    "username": "an_gon",
+    "passwords": [
+      "AA08062024"
+    ],
+    "userRoles": [
+      "friend",
+    ],
+    "origin": "Madrid",
+    "gender": "female",
   }
 ];
 
