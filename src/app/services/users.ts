@@ -198,6 +198,7 @@ var usersFriends = [
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "Mayagüez",
     "gender": "female",
@@ -210,6 +211,7 @@ var usersFriends = [
     ],
     "userRoles": [
       "friend",
+      "family"
     ],
     "origin": "Arequipa",
     "gender": "female",
@@ -753,6 +755,42 @@ var usersFamily = [
     ],
     "userRoles": [
       "friend",
+    ],
+    "origin": "Madrid",
+    "gender": "female",
+  },
+  {
+    "name": "Chus y Javier",
+    "username": "chus_ja",
+    "passwords": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Madrid",
+    "gender": "multiple",
+  },
+  {
+    "name": "Nilo",
+    "username": "nilo",
+    "passwords": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Madrid",
+    "gender": "male",
+  },
+  {
+    "name": "Adelita",
+    "username": "adel",
+    "passwords": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
     ],
     "origin": "Madrid",
     "gender": "female",
