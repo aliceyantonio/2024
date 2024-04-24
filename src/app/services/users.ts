@@ -794,6 +794,30 @@ var usersFamily = [
     ],
     "origin": "Madrid",
     "gender": "female",
+  },
+  {
+    "name": "Patri y Dani",
+    "username": "pa_da",
+    "passwords": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Madrid",
+    "gender": "multiple",
+  },
+  {
+    "name": "María y Guille",
+    "username": "ma_gu",
+    "passwords": [
+      "AA15062024"
+    ],
+    "userRoles": [
+      "family",
+    ],
+    "origin": "Madrid",
+    "gender": "multiple",
   }
 ];
 
